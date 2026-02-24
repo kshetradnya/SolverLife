@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SolverLife</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: radial-gradient(circle at 10% 10%, #253a6f 0%, #121729 40%, #0c101c 100%);
+      --card: rgba(255,255,255,0.09);
+      --text: #eef4ff;
+      --muted: #9fb2d1;
+      --accent: #4bd8ff;
+      --good: #43da85;
+      --bad: #ff5f7c;
+      --gold: #ffd365;
+      --shadow: 0 12px 26px rgba(0,0,0,0.35);
+    }
+
+    [data-theme="holiday"] {
+      --bg: radial-gradient(circle at 20% 5%, #2e5731 0%, #1f2e28 35%, #13101c 100%);
+      --accent: #ff6a8e;
+      --gold: #66f7b2;
+    }
+
+    [data-theme="sunset"] {
+      --bg: linear-gradient(120deg, #2a1e54 0%, #6a264f 35%, #d14a40 100%);
+      --accent: #ffd365;
+      --gold: #8ff7ff;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Manrope", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(8px);
+      background: rgba(7,10,18,0.65);
+      border-bottom: 1px solid rgba(255,255,255,0.12);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 16px;
+      gap: 10px;
+    }
+
+    .brand {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .nav button, .btn {
+      background: rgba(255,255,255,0.1);
+      color: var(--text);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 999px;
+      padding: 8px 14px;
+      cursor: pointer;
+      transition: 0.25s;
+      font-weight: 800;
+    }
+
+    .nav button.active, .nav button:hover, .btn:hover {
+      transform: translateY(-1px);
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(75,216,255,0.15);
+    }
+
+    main { padding: 18px; max-width: 1260px; margin: 0 auto; }
+    .section { display: none; animation: fade .35s ease; }
+    .section.active { display: block; }
+    @keyframes fade { from { opacity: 0; transform: translateY(8px);} to { opacity:1; transform:none; } }
+
+    .card {
+      background: var(--card);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 20px;
+      padding: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .home-grid { display: grid; gap: 16px; grid-template-columns: 1.2fr 1fr; }
+    .hero-title { font-family: "Space Grotesk", sans-serif; font-size: clamp(2rem, 5vw, 3rem); margin: 0 0 10px; }
+    .big-auth { margin-top: 14px; font-size: 1.2rem; padding: 14px 24px; border-radius: 14px; background: linear-gradient(90deg, #4bd8ff, #6c9fff); color: #041527; border: 0; font-weight: 800; }
+
+    .demo {
+      position: relative;
+      min-height: 300px;
+      overflow: hidden;
+      border-radius: 16px;
+      background: linear-gradient(145deg, #111a2f 0%, #111522 100%);
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .demo .option {
+      position: absolute;
+      left: 18px;
+      right: 18px;
+      height: 50px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.2);
+      display: flex;
+      align-items: center;
+      padding-left: 12px;
+      background: rgba(255,255,255,0.06);
+      font-weight: 800;
+    }
+
+    .o1 { top: 20px; }
+    .o2 { top: 85px; }
+    .o3 { top: 150px; }
+    .o4 { top: 215px; }
+
+    .cursor {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      position: absolute;
+      background: #fff;
+      box-shadow: 0 0 24px rgba(255,255,255,.7);
+      animation: cursorMove 7s infinite;
+    }
+
+    .feedback-bubble {
+      position: absolute;
+      right: 18px;
+      bottom: 18px;
+      background: rgba(0,0,0,0.45);
+      border: 1px solid rgba(255,255,255,0.18);
+      padding: 10px 12px;
+      border-radius: 12px;
+      animation: bubble 7s infinite;
+      font-size: .9rem;
+      font-weight: 700;
+    }
+
+    @keyframes cursorMove {
+      0%, 8% { transform: translate(42px, 32px); }
+      20% { transform: translate(42px, 96px); }
+      22% { transform: scale(0.8) translate(52px, 110px); }
+      35% { transform: translate(42px, 161px); }
+      50% { transform: translate(42px, 227px); }
+      52% { transform: scale(0.8) translate(50px, 240px); }
+      100% { transform: translate(42px, 32px); }
+    }
+
+    @keyframes bubble {
+      0%, 24% { opacity: 0; }
+      25%, 40% { opacity: 1; color: var(--bad); }
+      41%, 54% { opacity: 0; }
+      55%, 78% { opacity: 1; color: var(--good); }
+      79%, 100% { opacity: 0; }
+    }
+
+    .solver-grid { display: grid; gap: 14px; grid-template-columns: 2fr 1fr; }
+    .split { display: grid; gap: 12px; grid-template-columns: 1fr 1fr; }
+
+    .question-text {
+      font-size: 1.05rem;
+      line-height: 1.45;
+      font-weight: 800;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 12px;
+      padding: 12px;
+      margin-bottom: 10px;
+    }
+
+    .diagram-box {
+      border: 1px solid rgba(255,255,255,.2);
+      border-radius: 12px;
+      margin: 8px 0 12px;
+      padding: 8px;
+      background: rgba(0,0,0,.18);
+    }
+
+    #diagramCanvas {
+      width: 100%;
+      height: 180px;
+      display: block;
+      border-radius: 8px;
+      background: linear-gradient(145deg, #0f1726, #131d31);
+    }
+
+    .options { display: grid; gap: 8px; }
+    .opt {
+      text-align: left;
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,.2);
+      background: rgba(255,255,255,.05);
+      color: var(--text);
+      cursor: pointer;
+      font-weight: 800;
+      line-height: 1.4;
+    }
+
+    .opt.correct { border-color: var(--good); background: rgba(67,218,133,0.2); }
+    .opt.wrong { border-color: var(--bad); background: rgba(255,95,124,0.2); }
+    .feedback { margin-top: 10px; padding: 10px; border-radius: 10px; background: rgba(0,0,0,.25); font-weight: 700; }
+
+    .leaderboard .entry {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      margin-bottom: 8px;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.06);
+      transition: .2s;
+      font-weight: 800;
+    }
+
+    .leaderboard .entry:hover { transform: translateX(4px) scale(1.01); background: rgba(255,255,255,0.12); }
+
+    .history-list {
+      max-height: 290px;
+      overflow: auto;
+      display: grid;
+      gap: 7px;
+    }
+
+    .history-item {
+      border-radius: 10px;
+      padding: 8px 10px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      font-size: .92rem;
+      font-weight: 700;
+    }
+
+    .achievements-grid {
+      margin-top: 12px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 10px;
+    }
+
+    .achievement {
+      padding: 10px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.15);
+      background: rgba(255,255,255,0.06);
+      font-weight: 800;
+    }
+
+    .achievement.unlocked { border-color: var(--gold); background: rgba(255,211,101,0.12); }
+
+    .popup {
+      position: fixed;
+      top: 84px;
+      right: 14px;
+      background: #122331;
+      border: 1px solid var(--gold);
+      border-radius: 12px;
+      padding: 10px 12px;
+      z-index: 60;
+      animation: popfade 3s forwards;
+      font-weight: 800;
+    }
+
+    @keyframes popfade {
+      0% { opacity: 0; transform: translateY(-10px) scale(0.95); }
+      15%, 75% { opacity: 1; transform: none; }
+      100% { opacity: 0; transform: translateY(-20px) scale(0.95); }
+    }
+
+    .contact-icons a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      color: var(--text);
+      text-decoration: none;
+      background: rgba(255,255,255,0.08);
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.14);
+      font-weight: 800;
+    }
+
+    .contact-icons svg { width: 18px; height: 18px; fill: currentColor; }
+
+    .auth-modal {
+      position: fixed;
+      inset: 0;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0,0,0,.5);
+      z-index: 70;
+    }
+
+    .auth-modal.open { display: flex; }
+    .auth-box { width: min(95vw, 430px); }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,.24);
+      background: rgba(255,255,255,.06);
+      color: var(--text);
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+
+    .captcha-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .pill {
+      display: inline-block;
+      padding: 4px 9px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.15);
+      font-size: .82rem;
+      font-weight: 800;
+    }
+
+    small { color: var(--muted); }
+
+    @media (max-width: 980px) {
+      .home-grid, .solver-grid, .split { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body data-theme="default">
+  <header class="topbar">
+    <div class="brand">SolverLife</div>
+    <nav class="nav" id="nav"></nav>
+  </header>
+
+  <main>
+    <section id="home" class="section active">
+      <div class="home-grid">
+        <article class="card">
+          <h1 class="hero-title">MCQ practice with real-time feedback.</h1>
+          <p><b>Online Mode:</b> configure Firebase once, host on GitHub Pages, and real users can register/login with email+password and appear on a real leaderboard.</p>
+          <div id="homeAuthArea"></div>
+        </article>
+
+        <article class="card">
+          <h3>How it works (animated demo)</h3>
+          <div class="demo">
+            <div class="option o1">A) Random choice</div>
+            <div class="option o2">B) Another option</div>
+            <div class="option o3">C) Correct logic route</div>
+            <div class="option o4">D) Distractor</div>
+            <div class="cursor"></div>
+            <div class="feedback-bubble">Wrong first, then correct with feedback.</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="solver" class="section">
+      <div class="solver-grid">
+        <article class="card">
+          <h2>Solver Session</h2>
+          <p><span class="pill" id="modeTag">Local Mode</span></p>
+          <div class="split">
+            <div>
+              <label><b>Subject Codes</b></label>
+              <select id="subjectCodes" multiple size="3">
+                <option value="biology" selected>Biology</option>
+                <option value="chemistry" selected>Chemistry</option>
+                <option value="physics" selected>Physics</option>
+              </select>
+              <small>Cmd/Ctrl-click to select multiple subjects.</small>
+            </div>
+            <div>
+              <label><b>Topic Filter</b></label>
+              <select id="topicFilter"></select>
+            </div>
+          </div>
+          <button class="btn" id="startSession">Start Session</button>
+          <hr style="border-color: rgba(255,255,255,.15)">
+
+          <h3 id="qTitle">Pick subjects and click Start Session</h3>
+          <div class="question-text" id="questionText"><b>Question text appears here.</b></div>
+          <div class="diagram-box" id="diagramBox" hidden>
+            <canvas id="diagramCanvas" width="960" height="180"></canvas>
+          </div>
+          <div class="options" id="options"></div>
+          <div class="feedback" id="feedback" hidden></div>
+          <div style="margin-top: 10px; display:flex; gap: 8px; flex-wrap: wrap;">
+            <button class="btn" id="nextBtn">Next Question</button>
+            <button class="btn" id="saveBtn" title="Save question + feedback">Save</button>
+          </div>
+        </article>
+
+        <aside class="card">
+          <h3>Saved Solutions</h3>
+          <div id="savedCount">0 saved</div>
+          <small>Saved with explanation and timestamp.</small>
+        </aside>
+      </div>
+    </section>
+
+    <section id="bugrec" class="section">
+      <article class="card">
+        <h2>Bug & Recommendation</h2>
+        <p><b>Single page for both</b>. Removed old support page.</p>
+        <select id="reportType">
+          <option value="recommendation">Recommendation</option>
+          <option value="bug">Bug</option>
+        </select>
+        <input id="attachment" type="file">
+        <textarea id="reportText" rows="7" placeholder="Describe your recommendation or bug in detail..."></textarea>
+        <button class="btn" id="sendReport">Submit</button>
+        <small id="reportStatus"></small>
+      </article>
+    </section>
+
+    <section id="leaderboard" class="section">
+      <article class="card leaderboard">
+        <h2>Leaderboards</h2>
+        <p>Only real users are shown. No fake accounts.</p>
+        <div id="leaderboardList"></div>
+      </article>
+    </section>
+
+    <section id="history" class="section">
+      <div class="split">
+        <article class="card">
+          <h2>History (last 100)</h2>
+          <div id="stats"></div>
+          <div class="history-list" id="historyList"></div>
+        </article>
+
+        <article class="card">
+          <h2>Achievements</h2>
+          <div class="achievements-grid" id="achievements"></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <article class="card">
+        <h2>Contact Us</h2>
+        <div class="contact-icons">
+          <a href="https://twitter.com" target="_blank" rel="noreferrer">
+            <svg viewBox="0 0 24 24"><path d="M18.244 2H21l-6.56 7.5L22 22h-5.96l-4.66-6.09L6.06 22H3.3l7.01-8.01L2 2h6.11l4.21 5.55z"/></svg>Twitter
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noreferrer">
+            <svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 110 5 2.5 2.5 0 010-5zM3 9h4v12H3zM9 9h3.8v1.71h.05C13.38 9.74 14.8 9 16.64 9 20.22 9 21 11.36 21 14.46V21h-4v-5.73c0-1.37-.02-3.12-1.9-3.12-1.9 0-2.2 1.48-2.2 3.02V21H9z"/></svg>LinkedIn
+          </a>
+          <a href="https://youtube.com" target="_blank" rel="noreferrer">
+            <svg viewBox="0 0 24 24"><path d="M21.58 7.19a2.98 2.98 0 00-2.1-2.11C17.62 4.5 12 4.5 12 4.5s-5.62 0-7.48.58a2.98 2.98 0 00-2.1 2.1A31.1 31.1 0 002 12a31.1 31.1 0 00.42 4.81 2.98 2.98 0 002.1 2.1c1.86.59 7.48.59 7.48.59s5.62 0 7.48-.58a2.98 2.98 0 002.1-2.1A31.1 31.1 0 0022 12a31.1 31.1 0 00-.42-4.81zM10 15.5v-7l6 3.5-6 3.5z"/></svg>YouTube
+          </a>
+        </div>
+      </article>
+    </section>
+
+    <section id="account" class="section">
+      <article class="card">
+        <h2>Account Profile</h2>
+        <input id="profileName" placeholder="Display name">
+        <input id="profileEmail" placeholder="Email" type="email" disabled>
+        <input id="profilePic" placeholder="Public profile picture URL">
+        <label><input type="checkbox" id="batmanMode"> Batman mode (hide name/pic/info + silence sounds)</label>
+        <label><b>Theme</b></label>
+        <select id="themeSelect">
+          <option value="default">Blue Night Gradient</option>
+          <option value="sunset">Sunset Gradient</option>
+          <option value="holiday">Holiday Theme</option>
+        </select>
+        <button class="btn" id="saveProfile">Save Profile</button>
+      </article>
+    </section>
+  </main>
+
+  <div class="auth-modal" id="authModal">
+    <div class="card auth-box">
+      <h3>Login / Register</h3>
+      <input id="authEmail" type="email" placeholder="Email" />
+      <input id="authPassword" type="password" placeholder="Password (min 6 chars)" />
+      <div class="captcha-row">
+        <input id="authCaptchaInput" type="text" placeholder="Enter captcha" />
+        <button class="btn" id="refreshCaptcha" type="button">Refresh</button>
+      </div>
+      <div class="pill" id="captchaText">Captcha</div>
+      <div style="display:flex; gap: 8px; margin-top: 10px; flex-wrap: wrap;">
+        <button class="btn" id="loginBtn">Login</button>
+        <button class="btn" id="registerBtn">Register</button>
+        <button class="btn" id="closeAuth">Close</button>
+      </div>
+      <small id="authStatus">Password + captcha required.</small>
+    </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-storage-compat.js"></script>
+  <script src="assets/data/question-bank.js"></script>
+  <script>
+    // Fill Firebase config for real online users on GitHub Pages.
+    const FIREBASE_CONFIG = {
+      apiKey: "",
+      authDomain: "",
+      projectId: "",
+      storageBucket: "",
+      messagingSenderId: "",
+      appId: ""
+    };
+
+    const sections = ["home", "solver", "bugrec", "leaderboard", "history", "contact", "account"];
+    const sectionLabels = {
+      home: "Home",
+      solver: "Solver",
+      bugrec: "Bug & Rec",
+      leaderboard: "Leaderboard",
+      history: "History",
+      contact: "Contact",
+      account: "Account"
+    };
+
+    const nav = document.getElementById("nav");
+    const state = {
+      profile: JSON.parse(localStorage.getItem("solverlife-profile") || "{}"),
+      history: JSON.parse(localStorage.getItem("solverlife-history") || "[]"),
+      saved: JSON.parse(localStorage.getItem("solverlife-saved") || "[]"),
+      achievements: JSON.parse(localStorage.getItem("solverlife-ach") || "[]"),
+      current: null,
+      sessionPool: [],
+      streak: 0,
+      captcha: "",
+      online: { enabled: false, auth: null, db: null, storage: null, uid: null }
+    };
+
+    const FALLBACK_BANK = [
+      { subject:"biology", topic:"cells", q:"Which structure controls movement in/out of the cell?", opts:["Nucleus","Cell membrane","Cytoplasm","Ribosome"], a:1, why:"The cell membrane is selectively permeable and regulates transport.", number: 1, paper: "fallback" },
+      { subject:"chemistry", topic:"bonding", q:"Ionic bonding forms between:", opts:["Two non-metals","Metal + non-metal","Two metals","Noble gases"], a:1, why:"Electrons transfer from metal to non-metal, forming ions.", number: 2, paper: "fallback" },
+      { subject:"physics", topic:"forces", q:"Resultant force is zero when object is:", opts:["Accelerating","At constant velocity or rest","Moving in circle","Heating up"], a:1, why:"Zero resultant force means no acceleration, so velocity remains constant.", number: 3, paper: "fallback" }
+    ];
+
+    const BANK = (window.SOLVERLIFE_BANK && Array.isArray(window.SOLVERLIFE_BANK.questions) && window.SOLVERLIFE_BANK.questions.length)
+      ? window.SOLVERLIFE_BANK.questions
+      : FALLBACK_BANK;
+
+    function saveState() {
+      localStorage.setItem("solverlife-profile", JSON.stringify(state.profile));
+      localStorage.setItem("solverlife-history", JSON.stringify(state.history.slice(-100)));
+      localStorage.setItem("solverlife-saved", JSON.stringify(state.saved));
+      localStorage.setItem("solverlife-ach", JSON.stringify(state.achievements));
+    }
+
+    function rand(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
+
+    function setupFirebase() {
+      const values = Object.values(FIREBASE_CONFIG).map(v => String(v || "").trim());
+      const filled = values.every(v => v.length > 0);
+      if (!filled || typeof firebase === "undefined") {
+        state.online.enabled = false;
+        document.getElementById("modeTag").textContent = "Local Mode";
+        return;
+      }
+
+      firebase.initializeApp(FIREBASE_CONFIG);
+      state.online.auth = firebase.auth();
+      state.online.db = firebase.firestore();
+      state.online.storage = firebase.storage();
+      state.online.enabled = true;
+      document.getElementById("modeTag").textContent = "Online Mode";
+
+      state.online.auth.onAuthStateChanged(async (user) => {
+        if (user) {
+          state.online.uid = user.uid;
+          state.profile.loggedIn = true;
+          state.profile.email = user.email || "";
+          if (!state.profile.name) state.profile.name = (user.email || "user").split("@")[0];
+          saveState();
+          await loadRemoteProfile();
+          await loadRemoteHistory();
+          await renderLeaderboard();
+          renderHomeAuth();
+          hydrateProfile();
+        } else {
+          state.online.uid = null;
+          state.profile.loggedIn = false;
+          saveState();
+          renderHomeAuth();
+        }
+      });
+    }
+
+    async function loadRemoteProfile() {
+      if (!state.online.enabled || !state.online.uid) return;
+      const ref = state.online.db.collection("users").doc(state.online.uid);
+      const snap = await ref.get();
+      if (snap.exists) {
+        const data = snap.data();
+        state.profile.name = data.name || state.profile.name;
+        state.profile.pic = data.pic || state.profile.pic || "";
+        state.profile.batmanMode = Boolean(data.batmanMode);
+        state.profile.theme = data.theme || state.profile.theme || "default";
+        saveState();
+      } else {
+        await ref.set({
+          name: state.profile.name || state.profile.email.split("@")[0],
+          email: state.profile.email,
+          pic: state.profile.pic || "",
+          batmanMode: Boolean(state.profile.batmanMode),
+          theme: state.profile.theme || "default",
+          createdAt: firebase.firestore.FieldValue.serverTimestamp()
+        });
+      }
+    }
+
+    async function loadRemoteHistory() {
+      if (!state.online.enabled || !state.online.uid) return;
+      const snap = await state.online.db
+        .collection("users")
+        .doc(state.online.uid)
+        .collection("history")
+        .orderBy("at", "desc")
+        .limit(100)
+        .get();
+
+      state.history = snap.docs.map(d => d.data()).reverse();
+      saveState();
+      renderHistory();
+    }
+
+    function buildNav() {
+      nav.innerHTML = sections.map(id => `<button data-target="${id}">${sectionLabels[id]}</button>`).join("");
+      nav.addEventListener("click", (e) => {
+        if (!(e.target instanceof HTMLButtonElement)) return;
+        showSection(e.target.dataset.target);
+      });
+      showSection("home");
+    }
+
+    function showSection(id) {
+      document.querySelectorAll(".section").forEach(s => s.classList.toggle("active", s.id === id));
+      document.querySelectorAll(".nav button").forEach(b => b.classList.toggle("active", b.dataset.target === id));
+      if (id === "history") renderHistory();
+      if (id === "leaderboard") renderLeaderboard();
+      if (id === "home") renderHomeAuth();
+    }
+
+    function generateCaptcha() {
+      const chars = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+      state.captcha = Array.from({ length: 6 }, () => chars[Math.floor(Math.random() * chars.length)]).join("");
+      document.getElementById("captchaText").textContent = state.captcha;
+    }
+
+    function renderHomeAuth() {
+      const el = document.getElementById("homeAuthArea");
+      if (!state.profile.loggedIn) {
+        el.innerHTML = `<button class="big-auth" id="openAuth">Sign In / Log In</button>`;
+        document.getElementById("openAuth").onclick = () => {
+          generateCaptcha();
+          document.getElementById("authModal").classList.add("open");
+        };
+      } else {
+        const streak = computeStreak();
+        el.innerHTML = `<div class="card" style="margin-top:12px;"><h3>Streaks</h3><p><b>Current streak:</b> ${streak}</p><p><b>Total solved:</b> ${state.history.length}</p></div>`;
+      }
+    }
+
+    function selectedSubjects() {
+      return Array.from(document.getElementById("subjectCodes").selectedOptions).map(o => o.value);
+    }
+
+    function setTopicOptions() {
+      const topicFilter = document.getElementById("topicFilter");
+      const topics = [...new Set(BANK.map(q => q.topic).filter(Boolean))].sort();
+      topicFilter.innerHTML = `<option value="all">All topics</option>` + topics.map(t => `<option value="${t}">${t}</option>`).join("");
+    }
+
+    function startSession() {
+      const subjects = selectedSubjects();
+      const topic = document.getElementById("topicFilter").value;
+      state.sessionPool = BANK.filter(q => subjects.includes(q.subject) && (topic === "all" || q.topic === topic));
+      if (!state.sessionPool.length) return alert("No questions for selected filters.");
+      nextQuestion();
+    }
+
+    function drawDiagram(question) {
+      const box = document.getElementById("diagramBox");
+      const canvas = document.getElementById("diagramCanvas");
+      const ctx = canvas.getContext("2d");
+      const text = question.toLowerCase();
+
+      function clear() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.strokeStyle = "#9fd3ff";
+        ctx.fillStyle = "#9fd3ff";
+        ctx.lineWidth = 3;
+      }
+
+      clear();
+
+      if (/circuit|series|parallel|current|battery/.test(text)) {
+        box.hidden = false;
+        ctx.beginPath();
+        ctx.rect(60, 35, 840, 110);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(220, 35); ctx.lineTo(220, 10);
+        ctx.moveTo(240, 35); ctx.lineTo(240, 0);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.arc(460, 90, 18, 0, Math.PI * 2);
+        ctx.arc(650, 90, 18, 0, Math.PI * 2);
+        ctx.stroke();
+        ctx.font = "700 18px Manrope";
+        ctx.fillText("Redrawn Diagram", 20, 24);
+        return;
+      }
+
+      if (/filtrate|filter|funnel|beaker/.test(text)) {
+        box.hidden = false;
+        ctx.beginPath();
+        ctx.moveTo(220, 35); ctx.lineTo(320, 35); ctx.lineTo(270, 95); ctx.closePath();
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.rect(210, 95, 120, 50);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.rect(560, 85, 170, 60);
+        ctx.stroke();
+        ctx.font = "700 18px Manrope";
+        ctx.fillText("Redrawn Diagram", 20, 24);
+        ctx.fillText("Filtrate", 590, 120);
+        return;
+      }
+
+      if (/graph|plot|axis/.test(text)) {
+        box.hidden = false;
+        ctx.beginPath();
+        ctx.moveTo(110, 145); ctx.lineTo(110, 30); ctx.lineTo(115, 35);
+        ctx.moveTo(110, 30); ctx.lineTo(105, 35);
+        ctx.moveTo(110, 145); ctx.lineTo(840, 145); ctx.lineTo(835, 140);
+        ctx.moveTo(840, 145); ctx.lineTo(835, 150);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(140, 130); ctx.lineTo(270, 118); ctx.lineTo(420, 90); ctx.lineTo(560, 70); ctx.lineTo(730, 45);
+        ctx.stroke();
+        ctx.font = "700 18px Manrope";
+        ctx.fillText("Redrawn Graph", 20, 24);
+        return;
+      }
+
+      box.hidden = true;
+    }
+
+    function nextQuestion() {
+      const q = rand(state.sessionPool);
+      state.current = q;
+      document.getElementById("qTitle").textContent = `[${q.subject.toUpperCase()} | ${q.topic}] Q${q.number || "?"}`;
+      document.getElementById("questionText").innerHTML = `<b>${q.q}</b>`;
+      drawDiagram(q.q || "");
+
+      const options = document.getElementById("options");
+      options.innerHTML = q.opts.map((opt, i) => `<button class="opt" data-i="${i}"><b>${String.fromCharCode(65 + i)}) ${opt}</b></button>`).join("");
+      document.getElementById("feedback").hidden = true;
+      options.querySelectorAll(".opt").forEach(btn => btn.onclick = () => answerQuestion(Number(btn.dataset.i), btn));
+    }
+
+    function tone(freq, dur = 0.12) {
+      if (state.profile.batmanMode) return;
+      const ctx = new (window.AudioContext || window.webkitAudioContext)();
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.type = "triangle";
+      osc.frequency.value = freq;
+      gain.gain.value = 0.05;
+      osc.connect(gain); gain.connect(ctx.destination);
+      osc.start();
+      osc.stop(ctx.currentTime + dur);
+    }
+
+    function esc(text) {
+      return String(text || "")
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;");
+    }
+
+    function inferScientificPrinciple(q) {
+      const text = (q.q || "").toLowerCase();
+      if (text.includes("freezing point") && text.includes("boiling point")) {
+        return "State changes depend on temperature relative to melting/freezing and boiling points at the stated pressure.";
+      }
+      if (text.includes("ionic bond") || text.includes("ionic bonding")) {
+        return "Ionic bonding is electron transfer from a metal to a non-metal, creating oppositely charged ions with electrostatic attraction.";
+      }
+      if (text.includes("resultant force") || text.includes("newton")) {
+        return "By Newton's laws, zero resultant force means zero acceleration, so velocity stays constant (including rest).";
+      }
+      if (text.includes("exothermic") || text.includes("endothermic")) {
+        return "Thermal energy transfer determines exothermic/endothermic behavior: exothermic releases heat, endothermic absorbs heat.";
+      }
+      if (text.includes("cell membrane") || text.includes("chloroplast") || text.includes("enzyme")) {
+        return "Biological function follows structure: organelles and biomolecules have specialized roles tied to their structure.";
+      }
+      if (q.subject === "biology") return "Use structure-function relationships and homeostasis principles to evaluate each option.";
+      if (q.subject === "chemistry") return "Use particle theory, bonding, conservation laws, and reaction energetics to eliminate incorrect choices.";
+      if (q.subject === "physics") return "Use force, energy, and motion equations plus unit consistency to validate the correct option.";
+      return "Apply core scientific laws and definitions directly from the stem to test each option.";
+    }
+
+    function explainOption(q, optionIdx) {
+      const text = (q.q || "").toLowerCase();
+      const opt = (q.opts[optionIdx] || "").toLowerCase();
+      const isCorrect = optionIdx === q.a;
+
+      if (text.includes("freezing point") && text.includes("boiling point")) {
+        if (isCorrect) return "At a temperature between freezing and boiling points, a liquid does not boil but can evaporate from the surface.";
+        if (opt.includes("boil")) return "Boiling needs the liquid to reach its boiling point at that pressure, which is not satisfied here.";
+        if (opt.includes("melt")) return "Melting is solid-to-liquid; the substance is already above freezing and in liquid state.";
+        if (opt.includes("sublim")) return "Sublimation is solid-to-gas; this does not match conditions for a liquid sample.";
+      }
+
+      if (text.includes("ionic bond") || text.includes("ionic bonding")) {
+        if (isCorrect) return "A metal loses electrons and a non-metal gains them, producing ions that attract strongly.";
+        if (opt.includes("non-metal")) return "Two non-metals generally share electrons to form covalent bonds, not ionic.";
+        if (opt.includes("two metals")) return "Metal-metal bonding is metallic bonding with delocalized electrons, not ionic transfer.";
+      }
+
+      if (text.includes("resultant force")) {
+        if (isCorrect) return "Zero resultant force implies no acceleration, so velocity is constant (possibly zero).";
+        if (opt.includes("accelerat")) return "Acceleration requires a non-zero resultant force, so this conflicts with the stem.";
+        if (opt.includes("circle")) return "Uniform circular motion requires centripetal force, so resultant force cannot be zero.";
+      }
+
+      if (text.includes("unit") || text.includes("power") || text.includes("energy")) {
+        if (isCorrect) return "Dimensional/unit analysis matches the required physical quantity.";
+      }
+
+      if (!isCorrect && /\balways\b|\bnever\b|\bonly\b/.test(opt)) {
+        return "This option uses an absolute claim that is not universally valid under scientific conditions.";
+      }
+
+      return isCorrect
+        ? "This option is consistent with the scientific definition and the conditions given in the question."
+        : "This option conflicts with the scientific conditions or definition required by the stem.";
+    }
+
+    function buildScientificFeedback(q, selectedIdx) {
+      const isCorrect = selectedIdx === q.a;
+      const correctLetter = String.fromCharCode(65 + q.a);
+      const selectedLetter = String.fromCharCode(65 + selectedIdx);
+      const principle = inferScientificPrinciple(q);
+      const correctWhy = explainOption(q, q.a);
+      const selectedWhy = explainOption(q, selectedIdx);
+
+      const optionChecks = q.opts.map((opt, i) => {
+        const mark = i === q.a ? "Correct" : "Not correct";
+        return `<li><b>${String.fromCharCode(65 + i)}) ${esc(opt)}:</b> ${esc(explainOption(q, i))} <b>(${mark})</b></li>`;
+      }).join("");
+
+      if (isCorrect) {
+        return `
+          <b style="color:var(--good)">Correct (${selectedLetter}).</b><br>
+          <b>Scientific principle:</b> ${esc(principle)}<br>
+          <b>Why this is correct:</b> ${esc(correctWhy)}<br>
+          <b>Option analysis:</b><ul>${optionChecks}</ul>
+        `;
+      }
+
+      return `
+        <b style="color:var(--bad)">Wrong (${selectedLetter}). Correct answer: ${correctLetter}.</b><br>
+        <b>Scientific principle:</b> ${esc(principle)}<br>
+        <b>Why your choice is wrong:</b> ${esc(selectedWhy)}<br>
+        <b>Why the correct answer is right:</b> ${esc(correctWhy)}<br>
+        <b>Option analysis:</b><ul>${optionChecks}</ul>
+      `;
+    }
+
+    async function syncAttemptOnline(entry) {
+      if (!state.online.enabled || !state.online.uid) return;
+      const uid = state.online.uid;
+      await state.online.db.collection("users").doc(uid).collection("history").add(entry);
+      await state.online.db.collection("stats").doc(uid).set({
+        uid,
+        name: state.profile.batmanMode ? "Batman Signal" : (state.profile.name || "User"),
+        pic: state.profile.batmanMode ? "" : (state.profile.pic || ""),
+        batmanMode: Boolean(state.profile.batmanMode),
+        solvedTotal: firebase.firestore.FieldValue.increment(1),
+        solvedCorrect: firebase.firestore.FieldValue.increment(entry.ok ? 1 : 0),
+        updatedAt: firebase.firestore.FieldValue.serverTimestamp()
+      }, { merge: true });
+    }
+
+    async function answerQuestion(idx, clickedBtn) {
+      if (!state.current) return;
+      const q = state.current;
+      const buttons = Array.from(document.querySelectorAll("#options .opt"));
+      buttons.forEach((b, i) => {
+        b.disabled = true;
+        if (i === q.a) b.classList.add("correct");
+      });
+
+      const isCorrect = idx === q.a;
+      if (!isCorrect) clickedBtn.classList.add("wrong");
+      if (isCorrect) { tone(680); tone(920, .1); state.streak += 1; } else { tone(210, .22); state.streak = 0; }
+
+      const fb = document.getElementById("feedback");
+      fb.hidden = false;
+      fb.innerHTML = buildScientificFeedback(q, idx);
+
+      const entry = {
+        at: new Date().toISOString(),
+        subject: q.subject,
+        topic: q.topic,
+        q: q.q,
+        your: idx,
+        correct: q.a,
+        ok: isCorrect,
+        number: q.number || null,
+        paper: q.paper || ""
+      };
+
+      state.history.push(entry);
+      state.history = state.history.slice(-100);
+      saveState();
+      await syncAttemptOnline(entry);
+      checkAchievements();
+      renderHistory();
+      await renderLeaderboard();
+      renderHomeAuth();
+    }
+
+    function saveCurrent() {
+      if (!state.current) return;
+      const fb = document.getElementById("feedback").textContent.trim();
+      if (!fb) return alert("Answer first, then save.");
+      state.saved.push({ q: state.current.q, feedback: fb, time: new Date().toISOString() });
+      saveState();
+      document.getElementById("savedCount").textContent = `${state.saved.length} saved`;
+    }
+
+    function computeStats() {
+      const h = state.history;
+      const total = h.length || 1;
+      const correct = h.filter(x => x.ok).length;
+      const bySubject = ["biology", "chemistry", "physics"].map(s => {
+        const a = h.filter(x => x.subject === s);
+        const p = a.length ? Math.round(100 * a.filter(x => x.ok).length / a.length) : 0;
+        return `${s}: ${p}%`;
+      }).join(" | ");
+      const topics = [...new Set(h.map(x => x.topic))].map(t => {
+        const a = h.filter(x => x.topic === t);
+        const p = Math.round(100 * a.filter(x => x.ok).length / a.length);
+        return `${t}: ${p}%`;
+      }).join(" | ") || "No topic data";
+      return { total: h.length, overall: Math.round(100 * correct / total), bySubject, byTopic: topics };
+    }
+
+    function renderHistory() {
+      const s = computeStats();
+      document.getElementById("stats").innerHTML = `<p><b>Total:</b> ${s.total} | <b>Overall Correct:</b> ${s.overall}%</p><p><b>By Subject:</b> ${s.bySubject}</p><p><b>By Topic:</b> ${s.byTopic}</p>`;
+      document.getElementById("historyList").innerHTML = state.history.slice().reverse().map(h =>
+        `<div class="history-item"><b>${new Date(h.at).toLocaleString()}</b> | <b>${h.subject}/${h.topic}</b> | <b>${h.ok ? "Correct" : "Wrong"}</b></div>`
+      ).join("") || "<div class='history-item'><b>No attempts yet.</b></div>";
+      renderAchievements();
+    }
+
+    function subjectAcc(subject) {
+      const a = state.history.filter(x => x.subject === subject);
+      if (!a.length) return 0;
+      return Math.round(100 * a.filter(x => x.ok).length / a.length);
+    }
+
+    function computeStreak() {
+      let streak = 0;
+      for (let i = state.history.length - 1; i >= 0; i--) {
+        if (!state.history[i].ok) break;
+        streak++;
+      }
+      return streak;
+    }
+
+    function achievementList() {
+      const stats = computeStats();
+      return [
+        { id: "100", icon: "🏅", name: "100 Questions Solver", ok: stats.total >= 100 },
+        { id: "streak20", icon: "🔥", name: "20 in a Row", ok: computeStreak() >= 20 },
+        { id: "bioMaster", icon: "🧬", name: "Best Biology Solver", ok: subjectAcc("biology") >= 80 && state.history.filter(x => x.subject === "biology").length >= 10 },
+        { id: "chemMaster", icon: "⚗️", name: "Best Chemistry Solver", ok: subjectAcc("chemistry") >= 80 && state.history.filter(x => x.subject === "chemistry").length >= 10 },
+        { id: "phyMaster", icon: "🛰️", name: "Best Physics Solver", ok: subjectAcc("physics") >= 80 && state.history.filter(x => x.subject === "physics").length >= 10 }
+      ];
+    }
+
+    function checkAchievements() {
+      for (const a of achievementList()) {
+        if (a.ok && !state.achievements.includes(a.id)) {
+          state.achievements.push(a.id);
+          const pop = document.createElement("div");
+          pop.className = "popup";
+          pop.textContent = `${a.icon} Achievement unlocked: ${a.name}`;
+          document.body.appendChild(pop);
+          setTimeout(() => pop.remove(), 3200);
+        }
+      }
+      saveState();
+    }
+
+    function renderAchievements() {
+      document.getElementById("achievements").innerHTML = achievementList().map(a =>
+        `<div class="achievement ${state.achievements.includes(a.id) ? "unlocked" : ""}"><b>${a.icon} ${a.name}</b><br><small>${state.achievements.includes(a.id) ? "Unlocked" : "Locked"}</small></div>`
+      ).join("");
+    }
+
+    async function renderLeaderboard() {
+      const list = document.getElementById("leaderboardList");
+      if (state.online.enabled) {
+        const snap = await state.online.db.collection("stats").orderBy("solvedCorrect", "desc").limit(50).get();
+        if (snap.empty) {
+          list.innerHTML = "<div class='history-item'><b>No users yet.</b></div>";
+          return;
+        }
+        list.innerHTML = snap.docs.map((d, i) => {
+          const u = d.data();
+          const name = u.batmanMode ? "Batman Signal" : (u.name || "User");
+          return `<div class="entry" title="${name}"><span><b>#${i + 1} ${name}</b></span><strong>${u.solvedCorrect || 0} solved</strong></div>`;
+        }).join("");
+        return;
+      }
+
+      if (!state.profile.loggedIn) {
+        list.innerHTML = "<div class='history-item'><b>Sign in to appear in leaderboard.</b></div>";
+      } else {
+        const meName = state.profile.batmanMode ? "Batman Signal" : (state.profile.name || "You");
+        list.innerHTML = `<div class="entry" title="Local profile"><span><b>#1 ${meName}</b></span><strong>${state.history.filter(x => x.ok).length} solved</strong></div>`;
+      }
+    }
+
+    function setTheme(theme) {
+      document.body.setAttribute("data-theme", theme);
+      state.profile.theme = theme;
+      saveState();
+    }
+
+    async function submitReport() {
+      const reportStatus = document.getElementById("reportStatus");
+      const type = document.getElementById("reportType").value;
+      const text = document.getElementById("reportText").value.trim();
+      const file = document.getElementById("attachment").files[0] || null;
+      if (!text) return alert("Please add details.");
+
+      reportStatus.textContent = "Submitting...";
+
+      if (state.online.enabled && state.online.uid) {
+        let attachmentUrl = "";
+        let attachmentName = "";
+
+        if (file) {
+          attachmentName = file.name;
+          const path = `reports/${state.online.uid}/${Date.now()}_${file.name}`;
+          const ref = state.online.storage.ref(path);
+          await ref.put(file);
+          attachmentUrl = await ref.getDownloadURL();
+        }
+
+        await state.online.db.collection("reports").add({
+          uid: state.online.uid,
+          email: state.profile.email || "",
+          type,
+          message: text,
+          attachmentName,
+          attachmentUrl,
+          createdAt: firebase.firestore.FieldValue.serverTimestamp()
+        });
+        reportStatus.textContent = "Submitted online.";
+      } else {
+        const localReports = JSON.parse(localStorage.getItem("solverlife-reports") || "[]");
+        localReports.push({
+          at: new Date().toISOString(),
+          type,
+          message: text,
+          attachmentName: file ? file.name : ""
+        });
+        localStorage.setItem("solverlife-reports", JSON.stringify(localReports));
+        reportStatus.textContent = "Saved locally. Configure Firebase for online reports.";
+      }
+
+      document.getElementById("reportText").value = "";
+      document.getElementById("attachment").value = "";
+    }
+
+    async function authAction(mode) {
+      const email = document.getElementById("authEmail").value.trim();
+      const password = document.getElementById("authPassword").value;
+      const captchaInput = document.getElementById("authCaptchaInput").value.trim().toUpperCase();
+      const authStatus = document.getElementById("authStatus");
+
+      if (!email || !password) return (authStatus.textContent = "Email and password required.");
+      if (password.length < 6) return (authStatus.textContent = "Password must be at least 6 characters.");
+      if (captchaInput !== state.captcha) return (authStatus.textContent = "Captcha mismatch.");
+
+      try {
+        if (state.online.enabled) {
+          if (mode === "register") {
+            await state.online.auth.createUserWithEmailAndPassword(email, password);
+          } else {
+            await state.online.auth.signInWithEmailAndPassword(email, password);
+          }
+          authStatus.textContent = "Authenticated.";
+        } else {
+          const users = JSON.parse(localStorage.getItem("solverlife-users") || "{}");
+          if (mode === "register") {
+            if (users[email]) throw new Error("User already exists locally.");
+            users[email] = { password };
+            localStorage.setItem("solverlife-users", JSON.stringify(users));
+          } else {
+            if (!users[email] || users[email].password !== password) throw new Error("Invalid local credentials.");
+          }
+          state.profile.loggedIn = true;
+          state.profile.email = email;
+          if (!state.profile.name) state.profile.name = email.split("@")[0];
+          saveState();
+          authStatus.textContent = "Authenticated (local mode).";
+          renderHomeAuth();
+          renderLeaderboard();
+        }
+
+        document.getElementById("authModal").classList.remove("open");
+      } catch (err) {
+        authStatus.textContent = err.message || "Authentication failed.";
+      }
+    }
+
+    function bind() {
+      document.getElementById("startSession").onclick = startSession;
+      document.getElementById("nextBtn").onclick = nextQuestion;
+      document.getElementById("saveBtn").onclick = saveCurrent;
+      document.getElementById("savedCount").textContent = `${state.saved.length} saved`;
+
+      document.getElementById("sendReport").onclick = submitReport;
+
+      const authModal = document.getElementById("authModal");
+      document.getElementById("closeAuth").onclick = () => authModal.classList.remove("open");
+      document.getElementById("refreshCaptcha").onclick = generateCaptcha;
+      document.getElementById("loginBtn").onclick = () => authAction("login");
+      document.getElementById("registerBtn").onclick = () => authAction("register");
+
+      document.getElementById("saveProfile").onclick = async () => {
+        state.profile.name = document.getElementById("profileName").value.trim();
+        state.profile.pic = document.getElementById("profilePic").value.trim();
+        state.profile.batmanMode = document.getElementById("batmanMode").checked;
+        setTheme(document.getElementById("themeSelect").value);
+        saveState();
+
+        if (state.online.enabled && state.online.uid) {
+          await state.online.db.collection("users").doc(state.online.uid).set({
+            name: state.profile.name || "",
+            email: state.profile.email || "",
+            pic: state.profile.pic || "",
+            batmanMode: Boolean(state.profile.batmanMode),
+            theme: state.profile.theme || "default",
+            updatedAt: firebase.firestore.FieldValue.serverTimestamp()
+          }, { merge: true });
+        }
+
+        await renderLeaderboard();
+        renderHomeAuth();
+        alert("Profile updated.");
+      };
+
+      document.getElementById("themeSelect").onchange = (e) => setTheme(e.target.value);
+    }
+
+    function hydrateProfile() {
+      document.getElementById("profileName").value = state.profile.name || "";
+      document.getElementById("profileEmail").value = state.profile.email || "";
+      document.getElementById("profilePic").value = state.profile.pic || "";
+      document.getElementById("batmanMode").checked = Boolean(state.profile.batmanMode);
+      document.getElementById("themeSelect").value = state.profile.theme || "default";
+      setTheme(state.profile.theme || "default");
+    }
+
+    setupFirebase();
+    buildNav();
+    setTopicOptions();
+    bind();
+    hydrateProfile();
+    renderHomeAuth();
+    renderHistory();
+    renderLeaderboard();
+  </script>
+</body>
+</html>
