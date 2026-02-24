@@ -1,0 +1,1142 @@
+window.SOLVERLIFE_BANK = {
+  "generatedAt": "2026-02-24T22:50:40.502274",
+  "count": 71,
+  "questions": [
+    {
+      "subject": "biology",
+      "topic": "cells",
+      "q": "All living things can remove toxic materials and other substances that are in excess of requirements. What is this process called?",
+      "opts": [
+        "egestion",
+        "excretion",
+        "nutrition",
+        "respiration"
+      ],
+      "a": 1,
+      "why": "Official mark scheme answer: B. This option matches the key.",
+      "paper": "assets/papers/biology/Biology - Paper 1/November 2021 (v2) QP - Paper 1 CAIE Biology IGCSE.pdf",
+      "year": 2021,
+      "number": 1
+    },
+    {
+      "subject": "biology",
+      "topic": "genetics",
+      "q": "The table shows features of some animals. Which animal is a mammal? gills hair scales wings",
+      "opts": [
+        "\u0016 \u001a \u001a \u001a key",
+        "\u0016 \u001a \u0016 \u001a \u0016 = present",
+        "\u001a \u0016 \u001a \u0016 \u001a = absent",
+        "\u001a \u001a \u0016 \u0016"
+      ],
+      "a": 2,
+      "why": "Official mark scheme answer: C. This option matches the key.",
+      "paper": "assets/papers/biology/Biology - Paper 1/November 2021 (v2) QP - Paper 1 CAIE Biology IGCSE.pdf",
+      "year": 2021,
+      "number": 2
+    },
+    {
+      "subject": "biology",
+      "topic": "human-biology",
+      "q": "phagocytosis Which features can prevent pathogens entering body tissues?",
+      "opts": [
+        "1, 2, 3 and 4",
+        "1, 2 and 3 only",
+        "2 and 3 only",
+        "4 only"
+      ],
+      "a": 1,
+      "why": "Official mark scheme answer: B. This option matches the key.",
+      "paper": "assets/papers/biology/Biology - Paper 1/November 2021 (v2) QP - Paper 1 CAIE Biology IGCSE.pdf",
+      "year": 2021,
+      "number": 4
+    },
+    {
+      "subject": "biology",
+      "topic": "enzymes",
+      "q": "The diagram shows some cells. cilia cytoplasm nucleus Where are these cells found?",
+      "opts": [
+        "alimentary canal",
+        "blood",
+        "bronchus",
+        "plant roots 2021 /O/N/21 [Turn over"
+      ],
+      "a": 2,
+      "why": "Official mark scheme answer: C. This option matches the key.",
+      "paper": "assets/papers/biology/Biology - Paper 1/November 2021 (v2) QP - Paper 1 CAIE Biology IGCSE.pdf",
+      "year": 2021,
+      "number": 5
+    },
+    {
+      "subject": "biology",
+      "topic": "genetics",
+      "q": "Which statement about diffusion is correct?",
+      "opts": [
+        "The process requires energy from respiration.",
+        "The particles must cross a cell membrane.",
+        "The net movement of particles is up a concentration gradient.",
+        "The process involves the random movement of particles."
+      ],
+      "a": 3,
+      "why": "Official mark scheme answer: D. This option matches the key.",
+      "paper": "assets/papers/biology/Biology - Paper 1/November 2021 (v2) QP - Paper 1 CAIE Biology IGCSE.pdf",
+      "year": 2021,
+      "number": 7
+    },
+    {
+      "subject": "biology",
+      "topic": "ecology",
+      "q": "The cells in a plant root have a higher concentration of magnesium ions than in the surrounding soil. Which process will move the magnesium ions into the root?",
+      "opts": [
+        "active transport",
+        "diffusion",
+        "osmosis",
+        "transpiration 2021 /O/N/21"
+      ],
+      "a": 0,
+      "why": "Official mark scheme answer: A. This option matches the key.",
+      "paper": "assets/papers/biology/Biology - Paper 1/November 2021 (v2) QP - Paper 1 CAIE Biology IGCSE.pdf",
+      "year": 2021,
+      "number": 8
+    },
+    {
+      "subject": "biology",
+      "topic": "enzymes",
+      "q": "An experiment was carried out to investigate the effect of pH on enzyme action. The graph shows the results. y-axis x-axis What are the labels for the x-axis and the y-axis? x-axis y-axis",
+      "opts": [
+        "pH rate of reaction",
+        "pH time",
+        "rate of reaction pH",
+        "time pH 2021 /O/N/21 [Turn over"
+      ],
+      "a": 0,
+      "why": "Official mark scheme answer: A. This option matches the key.",
+      "paper": "assets/papers/biology/Biology - Paper 1/November 2021 (v2) QP - Paper 1 CAIE Biology IGCSE.pdf",
+      "year": 2021,
+      "number": 10
+    },
+    {
+      "subject": "biology",
+      "topic": "genetics",
+      "q": "The diagram shows a cross-section through a leaf. X What is the structure labelled X?",
+      "opts": [
+        "cuticle",
+        "palisade mesophyll",
+        "spongy mesophyll",
+        "stomata 2021 /O/N/21"
+      ],
+      "a": 0,
+      "why": "Official mark scheme answer: A. This option matches the key.",
+      "paper": "assets/papers/biology/Biology - Paper 1/November 2021 (v2) QP - Paper 1 CAIE Biology IGCSE.pdf",
+      "year": 2021,
+      "number": 12
+    },
+    {
+      "subject": "biology",
+      "topic": "human-biology",
+      "q": "What is the dietary importance of carbohydrates?",
+      "opts": [
+        "to promote healthy bones and teeth",
+        "to make fats",
+        "to provide energy for the body",
+        "to make proteins"
+      ],
+      "a": 2,
+      "why": "Official mark scheme answer: C. This option matches the key.",
+      "paper": "assets/papers/biology/Biology - Paper 1/November 2021 (v2) QP - Paper 1 CAIE Biology IGCSE.pdf",
+      "year": 2021,
+      "number": 14
+    },
+    {
+      "subject": "biology",
+      "topic": "enzymes",
+      "q": "The diagram shows a large food molecule changing into smaller molecules. process X What is process X?",
+      "opts": [
+        "absorption",
+        "chewing",
+        "digestion",
+        "secretion 2021 /O/N/21 [Turn over"
+      ],
+      "a": 2,
+      "why": "Official mark scheme answer: C. This option matches the key.",
+      "paper": "assets/papers/biology/Biology - Paper 1/November 2021 (v2) QP - Paper 1 CAIE Biology IGCSE.pdf",
+      "year": 2021,
+      "number": 15
+    },
+    {
+      "subject": "biology",
+      "topic": "genetics",
+      "q": "Which shows the correct order of structures that air travels through when a human breathes in?",
+      "opts": [
+        "alveoli \uf0ae trachea \uf0ae bronchioles \uf0ae bronchi",
+        "trachea \uf0ae bronchi \uf0ae bronchioles \uf0ae alveoli",
+        "alveoli \uf0ae bronchioles \uf0ae bronchi \uf0ae trachea",
+        "trachea \uf0ae bronchioles \uf0ae bronchi \uf0ae alveoli 2021 /O/N/21"
+      ],
+      "a": 1,
+      "why": "Official mark scheme answer: B. This option matches the key.",
+      "paper": "assets/papers/biology/Biology - Paper 1/November 2021 (v2) QP - Paper 1 CAIE Biology IGCSE.pdf",
+      "year": 2021,
+      "number": 22
+    },
+    {
+      "subject": "biology",
+      "topic": "ecology",
+      "q": "Which chemicals are needed to release energy in aerobic respiration?",
+      "opts": [
+        "carbon dioxide and glucose",
+        "carbon dioxide and water",
+        "oxygen and glucose",
+        "oxygen and water"
+      ],
+      "a": 2,
+      "why": "Official mark scheme answer: C. This option matches the key.",
+      "paper": "assets/papers/biology/Biology - Paper 1/November 2021 (v2) QP - Paper 1 CAIE Biology IGCSE.pdf",
+      "year": 2021,
+      "number": 23
+    },
+    {
+      "subject": "biology",
+      "topic": "human-biology",
+      "q": "Yeast is an organism used in the production of biofuels. Which statement describes why yeast is used for biofuel production?",
+      "opts": [
+        "Yeast respires aerobically to produce carbon dioxide.",
+        "Yeast respires aerobically to produce carbon dioxide and ethanol.",
+        "Yeast respires anaerobically to produce carbon dioxide.",
+        "Yeast respires anaerobically to produce carbon dioxide and ethanol."
+      ],
+      "a": 3,
+      "why": "Official mark scheme answer: D. This option matches the key.",
+      "paper": "assets/papers/biology/Biology - Paper 1/November 2021 (v2) QP - Paper 1 CAIE Biology IGCSE.pdf",
+      "year": 2021,
+      "number": 24
+    },
+    {
+      "subject": "biology",
+      "topic": "enzymes",
+      "q": "The diagram shows part of the excretory system of a female mammal. X What is tube X?",
+      "opts": [
+        "ureter",
+        "urethra",
+        "uterus",
+        "vein 2021 /O/N/21 [Turn over"
+      ],
+      "a": 0,
+      "why": "Official mark scheme answer: A. This option matches the key.",
+      "paper": "assets/papers/biology/Biology - Paper 1/November 2021 (v2) QP - Paper 1 CAIE Biology IGCSE.pdf",
+      "year": 2021,
+      "number": 25
+    },
+    {
+      "subject": "biology",
+      "topic": "human-biology",
+      "q": "Which substance can be used to treat a bacterial infection?",
+      "opts": [
+        "adrenaline",
+        "antibiotics",
+        "antigens",
+        "insulin"
+      ],
+      "a": 1,
+      "why": "Official mark scheme answer: B. This option matches the key.",
+      "paper": "assets/papers/biology/Biology - Paper 1/November 2021 (v2) QP - Paper 1 CAIE Biology IGCSE.pdf",
+      "year": 2021,
+      "number": 29
+    },
+    {
+      "subject": "biology",
+      "topic": "enzymes",
+      "q": "Fertilisation is defined as the fusion of the \u2026\u2026X\u2026\u2026 of two gametes to form a \u2026\u2026Y\u2026\u2026 . Which row completes the sentence? X Y",
+      "opts": [
+        "alleles sex cell",
+        "alleles zygote",
+        "nuclei sex cell",
+        "nuclei zygote"
+      ],
+      "a": 3,
+      "why": "Official mark scheme answer: D. This option matches the key.",
+      "paper": "assets/papers/biology/Biology - Paper 1/November 2021 (v2) QP - Paper 1 CAIE Biology IGCSE.pdf",
+      "year": 2021,
+      "number": 30
+    },
+    {
+      "subject": "biology",
+      "topic": "cells",
+      "q": "What is the correct description of pollination?",
+      "opts": [
+        "Pollen grains are transferred from the anther to the ovary.",
+        "Pollen grains are transferred from the anther to the stigma.",
+        "Pollen grains are transferred from the ovary to the stigma.",
+        "Pollen grains are transferred from the stamen to the anther."
+      ],
+      "a": 1,
+      "why": "Official mark scheme answer: B. This option matches the key.",
+      "paper": "assets/papers/biology/Biology - Paper 1/November 2021 (v2) QP - Paper 1 CAIE Biology IGCSE.pdf",
+      "year": 2021,
+      "number": 31
+    },
+    {
+      "subject": "biology",
+      "topic": "ecology",
+      "q": "Which of these determine the sex of humans?",
+      "opts": [
+        "X and Y genes",
+        "X and Y alleles",
+        "X and Y chromosomes",
+        "X and Y genotypes 2021 /O/N/21 [Turn over"
+      ],
+      "a": 2,
+      "why": "Official mark scheme answer: C. This option matches the key.",
+      "paper": "assets/papers/biology/Biology - Paper 1/November 2021 (v2) QP - Paper 1 CAIE Biology IGCSE.pdf",
+      "year": 2021,
+      "number": 33
+    },
+    {
+      "subject": "biology",
+      "topic": "human-biology",
+      "q": "Part of a tree branch is broken off and planted in the soil. A new tree grows from the branch. Which row is correct? the cells in the new the cells in the original tree and tree are formed by in the new tree will be genetically meiosis mitosis different identical",
+      "opts": [
+        "\u0016 \u001a \u0016 \u001a key",
+        "\u001a \u0016 \u001a \u0016 \u0016 = correct",
+        "\u001a \u0016 \u0016 \u001a \u001a = not correct",
+        "\u0016 \u001a \u001a \u0016"
+      ],
+      "a": 1,
+      "why": "Official mark scheme answer: B. This option matches the key.",
+      "paper": "assets/papers/biology/Biology - Paper 1/November 2021 (v2) QP - Paper 1 CAIE Biology IGCSE.pdf",
+      "year": 2021,
+      "number": 34
+    },
+    {
+      "subject": "biology",
+      "topic": "cells",
+      "q": "The diagram shows a food chain. grass grasshopper frog snake hawk What is the tertiary consumer in this food chain?",
+      "opts": [
+        "frog",
+        "grasshopper",
+        "hawk",
+        "snake 2021 /O/N/21"
+      ],
+      "a": 3,
+      "why": "Official mark scheme answer: D. This option matches the key.",
+      "paper": "assets/papers/biology/Biology - Paper 1/November 2021 (v2) QP - Paper 1 CAIE Biology IGCSE.pdf",
+      "year": 2021,
+      "number": 36
+    },
+    {
+      "subject": "biology",
+      "topic": "genetics",
+      "q": "The diagram shows the water cycle. S Q R P land river sea The table shows the processes involved in the water cycle. Which row is correct? condensation evaporation precipitation transpiration",
+      "opts": [
+        "P Q R S",
+        "R S Q P",
+        "S R P Q",
+        "Q P S R"
+      ],
+      "a": 3,
+      "why": "Official mark scheme answer: D. This option matches the key.",
+      "paper": "assets/papers/biology/Biology - Paper 1/November 2021 (v2) QP - Paper 1 CAIE Biology IGCSE.pdf",
+      "year": 2021,
+      "number": 37
+    },
+    {
+      "subject": "biology",
+      "topic": "ecology",
+      "q": "Which process releases carbon dioxide into the atmosphere?",
+      "opts": [
+        "decomposition",
+        "fossilisation",
+        "photosynthesis",
+        "transpiration"
+      ],
+      "a": 0,
+      "why": "Official mark scheme answer: A. This option matches the key.",
+      "paper": "assets/papers/biology/Biology - Paper 1/November 2021 (v2) QP - Paper 1 CAIE Biology IGCSE.pdf",
+      "year": 2021,
+      "number": 38
+    },
+    {
+      "subject": "biology",
+      "topic": "human-biology",
+      "q": "What is the useful product of anaerobic respiration in the manufacture of bread?",
+      "opts": [
+        "carbon dioxide",
+        "ethanol",
+        "lactic acid",
+        "oxygen 2021 /O/N/21 [Turn over"
+      ],
+      "a": 0,
+      "why": "Official mark scheme answer: A. This option matches the key.",
+      "paper": "assets/papers/biology/Biology - Paper 1/November 2021 (v2) QP - Paper 1 CAIE Biology IGCSE.pdf",
+      "year": 2021,
+      "number": 39
+    },
+    {
+      "subject": "biology",
+      "topic": "enzymes",
+      "q": "What are reasons why species become endangered?",
+      "opts": [
+        "habitat destruction, hunting and introduced species",
+        "habitat protection, introduced species and monitoring",
+        "habitat destruction, hunting and captive breeding programmes",
+        "hunting, pollution and seed banks Permission to reproduce items where third-party owned material protected by copyright is included has been sought and cleared where possible. Every reasonable effort has been made by the publisher (UCLES) to trace copyright holders, but if any items requiring clearance have unwittingly been included, the publisher will be pleased to make amends at the earliest possible opportunity. To avoid the issue of disclosure of answer-related information to candidates, all copyright acknowledgements are reproduced online in the Cambridge Assessment International Education Copyright Acknowledgements Booklet. This is produced for each series of examinations and is freely available to download at www.cambridgeinternational.org after the live examination series. Cambridge Assessment International Education is part of the Cambridge Assessment Group. Cambridge Assessment is the brand name of the University of Cambridge Local Examinations Syndicate (UCLES), which itself is a department of the University of Cambridge. 2021 /O/N/21"
+      ],
+      "a": 0,
+      "why": "Official mark scheme answer: A. This option matches the key.",
+      "paper": "assets/papers/biology/Biology - Paper 1/November 2021 (v2) QP - Paper 1 CAIE Biology IGCSE.pdf",
+      "year": 2021,
+      "number": 40
+    },
+    {
+      "subject": "chemistry",
+      "topic": "bonding",
+      "q": "Decane has a freezing point of \u201330 \u00b0C and a boiling point of 174 \u00b0C.",
+      "opts": [
+        "It boils.",
+        "It evaporates.",
+        "It melts.",
+        "It sublimes."
+      ],
+      "a": 1,
+      "why": "Official mark scheme answer: B. This option matches the key.",
+      "paper": "assets/papers/chemistry/Chemistry - Paper 2/November 2021 (v1) QP - Paper 2 CAIE Chemistry IGCSE.pdf",
+      "year": 2021,
+      "number": 1
+    },
+    {
+      "subject": "chemistry",
+      "topic": "organic",
+      "q": "Which statement explains why metals conduct electricity when solid?",
+      "opts": [
+        "They have atoms which are free to move.",
+        "They have electrons which are free to move.",
+        "They have molecules which are free to move.",
+        "They have positive ions which are free to move."
+      ],
+      "a": 1,
+      "why": "Official mark scheme answer: B. This option matches the key.",
+      "paper": "assets/papers/chemistry/Chemistry - Paper 2/November 2021 (v1) QP - Paper 2 CAIE Chemistry IGCSE.pdf",
+      "year": 2021,
+      "number": 4
+    },
+    {
+      "subject": "chemistry",
+      "topic": "electrolysis",
+      "q": "Which description of brass is correct?",
+      "opts": [
+        "alloy",
+        "compound",
+        "element",
+        "non-metal"
+      ],
+      "a": 0,
+      "why": "Official mark scheme answer: A. This option matches the key.",
+      "paper": "assets/papers/chemistry/Chemistry - Paper 2/November 2021 (v1) QP - Paper 2 CAIE Chemistry IGCSE.pdf",
+      "year": 2021,
+      "number": 5
+    },
+    {
+      "subject": "chemistry",
+      "topic": "stoichiometry",
+      "q": "Which statement describes the attractive forces between molecules?",
+      "opts": [
+        "They are strong covalent bonds which hold molecules together.",
+        "They are strong ionic bonds which hold molecules together.",
+        "They are weak forces formed between covalently-bonded molecules.",
+        "They are weak forces which hold ions together in a lattice."
+      ],
+      "a": 2,
+      "why": "Official mark scheme answer: C. This option matches the key.",
+      "paper": "assets/papers/chemistry/Chemistry - Paper 2/November 2021 (v1) QP - Paper 2 CAIE Chemistry IGCSE.pdf",
+      "year": 2021,
+      "number": 7
+    },
+    {
+      "subject": "chemistry",
+      "topic": "acids-bases",
+      "q": "Which statement about carbon is correct?",
+      "opts": [
+        "Diamond and graphite both have simple molecular structures.",
+        "Diamond and graphite are both used to make cutting tools.",
+        "Each carbon atom in diamond is bonded to three other carbon atoms.",
+        "Graphite conducts electricity and has a giant covalent structure."
+      ],
+      "a": 3,
+      "why": "Official mark scheme answer: D. This option matches the key.",
+      "paper": "assets/papers/chemistry/Chemistry - Paper 2/November 2021 (v1) QP - Paper 2 CAIE Chemistry IGCSE.pdf",
+      "year": 2021,
+      "number": 8
+    },
+    {
+      "subject": "chemistry",
+      "topic": "bonding",
+      "q": "Chlorine reacts with ethane to produce chloroethane and hydrogen chloride. H H H H H C C H + Cl Cl H C C Cl + H Cl H H H H The reaction is exothermic. The bond energies are shown in the table. bond energy bond in kJ / mol C\u2013Cl +340 C\u2013C +350 C\u2013H +410 Cl \u2013Cl +240 H\u2013Cl +430 What is the energy change for the reaction?",
+      "opts": [
+        "\u20131420 kJ / mol",
+        "\u2013120 kJ / mol",
+        "+120 kJ / mol",
+        "+1420 kJ / mol 2021 /O/N/21"
+      ],
+      "a": 1,
+      "why": "Official mark scheme answer: B. This option matches the key.",
+      "paper": "assets/papers/chemistry/Chemistry - Paper 2/November 2021 (v1) QP - Paper 2 CAIE Chemistry IGCSE.pdf",
+      "year": 2021,
+      "number": 11
+    },
+    {
+      "subject": "chemistry",
+      "topic": "organic",
+      "q": "Ammonia is made by reacting nitrogen with hydrogen. The equation for the reaction is shown. N2(g) + 3H2(g) 2NH3(g) The forward reaction is exothermic. Which changes in temperature and pressure decrease the yield of ammonia? temperature pressure",
+      "opts": [
+        "decrease decrease",
+        "decrease increase",
+        "increase decrease",
+        "increase increase 2021 /O/N/21 over [Turn"
+      ],
+      "a": 2,
+      "why": "Official mark scheme answer: C. This option matches the key.",
+      "paper": "assets/papers/chemistry/Chemistry - Paper 2/November 2021 (v1) QP - Paper 2 CAIE Chemistry IGCSE.pdf",
+      "year": 2021,
+      "number": 14
+    },
+    {
+      "subject": "chemistry",
+      "topic": "electrolysis",
+      "q": "X is a pink solid. Y is a blue solid. When X is heated, water is produced and the solid turns blue. When water is added to Y, the solid turns pink. What are X and Y? X Y",
+      "opts": [
+        "anhydrous cobalt(II) chloride hydrated cobalt(II) chloride",
+        "hydrated cobalt(II) chloride anhydrous cobalt(II) chloride",
+        "anhydrous copper(II) sulfate hydrated copper(II) sulfate",
+        "hydrated copper(II) sulfate anhydrous copper(II) sulfate"
+      ],
+      "a": 1,
+      "why": "Official mark scheme answer: B. This option matches the key.",
+      "paper": "assets/papers/chemistry/Chemistry - Paper 2/November 2021 (v1) QP - Paper 2 CAIE Chemistry IGCSE.pdf",
+      "year": 2021,
+      "number": 15
+    },
+    {
+      "subject": "chemistry",
+      "topic": "stoichiometry",
+      "q": "Which row describes the properties of an acid? property 1 property 2",
+      "opts": [
+        "proton acceptor pH less than 7",
+        "proton acceptor pH more than 7",
+        "proton donor pH less than 7",
+        "proton donor pH more than 7 2021 /O/N/21"
+      ],
+      "a": 2,
+      "why": "Official mark scheme answer: C. This option matches the key.",
+      "paper": "assets/papers/chemistry/Chemistry - Paper 2/November 2021 (v1) QP - Paper 2 CAIE Chemistry IGCSE.pdf",
+      "year": 2021,
+      "number": 17
+    },
+    {
+      "subject": "chemistry",
+      "topic": "acids-bases",
+      "q": "Which element forms an amphoteric oxide?",
+      "opts": [
+        "aluminium",
+        "carbon",
+        "magnesium",
+        "silicon"
+      ],
+      "a": 0,
+      "why": "Official mark scheme answer: A. This option matches the key.",
+      "paper": "assets/papers/chemistry/Chemistry - Paper 2/November 2021 (v1) QP - Paper 2 CAIE Chemistry IGCSE.pdf",
+      "year": 2021,
+      "number": 18
+    },
+    {
+      "subject": "chemistry",
+      "topic": "organic",
+      "q": "Copper(II) chloride crystals are made by adding solid copper(II) carbonate to dilute hydrochloric acid until no more dissolves. Which process is used to obtain pure copper(II) chloride crystals from the mixture?",
+      "opts": [
+        "distillation of the mixture",
+        "evaporation of the mixture",
+        "filtration followed by drying of the residue",
+        "filtration followed by evaporation of the filtrate"
+      ],
+      "a": 3,
+      "why": "Official mark scheme answer: D. This option matches the key.",
+      "paper": "assets/papers/chemistry/Chemistry - Paper 2/November 2021 (v1) QP - Paper 2 CAIE Chemistry IGCSE.pdf",
+      "year": 2021,
+      "number": 19
+    },
+    {
+      "subject": "chemistry",
+      "topic": "electrolysis",
+      "q": "Moving from right to left across the Periodic Table the elements show increasing metallic character. Why does metallic character increase from right to left across a period?",
+      "opts": [
+        "The atoms have more electrons in their outer shells.",
+        "The atoms more readily gain electrons to form negative ions.",
+        "The atoms more readily lose electrons to form positive ions.",
+        "The charge on the nucleus of each atom gets larger."
+      ],
+      "a": 2,
+      "why": "Official mark scheme answer: C. This option matches the key.",
+      "paper": "assets/papers/chemistry/Chemistry - Paper 2/November 2021 (v1) QP - Paper 2 CAIE Chemistry IGCSE.pdf",
+      "year": 2021,
+      "number": 20
+    },
+    {
+      "subject": "chemistry",
+      "topic": "stoichiometry",
+      "q": "Group VII elements show trends in their physical properties going down the group. element X Y Z chlorine \u2013101 \u201334 0.003 bromine \u20137 59 3.1 iodine 114 184 4.9 Which row shows the missing headings for the properties in the table? X Y Z",
+      "opts": [
+        "density in g / cm3 boiling point in \u00b0C melting point in \u00b0C",
+        "melting point in \u00b0C boiling point in \u00b0C density in g / cm3",
+        "boiling point in \u00b0C density in g / cm3 melting point in \u00b0C",
+        "boiling point in \u00b0C melting point in \u00b0C density in g / cm3"
+      ],
+      "a": 1,
+      "why": "Official mark scheme answer: B. This option matches the key.",
+      "paper": "assets/papers/chemistry/Chemistry - Paper 2/November 2021 (v1) QP - Paper 2 CAIE Chemistry IGCSE.pdf",
+      "year": 2021,
+      "number": 22
+    },
+    {
+      "subject": "chemistry",
+      "topic": "acids-bases",
+      "q": "Some properties of two metals, G and H, are shown. metal G metal H the formula of the chloride is GCl high melting point reacts with cold water has more than one oxidation state Which row about metals G and H is correct? metal G metal H",
+      "opts": [
+        "in Group I of the Periodic Table in Group II of the Periodic Table",
+        "in Group I of the Periodic Table transition metal",
+        "in Group II of the Periodic Table in Group I of the Periodic Table",
+        "in Group II of the Periodic Table transition metal"
+      ],
+      "a": 1,
+      "why": "Official mark scheme answer: B. This option matches the key.",
+      "paper": "assets/papers/chemistry/Chemistry - Paper 2/November 2021 (v1) QP - Paper 2 CAIE Chemistry IGCSE.pdf",
+      "year": 2021,
+      "number": 23
+    },
+    {
+      "subject": "chemistry",
+      "topic": "organic",
+      "q": "The noble gases are in Group VIII of the Periodic Table. Which statement explains why noble gases are unreactive?",
+      "opts": [
+        "They all have eight electrons in their outer shells.",
+        "They all have full outer shells.",
+        "They are all gases.",
+        "They are all monoatomic. 2021 /O/N/21"
+      ],
+      "a": 1,
+      "why": "Official mark scheme answer: B. This option matches the key.",
+      "paper": "assets/papers/chemistry/Chemistry - Paper 2/November 2021 (v1) QP - Paper 2 CAIE Chemistry IGCSE.pdf",
+      "year": 2021,
+      "number": 24
+    },
+    {
+      "subject": "chemistry",
+      "topic": "electrolysis",
+      "q": "Which statement is correct for all metals?",
+      "opts": [
+        "They conduct electricity when molten.",
+        "They gain electrons when they form ions.",
+        "They have a low density.",
+        "They have a low melting point."
+      ],
+      "a": 0,
+      "why": "Official mark scheme answer: A. This option matches the key.",
+      "paper": "assets/papers/chemistry/Chemistry - Paper 2/November 2021 (v1) QP - Paper 2 CAIE Chemistry IGCSE.pdf",
+      "year": 2021,
+      "number": 25
+    },
+    {
+      "subject": "chemistry",
+      "topic": "bonding",
+      "q": "Which statement about the extraction of metals is correct?",
+      "opts": [
+        "Aluminium is extracted from the ore bauxite by electrolysis.",
+        "Aluminium is extracted from the ore hematite by electrolysis.",
+        "Iron is extracted from the ore bauxite by electrolysis.",
+        "Iron is extracted from the ore hematite by electrolysis."
+      ],
+      "a": 0,
+      "why": "Official mark scheme answer: A. This option matches the key.",
+      "paper": "assets/papers/chemistry/Chemistry - Paper 2/November 2021 (v1) QP - Paper 2 CAIE Chemistry IGCSE.pdf",
+      "year": 2021,
+      "number": 26
+    },
+    {
+      "subject": "chemistry",
+      "topic": "stoichiometry",
+      "q": "Aluminium objects do not need protection from corrosion. Iron objects must be protected from corrosion. Which statement explains why aluminium resists corrosion?",
+      "opts": [
+        "Aluminium does not form ions easily.",
+        "Aluminium does not react with water or air.",
+        "Aluminium has a protective oxide layer.",
+        "Aluminium is below iron in the reactivity series."
+      ],
+      "a": 2,
+      "why": "Official mark scheme answer: C. This option matches the key.",
+      "paper": "assets/papers/chemistry/Chemistry - Paper 2/November 2021 (v1) QP - Paper 2 CAIE Chemistry IGCSE.pdf",
+      "year": 2021,
+      "number": 27
+    },
+    {
+      "subject": "chemistry",
+      "topic": "organic",
+      "q": "Covering iron with zinc prevents the iron from rusting even when the zinc is scratched. Covering iron with tin prevents the iron from rusting, but when the tin is scratched the iron underneath starts to rust. Which statement is correct?",
+      "opts": [
+        "Both tin and zinc prevent iron from rusting by sacrificial protection.",
+        "Both tin and zinc prevent iron from rusting by stopping water and carbon dioxide reaching the iron.",
+        "Tin is more reactive than iron and prevents iron from rusting until it is scratched.",
+        "Zinc loses electrons more easily than iron and prevents iron from rusting by corroding first."
+      ],
+      "a": 3,
+      "why": "Official mark scheme answer: D. This option matches the key.",
+      "paper": "assets/papers/chemistry/Chemistry - Paper 2/November 2021 (v1) QP - Paper 2 CAIE Chemistry IGCSE.pdf",
+      "year": 2021,
+      "number": 29
+    },
+    {
+      "subject": "chemistry",
+      "topic": "bonding",
+      "q": "Which raw material is used in the Contact process?",
+      "opts": [
+        "air",
+        "ammonia",
+        "carbon",
+        "nitrogen"
+      ],
+      "a": 0,
+      "why": "Official mark scheme answer: A. This option matches the key.",
+      "paper": "assets/papers/chemistry/Chemistry - Paper 2/November 2021 (v1) QP - Paper 2 CAIE Chemistry IGCSE.pdf",
+      "year": 2021,
+      "number": 31
+    },
+    {
+      "subject": "chemistry",
+      "topic": "stoichiometry",
+      "q": "Lime (calcium oxide) is used to treat waste water from a factory. Which substance is removed by the lime?",
+      "opts": [
+        "ammonia",
+        "sodium chloride",
+        "sodium hydroxide",
+        "sulfuric acid 2021 /O/N/21"
+      ],
+      "a": 3,
+      "why": "Official mark scheme answer: D. This option matches the key.",
+      "paper": "assets/papers/chemistry/Chemistry - Paper 2/November 2021 (v1) QP - Paper 2 CAIE Chemistry IGCSE.pdf",
+      "year": 2021,
+      "number": 32
+    },
+    {
+      "subject": "chemistry",
+      "topic": "acids-bases",
+      "q": "An alkane molecule of molecular formula C8H18 undergoes cracking. The equation for the reaction is shown. C8H18 \u2192 Q + 2R Substance R has two carbon atoms per molecule and decolourises aqueous bromine. What is substance Q?",
+      "opts": [
+        "butane",
+        "butene",
+        "ethane",
+        "ethene"
+      ],
+      "a": 0,
+      "why": "Official mark scheme answer: A. This option matches the key.",
+      "paper": "assets/papers/chemistry/Chemistry - Paper 2/November 2021 (v1) QP - Paper 2 CAIE Chemistry IGCSE.pdf",
+      "year": 2021,
+      "number": 33
+    },
+    {
+      "subject": "chemistry",
+      "topic": "organic",
+      "q": "Fuel X produces carbon dioxide and water when it is burned in air. So does fuel Y. What could X and Y be? X Y",
+      "opts": [
+        "C H2",
+        "C C8H18",
+        "CH4 H2",
+        "CH4 C8H18"
+      ],
+      "a": 3,
+      "why": "Official mark scheme answer: D. This option matches the key.",
+      "paper": "assets/papers/chemistry/Chemistry - Paper 2/November 2021 (v1) QP - Paper 2 CAIE Chemistry IGCSE.pdf",
+      "year": 2021,
+      "number": 34
+    },
+    {
+      "subject": "chemistry",
+      "topic": "electrolysis",
+      "q": "Which molecule contains only single covalent bonds?",
+      "opts": [
+        "propane",
+        "propanoic acid",
+        "propene",
+        "propyl propanoate"
+      ],
+      "a": 0,
+      "why": "Official mark scheme answer: A. This option matches the key.",
+      "paper": "assets/papers/chemistry/Chemistry - Paper 2/November 2021 (v1) QP - Paper 2 CAIE Chemistry IGCSE.pdf",
+      "year": 2021,
+      "number": 35
+    },
+    {
+      "subject": "chemistry",
+      "topic": "bonding",
+      "q": "Alkanes react with chlorine to form chloroalkanes. Which statement about the reactions of alkanes with chlorine is correct?",
+      "opts": [
+        "Alkanes react with chlorine by addition.",
+        "The gaseous product turns red litmus blue.",
+        "The chlorine atom in chloroethane is covalently bonded.",
+        "The general formula of the chloroalkanes is CnH2nCl. 2021 /O/N/21 over [Turn"
+      ],
+      "a": 2,
+      "why": "Official mark scheme answer: C. This option matches the key.",
+      "paper": "assets/papers/chemistry/Chemistry - Paper 2/November 2021 (v1) QP - Paper 2 CAIE Chemistry IGCSE.pdf",
+      "year": 2021,
+      "number": 36
+    },
+    {
+      "subject": "chemistry",
+      "topic": "stoichiometry",
+      "q": "Part of the structure of a very large molecule is shown. H OH H H H OH H H C C C C C C C C H H H OH H H H OH Which term describes the small unit used to make this molecule?",
+      "opts": [
+        "hydrocarbon",
+        "monomer",
+        "polymer",
+        "saturated"
+      ],
+      "a": 1,
+      "why": "Official mark scheme answer: B. This option matches the key.",
+      "paper": "assets/papers/chemistry/Chemistry - Paper 2/November 2021 (v1) QP - Paper 2 CAIE Chemistry IGCSE.pdf",
+      "year": 2021,
+      "number": 37
+    },
+    {
+      "subject": "chemistry",
+      "topic": "acids-bases",
+      "q": "Propene reacts with steam to form propanol. C3H6(g) + H2O(g) \u2192 C3H7OH(g) Which type of reaction takes place?",
+      "opts": [
+        "addition",
+        "condensation",
+        "oxidation",
+        "substitution"
+      ],
+      "a": 0,
+      "why": "Official mark scheme answer: A. This option matches the key.",
+      "paper": "assets/papers/chemistry/Chemistry - Paper 2/November 2021 (v1) QP - Paper 2 CAIE Chemistry IGCSE.pdf",
+      "year": 2021,
+      "number": 38
+    },
+    {
+      "subject": "chemistry",
+      "topic": "organic",
+      "q": "Which statement about aqueous ethanoic acid is correct?",
+      "opts": [
+        "It reacts with magnesium to produce a salt and hydrogen.",
+        "It reacts with sodium hydroxide to produce a salt and hydrogen.",
+        "It reacts with ammonium salts to produce ammonia.",
+        "It turns red litmus blue. 2021 /O/N/21"
+      ],
+      "a": 0,
+      "why": "Official mark scheme answer: A. This option matches the key.",
+      "paper": "assets/papers/chemistry/Chemistry - Paper 2/November 2021 (v1) QP - Paper 2 CAIE Chemistry IGCSE.pdf",
+      "year": 2021,
+      "number": 39
+    },
+    {
+      "subject": "chemistry",
+      "topic": "electrolysis",
+      "q": "The diagram shows the partial structure of Terylene. O O O C O O C C O From which pair of compounds is it made? O O",
+      "opts": [
+        "HO C C OH + HO OH O O",
+        "HO C OH + HO C OH O O",
+        "HO OH + HO C C OH O O O O",
+        "HO C C OH + HO C C OH 2021 /O/N/21"
+      ],
+      "a": 0,
+      "why": "Official mark scheme answer: A. This option matches the key.",
+      "paper": "assets/papers/chemistry/Chemistry - Paper 2/November 2021 (v1) QP - Paper 2 CAIE Chemistry IGCSE.pdf",
+      "year": 2021,
+      "number": 40
+    },
+    {
+      "subject": "physics",
+      "topic": "forces",
+      "q": "2 3 4 N S N S N S N S coil Which row is correct? turning effect of the forces turning effect of the forces in positions 1 and 3 in positions 2 and 4",
+      "opts": [
+        "different different",
+        "different same",
+        "same different",
+        "same same 2021 /O/N/21 [Turn over"
+      ],
+      "a": 2,
+      "why": "Official mark scheme answer: C. This option matches the key.",
+      "paper": "assets/papers/physics/Physics - Paper 2/November 2021 (v2) QP - Paper 2 CAIE Physics IGCSE.pdf",
+      "year": 2021,
+      "number": 1
+    },
+    {
+      "subject": "physics",
+      "topic": "waves",
+      "q": "In which situation does object X have a greater mass than object Y?",
+      "opts": [
+        "Object X is in a larger gravitational field than object Y and both have the same weight.",
+        "Object X shows a greater resistance to change in motion than object Y and both experience the same resultant force.",
+        "Object X has a lower density than object Y and both occupy the same volume.",
+        "Object X moves at a greater speed than object Y and both possess the same kinetic energy. 2021 /O/N/21"
+      ],
+      "a": 1,
+      "why": "Official mark scheme answer: B. This option matches the key.",
+      "paper": "assets/papers/physics/Physics - Paper 2/November 2021 (v2) QP - Paper 2 CAIE Physics IGCSE.pdf",
+      "year": 2021,
+      "number": 3
+    },
+    {
+      "subject": "physics",
+      "topic": "energy",
+      "q": "Which substance in the table has the lowest density? substance mass / g volume / cm3",
+      "opts": [
+        "nylon 1.2 1.0",
+        "cotton 1.5 1.0",
+        "olive oil 1.8 2.0",
+        "water 2.0 2.0"
+      ],
+      "a": 2,
+      "why": "Official mark scheme answer: C. This option matches the key.",
+      "paper": "assets/papers/physics/Physics - Paper 2/November 2021 (v2) QP - Paper 2 CAIE Physics IGCSE.pdf",
+      "year": 2021,
+      "number": 4
+    },
+    {
+      "subject": "physics",
+      "topic": "waves",
+      "q": "Electrical energy may be obtained from nuclear fission. In which order is the energy transferred in this process?",
+      "opts": [
+        "nuclear fuel \uf0ae generator \uf0ae reactor and boiler \uf0ae turbines",
+        "nuclear fuel \uf0ae generator \uf0ae turbines \uf0ae reactor and boiler",
+        "nuclear fuel \uf0ae reactor and boiler \uf0ae generator \uf0ae turbines",
+        "nuclear fuel \uf0ae reactor and boiler \uf0ae turbines \uf0ae generator 2021 /O/N/21"
+      ],
+      "a": 3,
+      "why": "Official mark scheme answer: D. This option matches the key.",
+      "paper": "assets/papers/physics/Physics - Paper 2/November 2021 (v2) QP - Paper 2 CAIE Physics IGCSE.pdf",
+      "year": 2021,
+      "number": 8
+    },
+    {
+      "subject": "physics",
+      "topic": "forces",
+      "q": "The diagram shows a pan used for cooking food. handle of pan base of pan Which row is correct for the materials used to make the base and the handle of the pan? base of pan handle of pan",
+      "opts": [
+        "good thermal conductor good thermal conductor",
+        "good thermal conductor poor thermal conductor",
+        "poor thermal conductor good thermal conductor",
+        "poor thermal conductor poor thermal conductor"
+      ],
+      "a": 1,
+      "why": "Official mark scheme answer: B. This option matches the key.",
+      "paper": "assets/papers/physics/Physics - Paper 2/November 2021 (v2) QP - Paper 2 CAIE Physics IGCSE.pdf",
+      "year": 2021,
+      "number": 16
+    },
+    {
+      "subject": "physics",
+      "topic": "electricity",
+      "q": "The diagram shows the pattern of water waves as they pass through a narrow gap. narrow gap between two barriers Which row names the process shown and describes the effect of using a wider gap? name of process wider gap",
+      "opts": [
+        "refraction waves spread out less",
+        "refraction waves spread out more",
+        "diffraction waves spread out less",
+        "diffraction waves spread out more 2021 /O/N/21"
+      ],
+      "a": 2,
+      "why": "Official mark scheme answer: C. This option matches the key.",
+      "paper": "assets/papers/physics/Physics - Paper 2/November 2021 (v2) QP - Paper 2 CAIE Physics IGCSE.pdf",
+      "year": 2021,
+      "number": 17
+    },
+    {
+      "subject": "physics",
+      "topic": "waves",
+      "q": "Which row is not correct for a wave on the surface of water? quantity usual unit",
+      "opts": [
+        "amplitude m",
+        "frequency Hz",
+        "wavelength \uf06c",
+        "speed m/s"
+      ],
+      "a": 2,
+      "why": "Official mark scheme answer: C. This option matches the key.",
+      "paper": "assets/papers/physics/Physics - Paper 2/November 2021 (v2) QP - Paper 2 CAIE Physics IGCSE.pdf",
+      "year": 2021,
+      "number": 18
+    },
+    {
+      "subject": "physics",
+      "topic": "energy",
+      "q": "The diagram shows how a ray of light refracts when going from air to Perspex. x air w Perspex y z The critical angle of Perspex is c. Which expression is correct?",
+      "opts": [
+        "sin x = sin c sin z",
+        "sin z = sin c sin x",
+        "sin w = sin c sin y sin y",
+        "= sin c sin w 2021 /O/N/21 [Turn over"
+      ],
+      "a": 1,
+      "why": "Official mark scheme answer: B. This option matches the key.",
+      "paper": "assets/papers/physics/Physics - Paper 2/November 2021 (v2) QP - Paper 2 CAIE Physics IGCSE.pdf",
+      "year": 2021,
+      "number": 19
+    },
+    {
+      "subject": "physics",
+      "topic": "motion",
+      "q": "The diagram shows a ray of light in air incident on a glass block. Some of the light is refracted and some of the light is reflected. Two angles, p and q, are marked on the diagram. ray of light q air p glass Which row gives the angle of incidence and states whether total internal reflection occurs? angle of total internal incidence reflection",
+      "opts": [
+        "p no",
+        "p yes",
+        "q no",
+        "q yes"
+      ],
+      "a": 2,
+      "why": "Official mark scheme answer: C. This option matches the key.",
+      "paper": "assets/papers/physics/Physics - Paper 2/November 2021 (v2) QP - Paper 2 CAIE Physics IGCSE.pdf",
+      "year": 2021,
+      "number": 20
+    },
+    {
+      "subject": "physics",
+      "topic": "electricity",
+      "q": "The Sun emits infrared radiation and light. Light from the Sun reaches the Earth in 8 minutes. Which row gives correct information about the infrared radiation? wavelength of time taken for infrared infrared radiation radiation to reach the Earth",
+      "opts": [
+        "longer than wavelength of light 8 minutes",
+        "longer than wavelength of light much less than 8 minutes",
+        "shorter than wavelength of light 8 minutes",
+        "shorter than wavelength of light much more than 8 minutes"
+      ],
+      "a": 0,
+      "why": "Official mark scheme answer: A. This option matches the key.",
+      "paper": "assets/papers/physics/Physics - Paper 2/November 2021 (v2) QP - Paper 2 CAIE Physics IGCSE.pdf",
+      "year": 2021,
+      "number": 22
+    },
+    {
+      "subject": "physics",
+      "topic": "waves",
+      "q": "Which statement about electromagnetic waves is not correct?",
+      "opts": [
+        "They travel at 3 \uf0b4 108 m / s in a vacuum.",
+        "They transfer energy.",
+        "They travel at 340 m / s in air.",
+        "They are transverse waves."
+      ],
+      "a": 2,
+      "why": "Official mark scheme answer: C. This option matches the key.",
+      "paper": "assets/papers/physics/Physics - Paper 2/November 2021 (v2) QP - Paper 2 CAIE Physics IGCSE.pdf",
+      "year": 2021,
+      "number": 23
+    },
+    {
+      "subject": "physics",
+      "topic": "energy",
+      "q": "What is ultrasound?",
+      "opts": [
+        "sound waves that are so loud that they damage human hearing",
+        "sound waves that are too high-pitched for humans to hear",
+        "sound waves that are too low-pitched for humans to hear",
+        "sound waves that are too quiet for humans to hear"
+      ],
+      "a": 1,
+      "why": "Official mark scheme answer: B. This option matches the key.",
+      "paper": "assets/papers/physics/Physics - Paper 2/November 2021 (v2) QP - Paper 2 CAIE Physics IGCSE.pdf",
+      "year": 2021,
+      "number": 24
+    },
+    {
+      "subject": "physics",
+      "topic": "energy",
+      "q": "There is a current I in a resistor. The potential difference (p.d.) across the resistor is V. Which other physical quantity is needed to be able to determine the energy transferred W by the resistor?",
+      "opts": [
+        "the electromotive force (e.m.f.) E of the source",
+        "the power P dissipated",
+        "the resistance R of the resistor",
+        "the time t for which there is a current in the resistor"
+      ],
+      "a": 3,
+      "why": "Official mark scheme answer: D. This option matches the key.",
+      "paper": "assets/papers/physics/Physics - Paper 2/November 2021 (v2) QP - Paper 2 CAIE Physics IGCSE.pdf",
+      "year": 2021,
+      "number": 29
+    },
+    {
+      "subject": "physics",
+      "topic": "forces",
+      "q": "Several cells are connected in series, as shown. What is the combined electromotive force (e.m.f.) of the cells?",
+      "opts": [
+        "the average of the e.m.f.s of the separate cells",
+        "the e.m.f. of one of the cells",
+        "the product of the e.m.f.s of the cells",
+        "the sum of the e.m.f.s of the cells 2021 /O/N/21 [Turn over"
+      ],
+      "a": 3,
+      "why": "Official mark scheme answer: D. This option matches the key.",
+      "paper": "assets/papers/physics/Physics - Paper 2/November 2021 (v2) QP - Paper 2 CAIE Physics IGCSE.pdf",
+      "year": 2021,
+      "number": 31
+    },
+    {
+      "subject": "physics",
+      "topic": "electricity",
+      "q": "Two resistors, with resistances R1 and R2, are connected in parallel. The resistance R1 is greater than the resistance R2. R1 R2 What is the resistance of the parallel combination?",
+      "opts": [
+        "less than either R1 or R2",
+        "equal to R1",
+        "equal to R2",
+        "the average of R1 and R2"
+      ],
+      "a": 0,
+      "why": "Official mark scheme answer: A. This option matches the key.",
+      "paper": "assets/papers/physics/Physics - Paper 2/November 2021 (v2) QP - Paper 2 CAIE Physics IGCSE.pdf",
+      "year": 2021,
+      "number": 32
+    },
+    {
+      "subject": "physics",
+      "topic": "waves",
+      "q": "The diagram shows a motor connected to an a.c. supply. The circuit is incomplete. X Y M Which device needs to be connected between point X and point Y to prevent the wires from overheating if a fault in the motor causes the current to get too high?",
+      "opts": [
+        "an ammeter",
+        "a fuse",
+        "a transformer",
+        "a length of thick copper wire 2021 /O/N/21"
+      ],
+      "a": 1,
+      "why": "Official mark scheme answer: B. This option matches the key.",
+      "paper": "assets/papers/physics/Physics - Paper 2/November 2021 (v2) QP - Paper 2 CAIE Physics IGCSE.pdf",
+      "year": 2021,
+      "number": 33
+    },
+    {
+      "subject": "physics",
+      "topic": "forces",
+      "q": "The diagram shows the magnetic field due to a current in a solenoid. direction of current The direction of the current is reversed. Which row describes the effect that this has on the magnitude and on the direction of the magnetic field? magnitude of direction of magnetic field magnetic field",
+      "opts": [
+        "increases changes",
+        "increases unchanged",
+        "unchanged changes",
+        "unchanged unchanged"
+      ],
+      "a": 2,
+      "why": "Official mark scheme answer: C. This option matches the key.",
+      "paper": "assets/papers/physics/Physics - Paper 2/November 2021 (v2) QP - Paper 2 CAIE Physics IGCSE.pdf",
+      "year": 2021,
+      "number": 36
+    },
+    {
+      "subject": "physics",
+      "topic": "electricity",
+      "q": "The nucleus of an americium atom contains 146 neutrons and 95 protons. It decays by emitting an \uf061-particle. How many neutrons and how many protons remain in the nucleus when this form of americium decays? number of neutrons number of protons remaining remaining",
+      "opts": [
+        "142 93",
+        "142 95",
+        "144 93",
+        "144 95"
+      ],
+      "a": 2,
+      "why": "Official mark scheme answer: C. This option matches the key.",
+      "paper": "assets/papers/physics/Physics - Paper 2/November 2021 (v2) QP - Paper 2 CAIE Physics IGCSE.pdf",
+      "year": 2021,
+      "number": 37
+    }
+  ]
+};
