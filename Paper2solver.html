@@ -31,6 +31,36 @@
       --accent: #ffd365;
       --gold: #8ff7ff;
     }
+    [data-theme="aurora"] {
+      --bg: radial-gradient(circle at 15% 20%, #0d5f67 0%, #15323f 35%, #191b2e 100%);
+      --accent: #7cf4d5;
+      --gold: #8ed1ff;
+    }
+    [data-theme="ocean"] {
+      --bg: linear-gradient(120deg, #041f3c 0%, #0b3f6a 45%, #1d7ca1 100%);
+      --accent: #8ee8ff;
+      --gold: #85ffe0;
+    }
+    [data-theme="ember"] {
+      --bg: radial-gradient(circle at 80% 10%, #5f210d 0%, #34171a 40%, #14151f 100%);
+      --accent: #ffb26b;
+      --gold: #ff7f7f;
+    }
+    [data-theme="matrix"] {
+      --bg: radial-gradient(circle at 50% 15%, #0b2a14 0%, #0d1712 45%, #090d0a 100%);
+      --accent: #58ff8f;
+      --gold: #89ffc3;
+    }
+    [data-theme="dawn"] {
+      --bg: linear-gradient(120deg, #36244f 0%, #72416c 35%, #d57a7f 100%);
+      --accent: #ffde8f;
+      --gold: #b8f9ff;
+    }
+    [data-theme="noir"] {
+      --bg: radial-gradient(circle at 30% 0%, #2b2b33 0%, #1a1a22 40%, #111117 100%);
+      --accent: #e7e7ef;
+      --gold: #9da3b0;
+    }
 
     * { box-sizing: border-box; }
     body {
@@ -172,6 +202,43 @@
     }
 
     .solver-grid { display: grid; gap: 14px; grid-template-columns: 2fr 1fr; }
+    .solver-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+    }
+    .subject-quick {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 10px 0 8px;
+    }
+    .subject-chip {
+      border: 1px solid rgba(255,255,255,.25);
+      border-radius: 999px;
+      padding: 8px 12px;
+      background: rgba(255,255,255,.06);
+      color: var(--text);
+      font-weight: 800;
+      cursor: pointer;
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease, background .2s ease;
+    }
+    .subject-chip:hover {
+      transform: translateY(-1px);
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(75,216,255,0.15);
+    }
+    .subject-chip.active {
+      background: linear-gradient(90deg, rgba(75,216,255,.22), rgba(108,159,255,.22));
+      border-color: var(--accent);
+    }
+    #subjectCodes, #topicFilter {
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.2);
+    }
     .split { display: grid; gap: 12px; grid-template-columns: 1fr 1fr; }
 
     .question-text {
@@ -201,17 +268,25 @@
       background: linear-gradient(145deg, #0f1726, #131d31);
     }
 
-    .options { display: grid; gap: 8px; }
+    .options { display: grid; gap: 14px; margin-top: 14px; }
     .opt {
       text-align: left;
-      padding: 10px;
-      border-radius: 10px;
+      padding: 14px 14px;
+      border-radius: 14px;
       border: 1px solid rgba(255,255,255,.2);
       background: rgba(255,255,255,.05);
       color: var(--text);
       cursor: pointer;
       font-weight: 800;
       line-height: 1.4;
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease, background .2s ease;
+    }
+
+    .opt:hover:not(:disabled) {
+      transform: translateY(-2px);
+      border-color: var(--accent);
+      box-shadow: 0 8px 16px rgba(0,0,0,.22);
+      background: rgba(255,255,255,.1);
     }
 
     .opt.correct { border-color: var(--good); background: rgba(67,218,133,0.2); }
@@ -231,6 +306,53 @@
     }
 
     .leaderboard .entry:hover { transform: translateX(4px) scale(1.01); background: rgba(255,255,255,0.12); }
+    .bat-hover-hint {
+      position: fixed;
+      left: 0;
+      top: 0;
+      pointer-events: none;
+      z-index: 99;
+      padding: 7px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.2);
+      background: rgba(7,8,14,.75);
+      color: #dce7ff;
+      font-size: .82rem;
+      font-weight: 800;
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(.9);
+      transition: opacity .18s ease, transform .18s ease;
+    }
+    .bat-hover-hint.show {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+    @keyframes batPulse {
+      0% { box-shadow: 0 0 0 0 rgba(180, 190, 255, 0.35); }
+      100% { box-shadow: 0 0 0 12px rgba(180, 190, 255, 0); }
+    }
+    @keyframes batWiggle {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      25% { transform: translateY(-2px) rotate(-2deg); }
+      75% { transform: translateY(-2px) rotate(2deg); }
+    }
+    body.batman-mode .brand {
+      text-shadow: 0 0 10px rgba(203, 220, 255, .32);
+    }
+    body.batman-mode .brand:hover {
+      animation: batWiggle .35s ease-in-out 2;
+    }
+    body.batman-mode .leaderboard .entry:hover {
+      border: 1px solid rgba(205, 215, 255, 0.42);
+      animation: batPulse .85s ease-out infinite;
+      transform: translateX(8px) scale(1.02);
+    }
+    body.batman-mode .subject-chip:hover,
+    body.batman-mode .opt:hover:not(:disabled),
+    body.batman-mode .btn:hover {
+      box-shadow: 0 0 0 3px rgba(193, 205, 255, 0.22), 0 8px 16px rgba(0,0,0,.25);
+      border-color: #cfd8ff;
+    }
 
     .history-list {
       max-height: 290px;
@@ -350,6 +472,7 @@
   </style>
 </head>
 <body data-theme="default">
+  <div id="batHoverHint" class="bat-hover-hint">🦇 Gotham pulse detected</div>
   <header class="topbar">
     <div class="brand">SolverLife</div>
     <nav class="nav" id="nav"></nav>
@@ -381,8 +504,15 @@
     <section id="solver" class="section">
       <div class="solver-grid">
         <article class="card">
-          <h2>Solver Session</h2>
-          <p><span class="pill" id="modeTag">Local Mode</span></p>
+          <div class="solver-head">
+            <h2>Solver Session</h2>
+            <p><span class="pill" id="modeTag">Local Mode</span></p>
+          </div>
+          <div class="subject-quick" id="subjectQuick">
+            <button class="subject-chip active" data-subject="biology" type="button">Biology</button>
+            <button class="subject-chip active" data-subject="chemistry" type="button">Chemistry</button>
+            <button class="subject-chip active" data-subject="physics" type="button">Physics</button>
+          </div>
           <div class="split">
             <div>
               <label><b>Subject Codes</b></label>
@@ -489,6 +619,12 @@
           <option value="default">Blue Night Gradient</option>
           <option value="sunset">Sunset Gradient</option>
           <option value="holiday">Holiday Theme</option>
+          <option value="aurora">Aurora</option>
+          <option value="ocean">Ocean</option>
+          <option value="ember">Ember</option>
+          <option value="matrix">Matrix</option>
+          <option value="dawn">Dawn</option>
+          <option value="noir">Noir</option>
         </select>
         <button class="btn" id="saveProfile">Save Profile</button>
       </article>
@@ -687,6 +823,27 @@
 
     function selectedSubjects() {
       return Array.from(document.getElementById("subjectCodes").selectedOptions).map(o => o.value);
+    }
+
+    function syncSubjectChipsFromSelect() {
+      const selected = new Set(selectedSubjects());
+      document.querySelectorAll("#subjectQuick .subject-chip").forEach((chip) => {
+        chip.classList.toggle("active", selected.has(chip.dataset.subject));
+      });
+    }
+
+    function toggleSubject(subject) {
+      const select = document.getElementById("subjectCodes");
+      Array.from(select.options).forEach((opt) => {
+        if (opt.value === subject) opt.selected = !opt.selected;
+      });
+
+      const anySelected = Array.from(select.options).some((opt) => opt.selected);
+      if (!anySelected) {
+        const fallback = Array.from(select.options).find((opt) => opt.value === subject) || select.options[0];
+        if (fallback) fallback.selected = true;
+      }
+      syncSubjectChipsFromSelect();
     }
 
     function setTopicOptions() {
@@ -1000,14 +1157,63 @@
       return streak;
     }
 
+    function longestStreak() {
+      let best = 0;
+      let cur = 0;
+      for (const h of state.history) {
+        if (h.ok) {
+          cur += 1;
+          if (cur > best) best = cur;
+        } else {
+          cur = 0;
+        }
+      }
+      return best;
+    }
+
+    function totalCorrect() {
+      return state.history.filter((x) => x.ok).length;
+    }
+
+    function perfectAttemptsMinimum(subject, minAttempts, minPct) {
+      const rows = state.history.filter((x) => x.subject === subject);
+      if (rows.length < minAttempts) return false;
+      return Math.round((rows.filter((x) => x.ok).length * 100) / rows.length) >= minPct;
+    }
+
     function achievementList() {
       const stats = computeStats();
+      const total = stats.total;
+      const correct = totalCorrect();
+      const currentStreak = computeStreak();
+      const bestStreak = longestStreak();
+      const allSubjectsTried = ["biology", "chemistry", "physics"].every((s) => state.history.some((x) => x.subject === s));
+      const daySet = new Set(state.history.map((x) => (x.at || "").slice(0, 10)).filter(Boolean));
       return [
-        { id: "100", icon: "🏅", name: "100 Questions Solver", ok: stats.total >= 100 },
-        { id: "streak20", icon: "🔥", name: "20 in a Row", ok: computeStreak() >= 20 },
-        { id: "bioMaster", icon: "🧬", name: "Best Biology Solver", ok: subjectAcc("biology") >= 80 && state.history.filter(x => x.subject === "biology").length >= 10 },
-        { id: "chemMaster", icon: "⚗️", name: "Best Chemistry Solver", ok: subjectAcc("chemistry") >= 80 && state.history.filter(x => x.subject === "chemistry").length >= 10 },
-        { id: "phyMaster", icon: "🛰️", name: "Best Physics Solver", ok: subjectAcc("physics") >= 80 && state.history.filter(x => x.subject === "physics").length >= 10 }
+        { id: "firstSolve", icon: "🎯", name: "First Solve", ok: total >= 1 },
+        { id: "tenSolved", icon: "🔟", name: "10 Solves", ok: total >= 10 },
+        { id: "fiftySolved", icon: "🥈", name: "50 Solves", ok: total >= 50 },
+        { id: "100", icon: "🏅", name: "100 Questions Solver", ok: total >= 100 },
+        { id: "correct25", icon: "✅", name: "25 Correct", ok: correct >= 25 },
+        { id: "correct100", icon: "💯", name: "100 Correct", ok: correct >= 100 },
+        { id: "streak5", icon: "⚡", name: "5 in a Row", ok: currentStreak >= 5 },
+        { id: "streak10", icon: "🔥", name: "10 in a Row", ok: currentStreak >= 10 },
+        { id: "streak20", icon: "🌋", name: "20 in a Row", ok: currentStreak >= 20 },
+        { id: "bestStreak30", icon: "🧠", name: "Best Streak 30", ok: bestStreak >= 30 },
+        { id: "allRounder", icon: "🧭", name: "All-Rounder", ok: allSubjectsTried },
+        { id: "bioMaster", icon: "🧬", name: "Biology Master", ok: perfectAttemptsMinimum("biology", 12, 82) },
+        { id: "chemMaster", icon: "⚗️", name: "Chemistry Master", ok: perfectAttemptsMinimum("chemistry", 12, 82) },
+        { id: "phyMaster", icon: "🛰️", name: "Physics Master", ok: perfectAttemptsMinimum("physics", 12, 82) },
+        { id: "nightOwl", icon: "🌙", name: "Night Owl", ok: state.history.some((x) => {
+          const d = new Date(x.at);
+          const h = d.getHours();
+          return h >= 23 || h <= 4;
+        }) },
+        { id: "weekWarrior", icon: "📅", name: "7-Day Learner", ok: daySet.size >= 7 },
+        { id: "saver10", icon: "💾", name: "10 Saved Explanations", ok: state.saved.length >= 10 },
+        { id: "accuracy90", icon: "🎖️", name: "90% Overall Accuracy", ok: total >= 20 && stats.overall >= 90 },
+        { id: "batSignal", icon: "🦇", name: "Batman Activated", ok: Boolean(state.profile.batmanMode) },
+        { id: "darkKnight", icon: "🛡️", name: "Dark Knight", ok: Boolean(state.profile.batmanMode) && correct >= 30 }
       ];
     }
 
@@ -1058,7 +1264,17 @@
     function setTheme(theme) {
       document.body.setAttribute("data-theme", theme);
       state.profile.theme = theme;
+      document.body.classList.toggle("batman-mode", Boolean(state.profile.batmanMode));
       saveState();
+    }
+
+    function showBatmanHint(text) {
+      if (!state.profile.batmanMode) return;
+      const hint = document.getElementById("batHoverHint");
+      hint.textContent = text;
+      hint.classList.add("show");
+      clearTimeout(showBatmanHint._t);
+      showBatmanHint._t = setTimeout(() => hint.classList.remove("show"), 1100);
     }
 
     async function submitReport() {
@@ -1155,6 +1371,22 @@
       document.getElementById("nextBtn").onclick = nextQuestion;
       document.getElementById("saveBtn").onclick = saveCurrent;
       document.getElementById("savedCount").textContent = `${state.saved.length} saved`;
+      document.getElementById("subjectCodes").addEventListener("change", syncSubjectChipsFromSelect);
+      document.querySelectorAll("#subjectQuick .subject-chip").forEach((chip) => {
+        chip.addEventListener("click", () => toggleSubject(chip.dataset.subject));
+      });
+      document.querySelector(".brand").addEventListener("mouseenter", () => showBatmanHint("🦇 Gotham watch activated"));
+      document.getElementById("leaderboardList").addEventListener("mouseover", (e) => {
+        if (e.target && e.target.closest(".entry")) showBatmanHint("🦇 Ranking scan complete");
+      });
+      document.getElementById("achievements").addEventListener("mouseover", (e) => {
+        if (e.target && e.target.closest(".achievement")) showBatmanHint("🦇 Achievement intel loaded");
+      });
+      document.addEventListener("mousemove", (e) => {
+        const hint = document.getElementById("batHoverHint");
+        hint.style.left = `${e.clientX + 14}px`;
+        hint.style.top = `${e.clientY - 16}px`;
+      });
 
       document.getElementById("sendReport").onclick = submitReport;
 
@@ -1195,14 +1427,18 @@
       document.getElementById("profileEmail").value = state.profile.email || "";
       document.getElementById("profilePic").value = state.profile.pic || "";
       document.getElementById("batmanMode").checked = Boolean(state.profile.batmanMode);
-      document.getElementById("themeSelect").value = state.profile.theme || "default";
-      setTheme(state.profile.theme || "default");
+      const themeSelect = document.getElementById("themeSelect");
+      themeSelect.value = state.profile.theme || "default";
+      if (themeSelect.value !== (state.profile.theme || "default")) themeSelect.value = "default";
+      setTheme(themeSelect.value);
+      document.body.classList.toggle("batman-mode", Boolean(state.profile.batmanMode));
     }
 
     setupFirebase();
     buildNav();
     setTopicOptions();
     bind();
+    syncSubjectChipsFromSelect();
     hydrateProfile();
     renderHomeAuth();
     renderHistory();
