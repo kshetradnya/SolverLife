@@ -238,6 +238,35 @@
     .home-grid { display: grid; gap: 16px; grid-template-columns: 1.2fr 1fr; }
     .hero-title { font-family: "Space Grotesk", sans-serif; font-size: clamp(2rem, 5vw, 3rem); margin: 0 0 10px; }
     .big-auth { margin-top: 14px; font-size: 1.2rem; padding: 14px 24px; border-radius: 14px; background: linear-gradient(90deg, #4bd8ff, #6c9fff); color: #041527; border: 0; font-weight: 800; }
+    .dashboard-grid { display: grid; gap: 12px; grid-template-columns: repeat(4, minmax(120px, 1fr)); margin-top: 12px; }
+    .dash-tile {
+      border-radius: 14px;
+      padding: 12px;
+      border: 1px solid rgba(255,255,255,.15);
+      background: rgba(255,255,255,.05);
+      transition: transform .22s ease, box-shadow .22s ease;
+      transform-style: preserve-3d;
+    }
+    .dash-tile:hover {
+      transform: perspective(700px) rotateX(4deg) rotateY(-4deg) translateY(-2px);
+      box-shadow: 0 10px 20px rgba(0,0,0,.3);
+    }
+    .fact-line { margin-top: 10px; font-weight: 700; color: var(--muted); }
+    .streak-wrap { margin-top: 10px; }
+    .streak-bar {
+      height: 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.15);
+      overflow: hidden;
+    }
+    .streak-fill {
+      height: 100%;
+      width: 0%;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #ff6a2a, #ff3d1f, #ff9f1c);
+      transition: width .35s ease;
+    }
 
     .demo {
       position: relative;
@@ -474,6 +503,41 @@
     }
 
     .leaderboard .entry:hover { transform: translateX(4px) scale(1.01); background: rgba(255,255,255,0.12); }
+    .podium {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(120px, 1fr));
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+    .podium-card {
+      border-radius: 14px;
+      padding: 10px;
+      border: 1px solid rgba(255,255,255,.18);
+      background: rgba(255,255,255,.06);
+      text-align: center;
+      font-weight: 800;
+      transition: transform .25s ease;
+    }
+    .podium-card.place-1 { background: rgba(255,211,101,.16); transform: translateY(-8px); }
+    .podium-card.place-2 { background: rgba(189,214,255,.12); }
+    .podium-card.place-3 { background: rgba(255,189,149,.12); }
+    .podium-card:hover { transform: translateY(-10px) scale(1.03); }
+    .podium-pic {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto 6px;
+      object-fit: cover;
+      border: 2px solid rgba(255,255,255,.35);
+      background: rgba(0,0,0,.25);
+    }
+    @keyframes rankBump {
+      0% { transform: scale(1); }
+      40% { transform: scale(1.04) translateX(3px); }
+      100% { transform: scale(1); }
+    }
+    .entry.rank-up { animation: rankBump .45s ease; }
     .bat-hover-hint {
       position: fixed;
       left: 0;
@@ -603,6 +667,83 @@
 
     .auth-modal.open { display: flex; }
     .auth-box { width: min(95vw, 430px); }
+    .paper4-layout { display: grid; gap: 14px; grid-template-columns: 2fr 1fr; }
+    .paper4-answer-switch { display: flex; gap: 8px; flex-wrap: wrap; margin: 10px 0; }
+    .paper4-answer-switch .btn.active { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(75,216,255,0.15); }
+    .paper4-draw {
+      width: 100%;
+      height: 260px;
+      border-radius: 12px;
+      background: #0c1526;
+      border: 1px solid rgba(255,255,255,.2);
+      touch-action: none;
+      display: block;
+    }
+    .part-strip {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 6px;
+      margin: 6px 0 10px;
+    }
+    .part-chip {
+      border: 1px solid rgba(255,255,255,.2);
+      background: rgba(255,255,255,.06);
+      color: var(--text);
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-weight: 800;
+      white-space: nowrap;
+      cursor: pointer;
+    }
+    .part-chip.active {
+      border-color: var(--accent);
+      background: rgba(75,216,255,.15);
+    }
+    .saved-list {
+      display: grid;
+      gap: 10px;
+      max-height: 520px;
+      overflow: auto;
+    }
+    .saved-card {
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 12px;
+      padding: 10px;
+      background: rgba(255,255,255,.05);
+      font-weight: 700;
+    }
+    .author-grid {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 14px;
+    }
+    .author-photo {
+      width: 100%;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,.18);
+      background: linear-gradient(145deg, rgba(75,216,255,.2), rgba(255,255,255,.05));
+      min-height: 280px;
+      display: grid;
+      place-items: center;
+      font-size: 4rem;
+    }
+    .timeline {
+      display: grid;
+      gap: 10px;
+      margin-top: 8px;
+    }
+    .timeline .node {
+      border: 1px solid rgba(255,255,255,.2);
+      border-radius: 12px;
+      padding: 10px;
+      background: rgba(255,255,255,.05);
+      transform: translateY(0);
+      transition: transform .2s ease, border-color .2s ease;
+      font-weight: 700;
+    }
+    .timeline:hover .node:nth-child(odd) { transform: translateY(-4px); border-color: #8fe1ff; }
+    .timeline:hover .node:nth-child(even) { transform: translateY(4px); border-color: #ffd365; }
 
     input, select, textarea {
       width: 100%;
@@ -641,6 +782,10 @@
 
     @media (max-width: 980px) {
       .home-grid, .solver-grid, .split { grid-template-columns: 1fr; }
+      .dashboard-grid { grid-template-columns: repeat(2, minmax(120px, 1fr)); }
+      .paper4-layout { grid-template-columns: 1fr; }
+      .author-grid { grid-template-columns: 1fr; }
+      .podium { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -657,6 +802,12 @@
         <article class="card">
           <h1 class="hero-title">MCQ practice with real-time feedback.</h1>
           <p><b>Online Mode:</b> configure Firebase once, host on GitHub Pages, and real users can register/login with email+password and appear on a real leaderboard.</p>
+          <div class="dashboard-grid" id="dashboardGrid"></div>
+          <div class="fact-line" id="factLine">Fact loading...</div>
+          <div class="streak-wrap">
+            <div><b>🔥 Streak Meter</b> <span id="streakLabel">0</span></div>
+            <div class="streak-bar"><div class="streak-fill" id="streakFill"></div></div>
+          </div>
           <div id="homeAuthArea"></div>
         </article>
 
@@ -671,6 +822,65 @@
             <div class="feedback-bubble">Wrong first, then correct with feedback.</div>
           </div>
         </article>
+      </div>
+    </section>
+
+    <section id="paper4" class="section">
+      <div class="paper4-layout">
+        <article class="card">
+          <div class="solver-head">
+            <h2>Paper 4 Structured Solver</h2>
+            <span class="pill">AI/Self Mark</span>
+          </div>
+          <p><b>Warning:</b> AI marking is heuristic and not always correct. Use markscheme/self-mark for final judgement.</p>
+          <div class="subject-quick" id="paper4SubjectQuick">
+            <button class="subject-chip active" data-subject="biology" type="button"><span class="chip-icon">🧬</span><span>Biology</span><span class="chip-sub">Paper 4</span></button>
+            <button class="subject-chip active" data-subject="chemistry" type="button"><span class="chip-icon">⚗️</span><span>Chemistry</span><span class="chip-sub">Paper 4</span></button>
+            <button class="subject-chip active" data-subject="physics" type="button"><span class="chip-icon">🛰️</span><span>Physics</span><span class="chip-sub">Paper 4</span></button>
+          </div>
+          <div class="split">
+            <div>
+              <label><b>Paper 4 Subjects</b></label>
+              <select id="paper4Subjects" multiple size="3">
+                <option value="biology" selected>Biology</option>
+                <option value="chemistry" selected>Chemistry</option>
+                <option value="physics" selected>Physics</option>
+              </select>
+            </div>
+            <div>
+              <label><b>Marking Mode</b></label>
+              <select id="paper4MarkMode">
+                <option value="ai">AI Marking (beta)</option>
+                <option value="self">Self Marking</option>
+              </select>
+            </div>
+          </div>
+          <button class="btn" id="paper4Start">Start Paper 4 Session</button>
+          <hr style="border-color: rgba(255,255,255,.15)">
+          <h3 id="paper4Title">Select subjects and start</h3>
+          <div class="part-strip" id="paper4PartStrip"></div>
+          <div class="question-text" id="paper4Text">Paper 4 question text appears here.</div>
+          <div id="paper4ImageWrap" class="question-image-wrap" hidden>
+            <img id="paper4QuestionImage" class="question-image" alt="Paper 4 question snippet" />
+          </div>
+          <div class="paper4-answer-switch">
+            <button class="btn active" id="paper4TextMode">Type Answer</button>
+            <button class="btn" id="paper4DrawMode">Draw Answer</button>
+          </div>
+          <textarea id="paper4AnswerText" rows="6" placeholder="Type your structured answer here..."></textarea>
+          <canvas id="paper4DrawCanvas" class="paper4-draw" width="1200" height="520" hidden></canvas>
+          <div style="margin-top: 8px; display:flex; gap:8px; flex-wrap:wrap;">
+            <button class="btn" id="paper4ClearDraw">Clear Drawing</button>
+            <button class="btn" id="paper4MarkBtn">Mark This Part</button>
+            <button class="btn" id="paper4NextPart">Next Part</button>
+            <button class="btn" id="paper4SaveBtn">Save</button>
+          </div>
+          <div class="feedback" id="paper4Feedback" hidden></div>
+        </article>
+        <aside class="card">
+          <h3>Self Mark Panel</h3>
+          <div id="paper4SelfArea">Switch to Self Marking to view markscheme snippets and enter marks.</div>
+        </aside>
       </div>
     </section>
 
@@ -757,7 +967,16 @@
       <article class="card leaderboard">
         <h2>Leaderboards</h2>
         <p>Only real users are shown. No fake accounts.</p>
+        <div id="podium" class="podium"></div>
         <div id="leaderboardList"></div>
+      </article>
+    </section>
+
+    <section id="saved" class="section">
+      <article class="card">
+        <h2>Saved Questions</h2>
+        <p>Reopen saved Paper 2 or Paper 4 items and solve again.</p>
+        <div class="saved-list" id="savedList"></div>
       </article>
     </section>
 
@@ -825,6 +1044,25 @@
         <button class="btn" id="saveProfile">Save Profile</button>
       </article>
     </section>
+
+    <section id="author" class="section">
+      <article class="card">
+        <h2>Author: Kshetradnya Patole</h2>
+        <div class="author-grid">
+          <div class="author-photo" title="Author spotlight">🧠⚗️🧬</div>
+          <div>
+            <p><b>SolverLife creator profile.</b> Science-first platform builder focused on interactive learning workflows.</p>
+            <div class="timeline">
+              <div class="node">🔬 Started exam-tool prototyping and question-bank automation.</div>
+              <div class="node">🧪 Added OCR and snippet pipelines for faster review flow.</div>
+              <div class="node">🛰️ Introduced adaptive practice modes and scientific explanations.</div>
+              <div class="node">📈 Building structured Paper 4 grading and progress analytics.</div>
+              <div class="node">🧠 Next: better AI assessment with rubric-linked feedback.</div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
   </main>
 
   <div class="auth-modal" id="authModal">
@@ -853,6 +1091,7 @@
   <script src="assets/data/question-bank.js"></script>
   <script src="assets/data/question-image-bank.js"></script>
   <script src="assets/data/question-ocr-bank.js"></script>
+  <script src="assets/data/paper4-bank.js"></script>
   <script>
     // Fill Firebase config for real online users on GitHub Pages.
     const FIREBASE_CONFIG = {
@@ -864,15 +1103,18 @@
       appId: ""
     };
 
-    const sections = ["home", "solver", "bugrec", "leaderboard", "history", "contact", "account"];
+    const sections = ["home", "solver", "paper4", "saved", "bugrec", "leaderboard", "history", "contact", "account", "author"];
     const sectionLabels = {
       home: "Home",
       solver: "Solver",
+      paper4: "Paper 4",
+      saved: "Saved",
       bugrec: "Bug & Rec",
       leaderboard: "Leaderboard",
       history: "History",
       contact: "Contact",
-      account: "Account"
+      account: "Account",
+      author: "Author"
     };
 
     const nav = document.getElementById("nav");
@@ -883,9 +1125,15 @@
       achievements: JSON.parse(localStorage.getItem("solverlife-ach") || "[]"),
       current: null,
       sessionPool: [],
+      paper4Current: null,
+      paper4Pool: [],
+      paper4PartIndex: 0,
+      paper4AnswerMode: "text",
+      paper4DraftMarks: 0,
       streak: 0,
       captcha: "",
-      online: { enabled: false, auth: null, db: null, storage: null, uid: null }
+      online: { enabled: false, auth: null, db: null, storage: null, uid: null },
+      leaderboardPrevRank: null
     };
 
     const FALLBACK_BANK = [
@@ -908,6 +1156,17 @@
       const ocr = OCR_LOOKUP[key] || {};
       return { ...q, imageSnippet: IMAGE_LOOKUP[key] || "", ocrSnippetText: ocr.ocrText || "" };
     });
+    const PAPER4_BANK = (window.SOLVERLIFE_PAPER4_BANK && Array.isArray(window.SOLVERLIFE_PAPER4_BANK.questions))
+      ? window.SOLVERLIFE_PAPER4_BANK.questions.filter((q) => Number(q.year || 0) >= 2016)
+      : [];
+    const SCIENCE_FACTS = [
+      "Biology: ATP is the universal immediate energy currency in cells.",
+      "Chemistry: Electron configuration predicts many periodic trends.",
+      "Physics: Momentum is conserved in every closed-system interaction.",
+      "Biology: Enzyme active sites are shape-specific and condition-sensitive.",
+      "Chemistry: Equilibrium is dynamic; forward and reverse rates balance.",
+      "Physics: Power is the rate of energy transfer per unit time."
+    ];
 
     function saveState() {
       localStorage.setItem("solverlife-profile", JSON.stringify(state.profile));
@@ -1008,6 +1267,8 @@
       if (id === "history") renderHistory();
       if (id === "leaderboard") renderLeaderboard();
       if (id === "home") renderHomeAuth();
+      if (id === "saved") renderSavedList();
+      if (id === "paper4" && state.paper4Current) renderPaper4Question();
     }
 
     function generateCaptcha() {
@@ -1028,10 +1289,50 @@
         const streak = computeStreak();
         el.innerHTML = `<div class="card" style="margin-top:12px;"><h3>Streaks</h3><p><b>Current streak:</b> ${streak}</p><p><b>Total solved:</b> ${state.history.length}</p></div>`;
       }
+      renderDashboard();
+    }
+
+    function updateVisitorCounter() {
+      const key = "solverlife-visit-count";
+      const seenKey = "solverlife-visit-seen";
+      let count = Number(localStorage.getItem(key) || "0");
+      if (!localStorage.getItem(seenKey)) {
+        count += 1;
+        localStorage.setItem(seenKey, "1");
+        localStorage.setItem(key, String(count));
+      }
+      return count;
+    }
+
+    function renderDashboard() {
+      const grid = document.getElementById("dashboardGrid");
+      if (!grid) return;
+      const stats = computeStats();
+      const visits = updateVisitorCounter();
+      const unlocked = state.achievements.length;
+      const streak = computeStreak();
+      grid.innerHTML = `
+        <div class="dash-tile"><small>Users Visited</small><div><b>${visits}</b></div></div>
+        <div class="dash-tile"><small>Total Solved</small><div><b>${stats.total}</b></div></div>
+        <div class="dash-tile"><small>Accuracy</small><div><b>${stats.overall}%</b></div></div>
+        <div class="dash-tile"><small>Achievements</small><div><b>${unlocked}</b></div></div>
+      `;
+      document.getElementById("factLine").innerHTML = `<b>Interesting Fact:</b> ${SCIENCE_FACTS[Math.floor(Math.random() * SCIENCE_FACTS.length)]}`;
+      const fill = document.getElementById("streakFill");
+      const label = document.getElementById("streakLabel");
+      if (fill && label) {
+        const pct = Math.min(100, streak * 5);
+        fill.style.width = `${pct}%`;
+        label.textContent = `${streak} 🔥`;
+      }
     }
 
     function selectedSubjects() {
       return Array.from(document.getElementById("subjectCodes").selectedOptions).map(o => o.value);
+    }
+
+    function selectedPaper4Subjects() {
+      return Array.from(document.getElementById("paper4Subjects").selectedOptions).map((o) => o.value);
     }
 
     function syncSubjectChipsFromSelect() {
@@ -1217,6 +1518,192 @@
       options.querySelectorAll(".opt").forEach(btn => btn.onclick = () => answerQuestion(Number(btn.dataset.i), btn));
     }
 
+    function togglePaper4Subject(subject) {
+      const select = document.getElementById("paper4Subjects");
+      Array.from(select.options).forEach((opt) => {
+        if (opt.value === subject) opt.selected = !opt.selected;
+      });
+      const anySelected = Array.from(select.options).some((opt) => opt.selected);
+      if (!anySelected && select.options[0]) select.options[0].selected = true;
+      const selected = new Set(selectedPaper4Subjects());
+      document.querySelectorAll("#paper4SubjectQuick .subject-chip").forEach((chip) => {
+        chip.classList.toggle("active", selected.has(chip.dataset.subject));
+      });
+    }
+
+    function startPaper4Session() {
+      const subjects = selectedPaper4Subjects();
+      state.paper4Pool = PAPER4_BANK.filter((q) => subjects.includes(q.subject));
+      if (!state.paper4Pool.length) return alert("No Paper 4 questions for selected subjects.");
+      state.paper4Current = rand(state.paper4Pool);
+      state.paper4PartIndex = 0;
+      renderPaper4Question();
+    }
+
+    function currentPaper4Part() {
+      if (!state.paper4Current) return null;
+      const parts = Array.isArray(state.paper4Current.parts) && state.paper4Current.parts.length
+        ? state.paper4Current.parts
+        : [{ label: "main", text: state.paper4Current.questionText, marks: state.paper4Current.totalMarks || 1 }];
+      return parts[Math.min(state.paper4PartIndex, parts.length - 1)];
+    }
+
+    function renderPaper4Question() {
+      if (!state.paper4Current) return;
+      const q = state.paper4Current;
+      const part = currentPaper4Part();
+      const parts = Array.isArray(q.parts) && q.parts.length ? q.parts : [part];
+      document.getElementById("paper4Title").textContent = `[${q.subject.toUpperCase()}] Q${q.number} • ${q.totalMarks || 1} marks`;
+      const strip = document.getElementById("paper4PartStrip");
+      strip.innerHTML = parts.map((p, idx) =>
+        `<button class="part-chip ${idx === state.paper4PartIndex ? "active" : ""}" data-pi="${idx}" type="button">${p.label.toUpperCase()} (${p.marks || 1})</button>`
+      ).join("");
+      strip.querySelectorAll(".part-chip").forEach((btn) => {
+        btn.onclick = () => {
+          state.paper4PartIndex = Number(btn.dataset.pi);
+          renderPaper4Question();
+        };
+      });
+      const partText = cleanDisplayText(part && part.text ? part.text : q.questionText || "");
+      document.getElementById("paper4Text").innerHTML = `<b>${partText}</b>`;
+
+      const imgWrap = document.getElementById("paper4ImageWrap");
+      const img = document.getElementById("paper4QuestionImage");
+      if (q.questionImage) {
+        img.src = q.questionImage;
+        imgWrap.hidden = false;
+      } else {
+        imgWrap.hidden = true;
+      }
+
+      const selfArea = document.getElementById("paper4SelfArea");
+      const mode = document.getElementById("paper4MarkMode").value;
+      if (mode === "self") {
+        const marksTotal = Number(part.marks || 1);
+        selfArea.innerHTML = `
+          <div><b>Markscheme snippet</b></div>
+          ${q.markschemeImage ? `<img src="${q.markschemeImage}" class="question-image" alt="Markscheme snippet"/>` : "<small>No markscheme snippet found for this question.</small>"}
+          <div style="margin-top:8px;"><small>${esc(cleanDisplayText((q.markschemeText || "").slice(0, 420)))}</small></div>
+          <label style="margin-top:8px; display:block;"><b>Your awarded marks (0-${marksTotal})</b></label>
+          <input id="paper4SelfMarks" type="number" min="0" max="${marksTotal}" step="1" value="${Math.min(marksTotal, state.paper4DraftMarks || 0)}"/>
+        `;
+      } else {
+        selfArea.innerHTML = "<small>AI mode enabled. AI uses keyword coverage and structure matching. Verify using markscheme.</small>";
+      }
+      document.getElementById("paper4Feedback").hidden = true;
+    }
+
+    function paper4Keywords(text) {
+      return [...new Set(String(text || "")
+        .toLowerCase()
+        .replace(/[^a-z0-9\s]/g, " ")
+        .split(/\s+/)
+        .filter((w) => w.length >= 5)
+        .slice(0, 24))];
+    }
+
+    function markPaper4AI() {
+      if (!state.paper4Current) return;
+      const q = state.paper4Current;
+      const part = currentPaper4Part();
+      const ansText = cleanDisplayText(document.getElementById("paper4AnswerText").value);
+      const source = `${part?.text || ""} ${q.markschemeText || ""}`;
+      const keys = paper4Keywords(source);
+      let hits = [];
+      if (state.paper4AnswerMode === "draw") {
+        const canvas = document.getElementById("paper4DrawCanvas");
+        const ctx = canvas.getContext("2d");
+        const data = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
+        let ink = 0;
+        for (let i = 3; i < data.length; i += 4) if (data[i] > 0) ink += 1;
+        const density = ink / (canvas.width * canvas.height);
+        const pseudoHits = Math.min(keys.length, Math.round(density * 420));
+        hits = keys.slice(0, pseudoHits);
+      } else {
+        const lowerAns = ansText.toLowerCase();
+        hits = keys.filter((k) => lowerAns.includes(k));
+      }
+      const partMarks = Number(part?.marks || 1);
+      const ratio = keys.length ? (hits.length / keys.length) : Math.min(1, ansText.length / 120);
+      const score = Math.max(0, Math.min(partMarks, Math.round(ratio * partMarks)));
+      return {
+        score,
+        max: partMarks,
+        notes: `AI estimated ${score}/${partMarks}. Keyword coverage: ${hits.length}/${Math.max(1, keys.length)}.`
+      };
+    }
+
+    function markPaper4() {
+      if (!state.paper4Current) return;
+      const mode = document.getElementById("paper4MarkMode").value;
+      let result;
+      if (mode === "self") {
+        const part = currentPaper4Part();
+        const max = Number(part?.marks || 1);
+        const marksInput = Number(document.getElementById("paper4SelfMarks")?.value || 0);
+        const score = Math.max(0, Math.min(max, Math.round(marksInput)));
+        state.paper4DraftMarks = score;
+        result = { score, max, notes: "Self-mark recorded from your entered marks." };
+      } else {
+        result = markPaper4AI();
+      }
+
+      const fb = document.getElementById("paper4Feedback");
+      fb.hidden = false;
+      fb.innerHTML = `<b>${mode === "ai" ? "AI" : "Self"} marking:</b> ${result.score}/${result.max}<br><small>${esc(result.notes)}</small>`;
+
+      state.history.push({
+        at: new Date().toISOString(),
+        subject: state.paper4Current.subject,
+        topic: state.paper4Current.topic,
+        q: state.paper4Current.questionText,
+        your: result.score,
+        correct: result.max,
+        ok: result.score >= Math.ceil(result.max * 0.6),
+        number: state.paper4Current.number,
+        paper: state.paper4Current.paper,
+        paperType: "paper4"
+      });
+      state.history = state.history.slice(-100);
+      saveState();
+      renderHistory();
+      renderDashboard();
+    }
+
+    function nextPaper4Part() {
+      if (!state.paper4Current) return;
+      const parts = Array.isArray(state.paper4Current.parts) && state.paper4Current.parts.length ? state.paper4Current.parts : [{ label: "main" }];
+      if (state.paper4PartIndex < parts.length - 1) {
+        state.paper4PartIndex += 1;
+        renderPaper4Question();
+      } else {
+        state.paper4Current = rand(state.paper4Pool.length ? state.paper4Pool : PAPER4_BANK);
+        state.paper4PartIndex = 0;
+        document.getElementById("paper4AnswerText").value = "";
+        renderPaper4Question();
+      }
+    }
+
+    function savePaper4() {
+      if (!state.paper4Current) return;
+      const feedback = document.getElementById("paper4Feedback");
+      if (feedback.hidden) return alert("Mark the question first, then save.");
+      state.saved.push({
+        kind: "paper4",
+        q: state.paper4Current.questionText,
+        feedback: feedback.textContent.trim(),
+        time: new Date().toISOString(),
+        ref: {
+          subject: state.paper4Current.subject,
+          number: state.paper4Current.number,
+          paper: state.paper4Current.paper
+        }
+      });
+      saveState();
+      document.getElementById("savedCount").textContent = `${state.saved.length} saved`;
+      renderSavedList();
+    }
+
     function tone(freq, dur = 0.12) {
       if (state.profile.batmanMode) return;
       const ctx = new (window.AudioContext || window.webkitAudioContext)();
@@ -1386,9 +1873,79 @@
       if (!state.current) return;
       const fb = document.getElementById("feedback").textContent.trim();
       if (!fb) return alert("Answer first, then save.");
-      state.saved.push({ q: state.current.q, feedback: fb, time: new Date().toISOString() });
+      state.saved.push({
+        kind: "paper2",
+        q: state.current.q,
+        feedback: fb,
+        time: new Date().toISOString(),
+        ref: {
+          subject: state.current.subject,
+          number: state.current.number,
+          paper: state.current.paper
+        }
+      });
       saveState();
       document.getElementById("savedCount").textContent = `${state.saved.length} saved`;
+      renderSavedList();
+    }
+
+    function renderSavedList() {
+      const list = document.getElementById("savedList");
+      if (!list) return;
+      if (!state.saved.length) {
+        list.innerHTML = "<div class='saved-card'><b>No saved questions yet.</b></div>";
+        return;
+      }
+      list.innerHTML = state.saved.slice().reverse().map((item, idx) => {
+        const kind = item.kind || "paper2";
+        const title = kind === "paper4" ? "Paper 4 Structured" : "Paper 2 MCQ";
+        const qShort = esc(cleanDisplayText(String(item.q || "").slice(0, 170)));
+        return `
+          <div class="saved-card">
+            <div><b>${title}</b> • ${new Date(item.time).toLocaleString()}</div>
+            <div style="margin:6px 0;">${qShort}</div>
+            <div><small>${esc(String(item.feedback || "").slice(0, 210))}</small></div>
+            <div style="margin-top:8px;">
+              <button class="btn" data-saved-index="${state.saved.length - 1 - idx}">Solve Again</button>
+            </div>
+          </div>
+        `;
+      }).join("");
+      list.querySelectorAll("button[data-saved-index]").forEach((btn) => {
+        btn.onclick = () => reopenSaved(Number(btn.dataset.savedIndex));
+      });
+    }
+
+    function reopenSaved(index) {
+      const item = state.saved[index];
+      if (!item || !item.ref) return;
+      if ((item.kind || "paper2") === "paper4") {
+        const match = PAPER4_BANK.find((q) =>
+          q.subject === item.ref.subject &&
+          Number(q.number || -1) === Number(item.ref.number || -2) &&
+          q.paper === item.ref.paper
+        );
+        if (!match) return alert("Original Paper 4 question was not found in current database.");
+        state.paper4Current = match;
+        state.paper4PartIndex = 0;
+        showSection("paper4");
+        renderPaper4Question();
+        return;
+      }
+      const match = BANK.find((q) =>
+        q.subject === item.ref.subject &&
+        Number(q.number || -1) === Number(item.ref.number || -2) &&
+        q.paper === item.ref.paper
+      );
+      if (!match) return alert("Original Paper 2 question was not found in current database.");
+      state.current = match;
+      showSection("solver");
+      document.getElementById("qTitle").textContent = `[${match.subject.toUpperCase()} | ${match.topic}] Q${match.number || "?"}`;
+      renderCurrentQuestionView();
+      const options = document.getElementById("options");
+      options.classList.toggle("ocr-mode", getQuestionRenderMode() === "image-beta");
+      options.innerHTML = match.opts.map((opt, i) => `<button class="opt" data-i="${i}"><b>${String.fromCharCode(65 + i)}) ${cleanDisplayText(opt)}</b></button>`).join("");
+      options.querySelectorAll(".opt").forEach(btn => btn.onclick = () => answerQuestion(Number(btn.dataset.i), btn));
     }
 
     function computeStats() {
@@ -1514,24 +2071,48 @@
 
     async function renderLeaderboard() {
       const list = document.getElementById("leaderboardList");
+      const podium = document.getElementById("podium");
       if (state.online.enabled) {
         const snap = await state.online.db.collection("stats").orderBy("solvedCorrect", "desc").limit(50).get();
         if (snap.empty) {
+          podium.innerHTML = "";
           list.innerHTML = "<div class='history-item'><b>No users yet.</b></div>";
           return;
         }
-        list.innerHTML = snap.docs.map((d, i) => {
-          const u = d.data();
+        const users = snap.docs.map((d) => d.data());
+        podium.innerHTML = users.slice(0, 3).map((u, idx) => {
           const name = u.batmanMode ? "Batman Signal" : (u.name || "User");
-          return `<div class="entry" title="${name}"><span><b>#${i + 1} ${name}</b></span><strong>${u.solvedCorrect || 0} solved</strong></div>`;
+          const pic = u.batmanMode ? "" : (u.pic || "");
+          const medal = idx === 0 ? "🥇" : (idx === 1 ? "🥈" : "🥉");
+          return `
+            <div class="podium-card place-${idx + 1}">
+              ${pic ? `<img class="podium-pic" src="${pic}" alt="${esc(name)}"/>` : `<div class="podium-pic" style="display:grid;place-items:center;">🧑‍🔬</div>`}
+              <div>${medal} ${esc(name)}</div>
+              <small>${u.solvedCorrect || 0} solved</small>
+            </div>
+          `;
+        }).join("");
+        const myName = state.profile.batmanMode ? "Batman Signal" : (state.profile.name || "User");
+        const myRank = users.findIndex((u) => (u.batmanMode ? "Batman Signal" : (u.name || "User")) === myName) + 1;
+        const rankChanged = state.leaderboardPrevRank && myRank > 0 && myRank !== state.leaderboardPrevRank;
+        state.leaderboardPrevRank = myRank > 0 ? myRank : state.leaderboardPrevRank;
+        list.innerHTML = users.map((u, i) => {
+          const name = u.batmanMode ? "Batman Signal" : (u.name || "User");
+          const cls = rankChanged && name === myName ? "entry rank-up" : "entry";
+          return `<div class="${cls}" title="${name}"><span><b>#${i + 1} ${name}</b></span><strong>${u.solvedCorrect || 0} solved</strong></div>`;
         }).join("");
         return;
       }
 
       if (!state.profile.loggedIn) {
+        podium.innerHTML = "";
         list.innerHTML = "<div class='history-item'><b>Sign in to appear in leaderboard.</b></div>";
       } else {
         const meName = state.profile.batmanMode ? "Batman Signal" : (state.profile.name || "You");
+        const mePic = state.profile.batmanMode ? "" : (state.profile.pic || "");
+        podium.innerHTML = `
+          <div class="podium-card place-1">${mePic ? `<img class="podium-pic" src="${mePic}" alt="${esc(meName)}"/>` : `<div class="podium-pic" style="display:grid;place-items:center;">🧑‍🔬</div>`}<div>🥇 ${esc(meName)}</div><small>${state.history.filter(x => x.ok).length} solved</small></div>
+        `;
         list.innerHTML = `<div class="entry" title="Local profile"><span><b>#1 ${meName}</b></span><strong>${state.history.filter(x => x.ok).length} solved</strong></div>`;
       }
     }
@@ -1550,6 +2131,51 @@
       hint.classList.add("show");
       clearTimeout(showBatmanHint._t);
       showBatmanHint._t = setTimeout(() => hint.classList.remove("show"), 1100);
+    }
+
+    function setupPaper4Drawing() {
+      const canvas = document.getElementById("paper4DrawCanvas");
+      if (!canvas) return;
+      const ctx = canvas.getContext("2d");
+      ctx.lineCap = "round";
+      ctx.lineJoin = "round";
+      ctx.strokeStyle = "#9fd3ff";
+      ctx.lineWidth = 4;
+      let drawing = false;
+
+      function pointFromEvent(e) {
+        const r = canvas.getBoundingClientRect();
+        const x = (e.clientX - r.left) * (canvas.width / r.width);
+        const y = (e.clientY - r.top) * (canvas.height / r.height);
+        return { x, y };
+      }
+
+      function start(e) {
+        drawing = true;
+        const p = pointFromEvent(e);
+        ctx.beginPath();
+        ctx.moveTo(p.x, p.y);
+      }
+
+      function move(e) {
+        if (!drawing) return;
+        const p = pointFromEvent(e);
+        ctx.lineTo(p.x, p.y);
+        ctx.stroke();
+      }
+
+      function end() {
+        drawing = false;
+      }
+
+      canvas.addEventListener("pointerdown", start);
+      canvas.addEventListener("pointermove", move);
+      canvas.addEventListener("pointerup", end);
+      canvas.addEventListener("pointerleave", end);
+
+      document.getElementById("paper4ClearDraw").onclick = () => {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+      };
     }
 
     async function submitReport() {
@@ -1646,7 +2272,32 @@
       document.getElementById("nextBtn").onclick = nextQuestion;
       document.getElementById("saveBtn").onclick = saveCurrent;
       document.getElementById("savedCount").textContent = `${state.saved.length} saved`;
+      document.getElementById("paper4Start").onclick = startPaper4Session;
+      document.getElementById("paper4MarkBtn").onclick = markPaper4;
+      document.getElementById("paper4NextPart").onclick = nextPaper4Part;
+      document.getElementById("paper4SaveBtn").onclick = savePaper4;
+      document.getElementById("paper4MarkMode").onchange = renderPaper4Question;
+      document.getElementById("paper4TextMode").onclick = () => {
+        state.paper4AnswerMode = "text";
+        document.getElementById("paper4TextMode").classList.add("active");
+        document.getElementById("paper4DrawMode").classList.remove("active");
+        document.getElementById("paper4AnswerText").hidden = false;
+        document.getElementById("paper4DrawCanvas").hidden = true;
+      };
+      document.getElementById("paper4DrawMode").onclick = () => {
+        state.paper4AnswerMode = "draw";
+        document.getElementById("paper4DrawMode").classList.add("active");
+        document.getElementById("paper4TextMode").classList.remove("active");
+        document.getElementById("paper4AnswerText").hidden = true;
+        document.getElementById("paper4DrawCanvas").hidden = false;
+      };
       document.getElementById("subjectCodes").addEventListener("change", syncSubjectChipsFromSelect);
+      document.getElementById("paper4Subjects").addEventListener("change", () => {
+        const selected = new Set(selectedPaper4Subjects());
+        document.querySelectorAll("#paper4SubjectQuick .subject-chip").forEach((chip) => {
+          chip.classList.toggle("active", selected.has(chip.dataset.subject));
+        });
+      });
       document.getElementById("questionRenderMode").addEventListener("change", () => {
         renderCurrentQuestionView();
         if (state.current) {
@@ -1663,6 +2314,9 @@
       });
       document.querySelectorAll("#subjectQuick .subject-chip").forEach((chip) => {
         chip.addEventListener("click", () => toggleSubject(chip.dataset.subject));
+      });
+      document.querySelectorAll("#paper4SubjectQuick .subject-chip").forEach((chip) => {
+        chip.addEventListener("click", () => togglePaper4Subject(chip.dataset.subject));
       });
       document.querySelector(".brand").addEventListener("mouseenter", () => showBatmanHint("🦇 Gotham watch activated"));
       document.getElementById("leaderboardList").addEventListener("mouseover", (e) => {
@@ -1742,9 +2396,12 @@
     buildNav();
     setTopicOptions();
     bind();
+    setupPaper4Drawing();
     syncSubjectChipsFromSelect();
     hydrateProfile();
     renderHomeAuth();
+    renderDashboard();
+    renderSavedList();
     renderHistory();
     renderLeaderboard();
   </script>

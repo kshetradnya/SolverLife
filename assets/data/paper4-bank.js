@@ -1,0 +1,1131 @@
+window.SOLVERLIFE_PAPER4_BANK = {
+  "generatedAt": "2026-02-27T00:42:58.287339",
+  "count": 50,
+  "questions": [
+    {
+      "paperType": "paper4",
+      "subject": "biology",
+      "topic": "transport",
+      "year": 2021,
+      "number": 2,
+      "paper": "assets/papers4/biology/Biology - Paper 4/November 2021 (v2) QP - Paper 4 CAIE Biology IGCSE.pdf",
+      "questionText": "R T S Fig. 6.1 (i) State the letter of the substrate that will be broken down by enzyme 1. ..................................................................................................................................... [1] (ii) Explain, in terms of enzyme structure, the reason for your choice in 6(b)(i). ........................................................................................................................................... ........................................................................................................................................... ........................................................................................................................................... ........................................................................................................................................... ..................................................................................................................................... [2] 2021 0610/42/O/N/21",
+      "markschemeText": "increased growth of, plants / producers / algae ; MP2 A algal bloom",
+      "parts": [
+        {
+          "label": "i",
+          "text": "State the letter of the substrate that will be broken down by enzyme 1. ..................................................................................................................................... [1] (ii) Explain, in terms of enzyme structure, the reason for your choice in 6",
+          "marks": 1
+        },
+        {
+          "label": "i",
+          "text": ". ........................................................................................................................................... ........................................................................................................................................... ........................................................................................................................................... ........................................................................................................................................... ..................................................................................................................................... [2] 2021 0610/42/O/N/21",
+          "marks": 2
+        }
+      ],
+      "questionImage": "assets/question_snippets/paper4/November_2021_v2_QP_-_Paper_4_CAIE_Biology_IGCSE/qp/q02.png",
+      "markschemeImage": "assets/question_snippets/paper4/November_2021_v2_QP_-_Paper_4_CAIE_Biology_IGCSE/ms/q02.png",
+      "totalMarks": 3
+    },
+    {
+      "paperType": "paper4",
+      "subject": "biology",
+      "topic": "enzymes",
+      "year": 2021,
+      "number": 3,
+      "paper": "assets/papers4/biology/Biology - Paper 4/November 2021 (v2) QP - Paper 4 CAIE Biology IGCSE.pdf",
+      "questionText": "Fig. 3.1 shows the changes in the concentrations of the hormones FSH and LH during a menstrual cycle.",
+      "markschemeText": "plants / producers, compete with each other for light / AW , MP3 A no photosynthesis as no light",
+      "parts": [
+        {
+          "label": "main",
+          "text": "Fig. 3.1 shows the changes in the concentrations of the hormones FSH and LH during a menstrual cycle.",
+          "marks": 1
+        }
+      ],
+      "questionImage": "assets/question_snippets/paper4/November_2021_v2_QP_-_Paper_4_CAIE_Biology_IGCSE/qp/q03.png",
+      "markschemeImage": "assets/question_snippets/paper4/November_2021_v2_QP_-_Paper_4_CAIE_Biology_IGCSE/ms/q03.png",
+      "totalMarks": 1
+    },
+    {
+      "paperType": "paper4",
+      "subject": "biology",
+      "topic": "genetics",
+      "year": 2021,
+      "number": 4,
+      "paper": "assets/papers4/biology/Biology - Paper 4/November 2021 (v2) QP - Paper 4 CAIE Biology IGCSE.pdf",
+      "questionText": "Involuntary actions occur because nerve impulses travel along the components of reflex arcs. An example of an involuntary action is the rapid movement of a hand after unexpectedly touching a very hot object. Fig. 4.1 shows the structures that are involved in the movement of the hand. W U X V hot object Y Z Fig. 4.1 2021 0610/42/O/N/21",
+      "markschemeText": "plants / producers, die or plants / producers, are decomposed ;",
+      "parts": [
+        {
+          "label": "main",
+          "text": "Involuntary actions occur because nerve impulses travel along the components of reflex arcs. An example of an involuntary action is the rapid movement of a hand after unexpectedly touching a very hot object. Fig. 4.1 shows the structures that are involved in the movement of the hand. W U X V hot object Y Z Fig. 4.1 2021 0610/42/O/N/21",
+          "marks": 1
+        }
+      ],
+      "questionImage": "assets/question_snippets/paper4/November_2021_v2_QP_-_Paper_4_CAIE_Biology_IGCSE/qp/q04.png",
+      "markschemeImage": "assets/question_snippets/paper4/November_2021_v2_QP_-_Paper_4_CAIE_Biology_IGCSE/ms/q04.png",
+      "totalMarks": 1
+    },
+    {
+      "paperType": "paper4",
+      "subject": "biology",
+      "topic": "ecology",
+      "year": 2021,
+      "number": 5,
+      "paper": "assets/papers4/biology/Biology - Paper 4/November 2021 (v2) QP - Paper 4 CAIE Biology IGCSE.pdf",
+      "questionText": "(a) State two factors that affect the volume of urine produced in the human body.",
+      "markschemeText": "increase in, decomposers / bacteria ;",
+      "parts": [
+        {
+          "label": "a",
+          "text": "State two factors that affect the volume of urine produced in the human body.",
+          "marks": 1
+        }
+      ],
+      "questionImage": "assets/question_snippets/paper4/November_2021_v2_QP_-_Paper_4_CAIE_Biology_IGCSE/qp/q05.png",
+      "markschemeImage": "assets/question_snippets/paper4/November_2021_v2_QP_-_Paper_4_CAIE_Biology_IGCSE/ms/q05.png",
+      "totalMarks": 1
+    },
+    {
+      "paperType": "paper4",
+      "subject": "biology",
+      "topic": "cells",
+      "year": 2021,
+      "number": 6,
+      "paper": "assets/papers4/biology/Biology - Paper 4/November 2021 (v2) QP - Paper 4 CAIE Biology IGCSE.pdf",
+      "questionText": "Enzymes are catalysts. (a) Define the term catalyst. ................................................................................................................................................... ................................................................................................................................................... ............................................................................................................................................. [2] (b) Fig. 6.1 shows diagrams of three enzymes and eight different substrates. W",
+      "markschemeText": "bacteria / decomposers, use / absorb, (dissolved) oxygen in water ;",
+      "parts": [
+        {
+          "label": "a",
+          "text": "Define the term catalyst. ................................................................................................................................................... ................................................................................................................................................... ............................................................................................................................................. [2]",
+          "marks": 2
+        },
+        {
+          "label": "b",
+          "text": "Fig. 6.1 shows diagrams of three enzymes and eight different substrates. W",
+          "marks": 1
+        }
+      ],
+      "questionImage": "assets/question_snippets/paper4/November_2021_v2_QP_-_Paper_4_CAIE_Biology_IGCSE/qp/q06.png",
+      "markschemeImage": "assets/question_snippets/paper4/November_2021_v2_QP_-_Paper_4_CAIE_Biology_IGCSE/ms/q06.png",
+      "totalMarks": 3
+    },
+    {
+      "paperType": "paper4",
+      "subject": "biology",
+      "topic": "transport",
+      "year": 2021,
+      "number": 7,
+      "paper": "assets/papers4/biology/Biology - Paper 4/November 2021 (v2) QP - Paper 4 CAIE Biology IGCSE.pdf",
+      "questionText": "(ii) Suggest why the scientist placed a bag around flower 1. ........................................................................................................................................... ........................................................................................................................................... ..................................................................................................................................... [1] (iii) Explain how sexual reproduction results in the variation that the scientist discovered in the offspring plants. ........................................................................................................................................... ........................................................................................................................................... ........................................................................................................................................... ........................................................................................................................................... ..................................................................................................................................... [2] (iv) The chromosome number of the offspring plants is the same as the chromosome number of the parent plants in this investigation. Explain how the chromosome number is maintained from one generation to the next. ........................................................................................................................................... ........................................................................................................................................... ........................................................................................................................................... ........................................................................................................................................... ..................................................................................................................................... [2] 2021 0610/42/O/N/21 over [Turn",
+      "markschemeText": "decrease in concentration of (dissolved) oxygen ; reasons for reduction in biodiversity:",
+      "parts": [
+        {
+          "label": "main",
+          "text": "(ii) Suggest why the scientist placed a bag around flower 1. ........................................................................................................................................... ........................................................................................................................................... ..................................................................................................................................... [1] (iii) Explain how sexual reproduction results in the variation that the scientist discovered in the offspring plants. ........................................................................................................................................... ........................................................................................................................................... ........................................................................................................................................... ........................................................................................................................................... ..................................................................................................................................... [2] (iv) The chromosome number of the offspring plants is the same as the chromosome number of the parent plants in this investigation. Explain how the chromosome number is maintained from one generation to the next. ........................................................................................................................................... ........................................................................................................................................... ........................................................................................................................................... ........................................................................................................................................... ..................................................................................................................................... [2] 2021 0610/42/O/N/21 over [Turn",
+          "marks": 5
+        }
+      ],
+      "questionImage": "",
+      "markschemeImage": "assets/question_snippets/paper4/November_2021_v2_QP_-_Paper_4_CAIE_Biology_IGCSE/ms/q07.png",
+      "totalMarks": 5
+    },
+    {
+      "paperType": "paper4",
+      "subject": "biology",
+      "topic": "enzymes",
+      "year": 2021,
+      "number": 8,
+      "paper": "assets/papers4/biology/Biology - Paper 4/November 2021 (v2) QP - Paper 4 CAIE Biology IGCSE.pdf",
+      "questionText": "(b) The plant Camellia japonica has flowers that can be white, red or a mixture of these two colours. When red-flowered plants are crossed with white-flowered plants, all the offspring plants have flowers with petals that are a mixture of red and white, as shown in Fig. 2.2. Fig. 2.2 \u2022 The gene for petal colour in C. japonica is given the symbol P. \u2022 The allele for white petals is given the symbol PW. \u2022 The allele for red petals is given the symbol PR. (i) Table 2.1 shows the phenotypes of three different pairs of parent plants. Complete Table 2.1 by giving all the possible genotypes of the offspring plants that could be produced by these parent plants. Space for working. 2021 0610/42/O/N/21",
+      "markschemeText": "death of, (named) animals / fish / invertebrates (due to lack of dissolved MP8 A if linked to MP7 oxygen) ;",
+      "parts": [
+        {
+          "label": "b",
+          "text": "The plant Camellia japonica has flowers that can be white, red or a mixture of these two colours. When red-flowered plants are crossed with white-flowered plants, all the offspring plants have flowers with petals that are a mixture of red and white, as shown in Fig. 2.2. Fig. 2.2 \u2022 The gene for petal colour in C. japonica is given the symbol P. \u2022 The allele for white petals is given the symbol PW. \u2022 The allele for red petals is given the symbol PR.",
+          "marks": 1
+        },
+        {
+          "label": "i",
+          "text": "Table 2.1 shows the phenotypes of three different pairs of parent plants. Complete Table 2.1 by giving all the possible genotypes of the offspring plants that could be produced by these parent plants. Space for working. 2021 0610/42/O/N/21",
+          "marks": 1
+        }
+      ],
+      "questionImage": "assets/question_snippets/paper4/November_2021_v2_QP_-_Paper_4_CAIE_Biology_IGCSE/qp/q08.png",
+      "markschemeImage": "",
+      "totalMarks": 2
+    },
+    {
+      "paperType": "paper4",
+      "subject": "biology",
+      "topic": "genetics",
+      "year": 2021,
+      "number": 9,
+      "paper": "assets/papers4/biology/Biology - Paper 4/November 2021 (v2) QP - Paper 4 CAIE Biology IGCSE.pdf",
+      "questionText": "Table 2.1 phenotype of female all the possible genotypes of offspring phenotype of male parent parent plants produced by this cross red petals red petals white petals red petals petals that are both red petals that are both red and white and white [3] (ii) State the type of inheritance that is shown by petal colour in C. japonica. ..................................................................................................................................... [1] [Total: 11] 2021 0610/42/O/N/21 over [Turn",
+      "markschemeText": "decrease in, food / energy, available in, ecosystem / AW ; MP9 A disruption of food, chains / webs",
+      "parts": [
+        {
+          "label": "main",
+          "text": "Table 2.1 phenotype of female all the possible genotypes of offspring phenotype of male parent parent plants produced by this cross red petals red petals white petals red petals petals that are both red petals that are both red and white and white [3] (ii) State the type of inheritance that is shown by petal colour in C. japonica. ..................................................................................................................................... [1] [Total: 11] 2021 0610/42/O/N/21 over [Turn",
+          "marks": 4
+        }
+      ],
+      "questionImage": "",
+      "markschemeImage": "",
+      "totalMarks": 4
+    },
+    {
+      "paperType": "paper4",
+      "subject": "biology",
+      "topic": "cells",
+      "year": 2021,
+      "number": 11,
+      "paper": "assets/papers4/biology/Biology - Paper 4/November 2021 (v2) QP - Paper 4 CAIE Biology IGCSE.pdf",
+      "questionText": "(b) Describe the roles of FSH and LH in the menstrual cycle. ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ............................................................................................................................................. [4] (c) Describe the changes that occur in the lining of the uterus during one menstrual cycle. ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ............................................................................................................................................. [3] (d) Oral contraceptives are a method of birth control taken by women. Outline how the hormones in contraceptives act as a method of birth control. ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ............................................................................................................................................. [3] [Total: 14] 2021 0610/42/O/N/21 over [Turn",
+      "markschemeText": "ref to aerobic respiration (in either section)",
+      "parts": [
+        {
+          "label": "b",
+          "text": "Describe the roles of FSH and LH in the menstrual cycle. ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ............................................................................................................................................. [4]",
+          "marks": 4
+        },
+        {
+          "label": "c",
+          "text": "Describe the changes that occur in the lining of the uterus during one menstrual cycle. ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ............................................................................................................................................. [3]",
+          "marks": 3
+        },
+        {
+          "label": "d",
+          "text": "Oral contraceptives are a method of birth control taken by women. Outline how the hormones in contraceptives act as a method of birth control. ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ............................................................................................................................................. [3] [Total: 14] 2021 0610/42/O/N/21 over [Turn",
+          "marks": 3
+        }
+      ],
+      "questionImage": "",
+      "markschemeImage": "",
+      "totalMarks": 10
+    },
+    {
+      "paperType": "paper4",
+      "subject": "biology",
+      "topic": "enzymes",
+      "year": 2021,
+      "number": 13,
+      "paper": "assets/papers4/biology/Biology - Paper 4/November 2021 (v2) QP - Paper 4 CAIE Biology IGCSE.pdf",
+      "questionText": "(a) Table 4.1 shows the functions of some of the structures shown in Fig. 4.1, the names of the structures and the letter from Fig. 4.1 that identifies each structure. Complete Table 4.1. Table 4.1 function name letter on Fig. 4.1 conducts impulses to central nervous system (CNS) conducts impulses to an effector conducts impulses only within the CNS receptor Z [5] 2021 0610/42/O/N/21 over [Turn",
+      "markschemeText": "no clearance / no breakdown / no change, with water ; 1(f)(ii) (same pattern but) smaller / no, clear zones ; 1 2021 0610/42 Cambridge IGCSE \u2013 Mark Scheme October/November 2021 PUBLISHED Question Answer Marks Guidance 2(a)(i) (thread-like structure) made / length / strand / composed / molecule, of DNA ; 2 carries / contains, genes / alleles / genetic information or material ; 2(a)(ii) prevent pollination (from another flower or plant) / to prevent (other) pollen 1 landing on stigma ; 2(a)(iii) any two from: 2 reference to meiosis ; gametes contain different alleles ; idea of new / different, combinations of, maternal and paternal chromosomes / alleles ; idea of random fertilisation / fusion of gametes with different, genotypes or alleles ; AVP ; 2(a)(iv) either: 2",
+      "parts": [
+        {
+          "label": "a",
+          "text": "Table 4.1 shows the functions of some of the structures shown in Fig. 4.1, the names of the structures and the letter from Fig. 4.1 that identifies each structure. Complete Table 4.1. Table 4.1 function name letter on Fig. 4.1 conducts impulses to central nervous system (CNS) conducts impulses to an effector conducts impulses only within the CNS receptor Z [5] 2021 0610/42/O/N/21 over [Turn",
+          "marks": 5
+        }
+      ],
+      "questionImage": "",
+      "markschemeImage": "",
+      "totalMarks": 5
+    },
+    {
+      "paperType": "paper4",
+      "subject": "biology",
+      "topic": "genetics",
+      "year": 2021,
+      "number": 14,
+      "paper": "assets/papers4/biology/Biology - Paper 4/November 2021 (v2) QP - Paper 4 CAIE Biology IGCSE.pdf",
+      "questionText": "(b) Fig. 4.2 shows the structure of the synapse at W on Fig. 4.1. Fig. 4.2 Describe how an impulse travels across the synapse shown in Fig. 4.2. ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ............................................................................................................................................. [4] (c) State one example of a reflex action that occurs in the eye. ................................................................................................................................................... ................................................................................................................................................... ............................................................................................................................................. [1] [Total: 10] 2021 0610/42/O/N/21",
+      "markschemeText": "",
+      "parts": [
+        {
+          "label": "b",
+          "text": "Fig. 4.2 shows the structure of the synapse at W on Fig. 4.1. Fig. 4.2 Describe how an impulse travels across the synapse shown in Fig. 4.2. ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ............................................................................................................................................. [4]",
+          "marks": 4
+        },
+        {
+          "label": "c",
+          "text": "State one example of a reflex action that occurs in the eye. ................................................................................................................................................... ................................................................................................................................................... ............................................................................................................................................. [1] [Total: 10] 2021 0610/42/O/N/21",
+          "marks": 1
+        }
+      ],
+      "questionImage": "",
+      "markschemeImage": "",
+      "totalMarks": 5
+    },
+    {
+      "paperType": "paper4",
+      "subject": "biology",
+      "topic": "ecology",
+      "year": 2021,
+      "number": 15,
+      "paper": "assets/papers4/biology/Biology - Paper 4/November 2021 (v2) QP - Paper 4 CAIE Biology IGCSE.pdf",
+      "questionText": "BLANK PAGE 2021 0610/42/O/N/21 over [Turn",
+      "markschemeText": "",
+      "parts": [
+        {
+          "label": "main",
+          "text": "BLANK PAGE 2021 0610/42/O/N/21 over [Turn",
+          "marks": 1
+        }
+      ],
+      "questionImage": "",
+      "markschemeImage": "",
+      "totalMarks": 1
+    },
+    {
+      "paperType": "paper4",
+      "subject": "biology",
+      "topic": "transport",
+      "year": 2021,
+      "number": 17,
+      "paper": "assets/papers4/biology/Biology - Paper 4/November 2021 (v2) QP - Paper 4 CAIE Biology IGCSE.pdf",
+      "questionText": "(c) Waste from livestock farms often pollutes water courses, such as streams and rivers, leading to a reduction in biodiversity. Explain how the pollution of water courses by animal waste leads to a reduction in biodiversity. ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ............................................................................................................................................. [6] [Total: 13] 2021 0610/42/O/N/21 over [Turn",
+      "markschemeText": "",
+      "parts": [
+        {
+          "label": "c",
+          "text": "Waste from livestock farms often pollutes water courses, such as streams and rivers, leading to a reduction in biodiversity. Explain how the pollution of water courses by animal waste leads to a reduction in biodiversity. ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ............................................................................................................................................. [6] [Total: 13] 2021 0610/42/O/N/21 over [Turn",
+          "marks": 6
+        }
+      ],
+      "questionImage": "",
+      "markschemeImage": "",
+      "totalMarks": 6
+    },
+    {
+      "paperType": "paper4",
+      "subject": "biology",
+      "topic": "genetics",
+      "year": 2021,
+      "number": 19,
+      "paper": "assets/papers4/biology/Biology - Paper 4/November 2021 (v2) QP - Paper 4 CAIE Biology IGCSE.pdf",
+      "questionText": "(c) Table 6.1 lists some enzymes and the reactions that they catalyse. Complete Table 6.1. Table 6.1 enzyme reaction maltase breakdown of maltose to ............................... ............................... breakdown of proteins to amino acids lipase breakdown of fats to ............................... and ............................... ............................... breakdown of lactose to simpler sugars ............................... insertion of a short length of DNA into a plasmid restriction enzyme ....................................................................................................... [6] [Total: 11] 2021 0610/42/O/N/21",
+      "markschemeText": "",
+      "parts": [
+        {
+          "label": "c",
+          "text": "Table 6.1 lists some enzymes and the reactions that they catalyse. Complete Table 6.1. Table 6.1 enzyme reaction maltase breakdown of maltose to ............................... ............................... breakdown of proteins to amino acids lipase breakdown of fats to ............................... and ............................... ............................... breakdown of lactose to simpler sugars ............................... insertion of a short length of DNA into a plasmid restriction enzyme ....................................................................................................... [6] [Total: 11] 2021 0610/42/O/N/21",
+          "marks": 6
+        }
+      ],
+      "questionImage": "",
+      "markschemeImage": "",
+      "totalMarks": 6
+    },
+    {
+      "paperType": "paper4",
+      "subject": "biology",
+      "topic": "ecology",
+      "year": 2021,
+      "number": 20,
+      "paper": "assets/papers4/biology/Biology - Paper 4/November 2021 (v2) QP - Paper 4 CAIE Biology IGCSE.pdf",
+      "questionText": "BLANK PAGE Permission to reproduce items where third-party owned material protected by copyright is included has been sought and cleared where possible. Every reasonable effort has been made by the publisher (UCLES) to trace copyright holders, but if any items requiring clearance have unwittingly been included, the publisher will be pleased to make amends at the earliest possible opportunity. To avoid the issue of disclosure of answer-related information to candidates, all copyright acknowledgements are reproduced online in the Cambridge Assessment International Education Copyright Acknowledgements Booklet. This is produced for each series of examinations and is freely available to download at www.cambridgeinternational.org after the live examination series. Cambridge Assessment International Education is part of the Cambridge Assessment Group. Cambridge Assessment is the brand name of the University of Cambridge Local Examinations Syndicate (UCLES), which itself is a department of the University of Cambridge. 2021 0610/42/O/N/21",
+      "markschemeText": "",
+      "parts": [
+        {
+          "label": "main",
+          "text": "BLANK PAGE Permission to reproduce items where third-party owned material protected by copyright is included has been sought and cleared where possible. Every reasonable effort has been made by the publisher (UCLES) to trace copyright holders, but if any items requiring clearance have unwittingly been included, the publisher will be pleased to make amends at the earliest possible opportunity. To avoid the issue of disclosure of answer-related information to candidates, all copyright acknowledgements are reproduced online in the Cambridge Assessment International Education Copyright Acknowledgements Booklet. This is produced for each series of examinations and is freely available to download at www.cambridgeinternational.org after the live examination series. Cambridge Assessment International Education is part of the Cambridge Assessment Group. Cambridge Assessment is the brand name of the University of Cambridge Local Examinations Syndicate (UCLES), which itself is a department of the University of Cambridge. 2021 0610/42/O/N/21",
+          "marks": 1
+        }
+      ],
+      "questionImage": "",
+      "markschemeImage": "",
+      "totalMarks": 1
+    },
+    {
+      "paperType": "paper4",
+      "subject": "biology",
+      "topic": "ecology",
+      "year": 2021,
+      "number": 35,
+      "paper": "assets/papers4/biology/Biology - Paper 4/November 2021 (v2) QP - Paper 4 CAIE Biology IGCSE.pdf",
+      "questionText": "30 concentration 25 of hormone / arbitrary units 20",
+      "markschemeText": "",
+      "parts": [
+        {
+          "label": "main",
+          "text": "30 concentration 25 of hormone / arbitrary units 20",
+          "marks": 1
+        }
+      ],
+      "questionImage": "",
+      "markschemeImage": "",
+      "totalMarks": 1
+    },
+    {
+      "paperType": "paper4",
+      "subject": "chemistry",
+      "topic": "stoichiometry",
+      "year": 2021,
+      "number": 1,
+      "paper": "assets/papers4/chemistry/Chemistry - Paper 4/November 2021 (v3) QP - Paper 4 CAIE Chemistry IGCSE.pdf",
+      "questionText": "2 H He hydrogen helium Key 1 4",
+      "markschemeText": "Examiners should consider the context and scientific use of any keywords when awarding marks. Although keywords may be present, marks should not be awarded if the keywords are used incorrectly.",
+      "parts": [
+        {
+          "label": "main",
+          "text": "2 H He hydrogen helium Key 1 4",
+          "marks": 1
+        }
+      ],
+      "questionImage": "assets/question_snippets/paper4/November_2021_v3_QP_-_Paper_4_CAIE_Chemistry_IGCSE/qp/q01.png",
+      "markschemeImage": "assets/question_snippets/paper4/November_2021_v3_QP_-_Paper_4_CAIE_Chemistry_IGCSE/ms/q01.png",
+      "totalMarks": 1
+    },
+    {
+      "paperType": "paper4",
+      "subject": "chemistry",
+      "topic": "bonding",
+      "year": 2021,
+      "number": 2,
+      "paper": "assets/papers4/chemistry/Chemistry - Paper 4/November 2021 (v3) QP - Paper 4 CAIE Chemistry IGCSE.pdf",
+      "questionText": "................................................................................................................................................. [2] 2021 0620/43/O/N/21",
+      "markschemeText": "The examiner should not choose between contradictory statements given in the same question part, and credit should not be awarded for any correct statement that is contradicted within the same question part. Wrong science that is irrelevant to the question should be ignored.",
+      "parts": [
+        {
+          "label": "main",
+          "text": "................................................................................................................................................. [2] 2021 0620/43/O/N/21",
+          "marks": 2
+        }
+      ],
+      "questionImage": "assets/question_snippets/paper4/November_2021_v3_QP_-_Paper_4_CAIE_Chemistry_IGCSE/qp/q02.png",
+      "markschemeImage": "assets/question_snippets/paper4/November_2021_v3_QP_-_Paper_4_CAIE_Chemistry_IGCSE/ms/q02.png",
+      "totalMarks": 2
+    },
+    {
+      "paperType": "paper4",
+      "subject": "chemistry",
+      "topic": "acids-bases",
+      "year": 2021,
+      "number": 3,
+      "paper": "assets/papers4/chemistry/Chemistry - Paper 4/November 2021 (v3) QP - Paper 4 CAIE Chemistry IGCSE.pdf",
+      "questionText": "4 atomic number 5 6 7 8 9 10 Li Be atomic symbol B C N O F Ne lithium beryllium name boron carbon nitrogen oxygen fluorine neon",
+      "markschemeText": "Although spellings do not have to be correct, spellings of syllabus terms must allow for clear and unambiguous separation from other syllabus terms with which they may be confused (e.g. ethane / ethene, glucagon / glycogen, refraction / reflection).",
+      "parts": [
+        {
+          "label": "main",
+          "text": "4 atomic number 5 6 7 8 9 10 Li Be atomic symbol B C N O F Ne lithium beryllium name boron carbon nitrogen oxygen fluorine neon",
+          "marks": 1
+        }
+      ],
+      "questionImage": "assets/question_snippets/paper4/November_2021_v3_QP_-_Paper_4_CAIE_Chemistry_IGCSE/qp/q03.png",
+      "markschemeImage": "assets/question_snippets/paper4/November_2021_v3_QP_-_Paper_4_CAIE_Chemistry_IGCSE/ms/q03.png",
+      "totalMarks": 1
+    },
+    {
+      "paperType": "paper4",
+      "subject": "chemistry",
+      "topic": "organic",
+      "year": 2021,
+      "number": 4,
+      "paper": "assets/papers4/chemistry/Chemistry - Paper 4/November 2021 (v3) QP - Paper 4 CAIE Chemistry IGCSE.pdf",
+      "questionText": "Carbon is an important element. (a) Carbon exists as the isotopes 126C and 136C. Complete the table. number of protons number of electrons number of neutrons isotope in one atom in one atom in one atom",
+      "markschemeText": "The error carried forward (ecf) principle should be applied, where appropriate. If an incorrect answer is subsequently used in a scientifically correct way, the candidate should be awarded these subsequent marking points. Further guidance will be included in the mark scheme where necessary and any exceptions to this general principle will be noted.",
+      "parts": [
+        {
+          "label": "a",
+          "text": "Carbon exists as the isotopes 126C and 136C. Complete the table. number of protons number of electrons number of neutrons isotope in one atom in one atom in one atom",
+          "marks": 1
+        }
+      ],
+      "questionImage": "assets/question_snippets/paper4/November_2021_v3_QP_-_Paper_4_CAIE_Chemistry_IGCSE/qp/q04.png",
+      "markschemeImage": "assets/question_snippets/paper4/November_2021_v3_QP_-_Paper_4_CAIE_Chemistry_IGCSE/ms/q04.png",
+      "totalMarks": 1
+    },
+    {
+      "paperType": "paper4",
+      "subject": "chemistry",
+      "topic": "electrolysis",
+      "year": 2021,
+      "number": 5,
+      "paper": "assets/papers4/chemistry/Chemistry - Paper 4/November 2021 (v3) QP - Paper 4 CAIE Chemistry IGCSE.pdf",
+      "questionText": "(a) Dilute sulfuric acid and aqueous sodium hydroxide can be used to prepare sodium sulfate crystals using a method that involves titration. dilute sulfuric acid conical flask 25.0 cm3 aqueous sodium hydroxide (i) Suggest why universal indicator is not suitable for this titration. ....................................................................................................................................... [1] (ii) Name an indicator that can be used in this titration. ....................................................................................................................................... [1] 20.0 cm3 of dilute sulfuric acid neutralises 25.0 cm3 of 1.00 mol / dm3 aqueous sodium hydroxide. At the end of the titration the conical flask contains aqueous sodium sulfate with the dissolved indicator as an impurity. (b) Describe how to prepare a pure sample of sodium sulfate crystals from the original solutions of dilute sulfuric acid and aqueous sodium hydroxide of the same concentrations. You are not required to give details of how to carry out the titration. .................................................................................................................................................... .................................................................................................................................................... .................................................................................................................................................... .................................................................................................................................................... .................................................................................................................................................... .................................................................................................................................................... .................................................................................................................................................... .................................................................................................................................................... .............................................................................................................................................. [5] 2021 0620/43/O/N/21",
+      "markschemeText": "\u2018List rule\u2019 guidance For questions that require n responses (e.g. State two reasons \u2026): \u2022 The response should be read as continuous prose, even when numbered answer spaces are provided. \u2022 Any response marked ignore in the mark scheme should not count towards n. \u2022 Incorrect responses should not be awarded credit but will still count towards n. \u2022 Read the entire response to check for any responses that contradict those that would otherwise be credited. Credit should not be awarded for any responses that are contradicted within the rest of the response. Where two responses contradict one another, this should be treated as a single incorrect response. \u2022 Non-contradictory responses after the first n responses may be ignored even if they include incorrect science. 2021 0620/43 Cambridge IGCSE \u2013 Mark Scheme October/November 2021 PUBLISHED",
+      "parts": [
+        {
+          "label": "a",
+          "text": "Dilute sulfuric acid and aqueous sodium hydroxide can be used to prepare sodium sulfate crystals using a method that involves titration. dilute sulfuric acid conical flask 25.0 cm3 aqueous sodium hydroxide",
+          "marks": 1
+        },
+        {
+          "label": "i",
+          "text": "Suggest why universal indicator is not suitable for this titration. ....................................................................................................................................... [1] (ii) Name an indicator that can be used in this titration. ....................................................................................................................................... [1] 20.0 cm3 of dilute sulfuric acid neutralises 25.0 cm3 of 1.00 mol / dm3 aqueous sodium hydroxide. At the end of the titration the conical flask contains aqueous sodium sulfate with the dissolved indicator as an impurity.",
+          "marks": 2
+        },
+        {
+          "label": "b",
+          "text": "Describe how to prepare a pure sample of sodium sulfate crystals from the original solutions of dilute sulfuric acid and aqueous sodium hydroxide of the same concentrations. You are not required to give details of how to carry out the titration. .................................................................................................................................................... .................................................................................................................................................... .................................................................................................................................................... .................................................................................................................................................... .................................................................................................................................................... .................................................................................................................................................... .................................................................................................................................................... .................................................................................................................................................... .............................................................................................................................................. [5] 2021 0620/43/O/N/21",
+          "marks": 5
+        }
+      ],
+      "questionImage": "assets/question_snippets/paper4/November_2021_v3_QP_-_Paper_4_CAIE_Chemistry_IGCSE/qp/q05.png",
+      "markschemeImage": "assets/question_snippets/paper4/November_2021_v3_QP_-_Paper_4_CAIE_Chemistry_IGCSE/ms/q05.png",
+      "totalMarks": 8
+    },
+    {
+      "paperType": "paper4",
+      "subject": "chemistry",
+      "topic": "stoichiometry",
+      "year": 2021,
+      "number": 6,
+      "paper": "assets/papers4/chemistry/Chemistry - Paper 4/November 2021 (v3) QP - Paper 4 CAIE Chemistry IGCSE.pdf",
+      "questionText": "A student investigates the decomposition of hydrogen peroxide in the presence of a catalyst of manganese(IV) oxide. 2H2O2(aq) \u2192 2H2O(l) + O2(g) (a) State the meaning of the term catalyst. .................................................................................................................................................... .............................................................................................................................................. [2] (b) The diagram shows the equipment the student uses. cotton wool catalyst of manganese(IV) oxide aqueous hydrogen peroxide balance The student uses this method: \u25cf the catalyst is added to the aqueous hydrogen peroxide \u25cf the stop-clock is started \u25cf the mass of the flask and contents is recorded at regular time intervals. 2021 0620/43/O/N/21",
+      "markschemeText": "6 7 4(b) diamond and graphite 1 4(c)(i) M1 (22 \u00f7 44 =) 0.5 (moles) (1) 2 M2 3.01 \u00d7 1023(1) 4(c)(ii) 1.505 \u00d7 1023 1 2021 0620/43 Cambridge IGCSE \u2013 Mark Scheme October/November 2021 PUBLISHED Question Answer Marks 5(a)(i) too many colour changes 1 5(a)(ii) Any acid-base indicator, e.g. methyl orange or phenolphthalein 1 5(b) M1 repeat without indicator using same volumes OR remove indicator by adding charcoal or carbon and filtering (1) 5 M2 evaporate / heat / warm/ boil/leave in hot place (1) M3 until most of the water is gone / some water left / saturation(point) / crystallisation (point) / evaporate some of the water (1) M4 cool / leave to crystallise(1) M5 description of drying (1) 5(c)(i) yellow flame 1 5(c)(ii) M1 solid dissolves / disappears(1) 2 M2 blue solution(1) 5(c)(iii) white precipitate 1 2021 0620/43 Cambridge IGCSE \u2013 Mark Scheme October/November 2021 PUBLISHED Question Answer Marks 6(a) M1 (a substance that) speeds up a reaction / increases the rate of a reaction (1) 2 M2 unchanged chemically at the end (1) 6(b)(i) oxygen gas escapes 1 6(b)(ii) M1 rate decreases 2 OR rate / reaction is fastest at the start (1) M2 reaction stops or rate = zero (1) 6(c)(i) M1 (particles) have more kinetic energy / particles move faster(1) 3 M2 more collisions per unit time (1) M3 more particles have energy greater than or equal to activation energy OR more particles have sufficient energy to react OR A greater percentage or greater proportion or greater fraction of collisions have sufficient energy to react OR A greater percentage or greater proportion or greater fraction of collisions have energy greater than or equal to activation energy OR A greater percentage or greater proportion or greater fraction of collisions are successful (1) 6(c)(ii) M1 steeper gradient from start (1) 2 M2 levels off at the same mass (1) 2021 0620/43 Cambridge IGCSE \u2013 Mark Scheme October/November 2021 PUBLISHED Question Answer Marks 7(a) 1 for each for any 2 of: 2 \u2022 (same) general formula \u2022 similar chemical properties \u2022 (consecutive members) differ by CH2 \u2022 same functional group \u2022 common (allow similar or same) methods of preparation \u2022 physical properties and vary in predictable manner or show trends or gradually change OR example of a physical property variation, e.g. melting points increase boiling points increase volatility decreases 7(b)(i) cracking 1 7(b)(ii) \u2192 C2H4 + C4H10 (2) 2 7(b)(iii) C2H4 + H2O \u2192 C2H5OH 1 7(b)(iv) hydration / addition 1 7(b)(v) 1 mark for ANY 1 of: 1 \u2022 300 \u00b0C \u2022 60 atmospheres \u2022 H3PO4 2021 0620/43 Cambridge IGCSE \u2013 Mark Scheme October/November 2021 PUBLISHED Question Answer Marks 7(c) 1 mark each for any 2 of: 2 \u2022 carbohydrates are renewable \u2022 fossil fuels are non-renewable OR fossil fuels conserved \u2022 lower temperature OR lower energy \u2022 hydration is equilibrium meaning lower yield \u2022 lower pressure (used) 7(d)(i) substitution 1 7(d)(ii) addition 1 7(d)(iii) 2 M1 any one repeat unit with extension bonds (1) M2 both units fully correct (1) 7(e) 1 mark for each functional group fully correct (2) 2 2021",
+      "parts": [
+        {
+          "label": "a",
+          "text": "State the meaning of the term catalyst. .................................................................................................................................................... .............................................................................................................................................. [2]",
+          "marks": 2
+        },
+        {
+          "label": "b",
+          "text": "The diagram shows the equipment the student uses. cotton wool catalyst of manganese(IV) oxide aqueous hydrogen peroxide balance The student uses this method: \u25cf the catalyst is added to the aqueous hydrogen peroxide \u25cf the stop-clock is started \u25cf the mass of the flask and contents is recorded at regular time intervals. 2021 0620/43/O/N/21",
+          "marks": 1
+        }
+      ],
+      "questionImage": "assets/question_snippets/paper4/November_2021_v3_QP_-_Paper_4_CAIE_Chemistry_IGCSE/qp/q06.png",
+      "markschemeImage": "assets/question_snippets/paper4/November_2021_v3_QP_-_Paper_4_CAIE_Chemistry_IGCSE/ms/q06.png",
+      "totalMarks": 3
+    },
+    {
+      "paperType": "paper4",
+      "subject": "chemistry",
+      "topic": "bonding",
+      "year": 2021,
+      "number": 7,
+      "paper": "assets/papers4/chemistry/Chemistry - Paper 4/November 2021 (v3) QP - Paper 4 CAIE Chemistry IGCSE.pdf",
+      "questionText": "9 relative atomic mass 11 12 14 16 19 20",
+      "markschemeText": "Guidance for chemical equations Multiples / fractions of coefficients used in chemical equations are acceptable unless stated otherwise in the mark scheme. State symbols given in an equation should be ignored unless asked for in the question or stated otherwise in the mark scheme. 2021 0620/43 Cambridge IGCSE \u2013 Mark Scheme October/November 2021 PUBLISHED Question Answer Marks 1(a) oxygen 1 1(b) bauxite 1 1(c) sulfur dioxide 1 1(d) ethanol 1 1(e) sodium chloride 1 1(f) ammonia 1 1(g) carbon dioxide 1 1(h) carbon monoxide 1 1(i) ammonia 1 Question Answer Marks 2(a) M1 ionic compound 2 AND either molten or aqueous(or both)(1) M2 conducts electricity / undergoes electrolysis(1) 2(b)(i) M1 oxygen (1) 5 M2 pink / brown solid (1) M3 copper (1) M4 orange / brown / yellow liquid (1) M5 bromine (1) 2021 0620/43 Cambridge IGCSE \u2013 Mark Scheme October/November 2021 PUBLISHED Question Answer Marks 2(b)(ii) 2H+ + 2e(\u2013) \u2192 H2 (2) 2 2(b)(iii) M1 inert (1) 2 M2 good conductor of electricity (1) 2(b)(iv) electron 1 Question Answer Marks 3(a) 267 1 3(b) (207 / 239 \u00d7 100 = ) 86.6% 1 3(c) PbS because the percentage of lead is larger in PbS or answer to (b) > 77.5% 1 3(d) PbCO3 \u2192 PbO + CO2 1 3(e) PbCO3 + 2HNO3 \u2192 Pb(NO3)2 + H2O + CO2 2 3(f)(i) M1 two double bonds (1) 2 M2 two pairs of non-bonding electrons on each oxygen and no non-bonding electrons on carbon (1) 3(f)(ii) M1 bonds between ions or ionic bonds in lead(II) oxide (1) 3 M2 attraction between molecules in carbon dioxide (1) M3 weaker attraction (between particles) in carbon dioxide ORA (1) 3(g) M1 Mg + Pb2+ \u2192 Mg2+ + Pb (1) 2 M2 no reaction (1) 2021 0620/43 Cambridge IGCSE \u2013 Mark Scheme October/November 2021 PUBLISHED Question Answer Marks 3(h)(i) M1 glowing splint (1) 2 M2 relights (1) 3(h)(ii) nitrogen dioxide / 1 nitrogen(IV) oxide Question Answer Marks 4(a) 1 mark for each row 2",
+      "parts": [
+        {
+          "label": "main",
+          "text": "9 relative atomic mass 11 12 14 16 19 20",
+          "marks": 1
+        }
+      ],
+      "questionImage": "assets/question_snippets/paper4/November_2021_v3_QP_-_Paper_4_CAIE_Chemistry_IGCSE/qp/q07.png",
+      "markschemeImage": "assets/question_snippets/paper4/November_2021_v3_QP_-_Paper_4_CAIE_Chemistry_IGCSE/ms/q07.png",
+      "totalMarks": 1
+    },
+    {
+      "paperType": "paper4",
+      "subject": "chemistry",
+      "topic": "organic",
+      "year": 2021,
+      "number": 9,
+      "paper": "assets/papers4/chemistry/Chemistry - Paper 4/November 2021 (v3) QP - Paper 4 CAIE Chemistry IGCSE.pdf",
+      "questionText": "(c) Sodium hydrogensulfate, NaHSO4, dissolves in water to produce an aqueous solution, X, containing Na+, H+ and SO42\u2013 ions. State the observations when the following tests are done. (i) A flame test is carried out on X. ....................................................................................................................................... [1] (ii) Copper(II) oxide is warmed with an excess of X. ............................................................................................................................................. ....................................................................................................................................... [2] (iii) Acidified aqueous barium nitrate is added to X. ....................................................................................................................................... [1] [Total: 11] 2021 0620/43/O/N/21 over [Turn",
+      "markschemeText": "",
+      "parts": [
+        {
+          "label": "c",
+          "text": "Sodium hydrogensulfate, NaHSO4, dissolves in water to produce an aqueous solution, X, containing Na+, H+ and SO42\u2013 ions. State the observations when the following tests are done.",
+          "marks": 1
+        },
+        {
+          "label": "i",
+          "text": "A flame test is carried out on X. ....................................................................................................................................... [1] (ii) Copper(II) oxide is warmed with an excess of X. ............................................................................................................................................. ....................................................................................................................................... [2] (iii) Acidified aqueous barium nitrate is added to X. ....................................................................................................................................... [1] [Total: 11] 2021 0620/43/O/N/21 over [Turn",
+          "marks": 4
+        }
+      ],
+      "questionImage": "",
+      "markschemeImage": "",
+      "totalMarks": 5
+    },
+    {
+      "paperType": "paper4",
+      "subject": "chemistry",
+      "topic": "stoichiometry",
+      "year": 2021,
+      "number": 11,
+      "paper": "assets/papers4/chemistry/Chemistry - Paper 4/November 2021 (v3) QP - Paper 4 CAIE Chemistry IGCSE.pdf",
+      "questionText": "12 13 14 15 16 17 18 Na Mg Al Si P S Cl Ar sodium magnesium aluminium silicon phosphorus sulfur chlorine argon",
+      "markschemeText": "",
+      "parts": [
+        {
+          "label": "main",
+          "text": "12 13 14 15 16 17 18 Na Mg Al Si P S Cl Ar sodium magnesium aluminium silicon phosphorus sulfur chlorine argon",
+          "marks": 1
+        }
+      ],
+      "questionImage": "",
+      "markschemeImage": "",
+      "totalMarks": 1
+    },
+    {
+      "paperType": "paper4",
+      "subject": "chemistry",
+      "topic": "acids-bases",
+      "year": 2021,
+      "number": 13,
+      "paper": "assets/papers4/chemistry/Chemistry - Paper 4/November 2021 (v3) QP - Paper 4 CAIE Chemistry IGCSE.pdf",
+      "questionText": "(d) (i) Under certain conditions ethene can react with chlorine to produce chloroethene. The structure of chloroethene is shown. H H C C H Cl The equation for the chemical reaction is shown. C2H4 + Cl 2 \u2192 C2H3Cl + HCl State the type of chemical reaction between ethene and chlorine that this equation shows. ....................................................................................................................................... [1] (ii) Chloroethene monomers can be converted into a polymer called poly(chloroethene). State the type of polymerisation that produces poly(chloroethene) from chloroethene. ....................................................................................................................................... [1] (iii) Draw a section of the poly(chloroethene) molecule made from two monomer molecules. [2] 2021 0620/43/O/N/21 over [Turn",
+      "markschemeText": "",
+      "parts": [
+        {
+          "label": "i",
+          "text": "Under certain conditions ethene can react with chlorine to produce chloroethene. The structure of chloroethene is shown. H H C C H Cl The equation for the chemical reaction is shown. C2H4 + Cl 2 \u2192 C2H3Cl + HCl State the type of chemical reaction between ethene and chlorine that this equation shows. ....................................................................................................................................... [1] (ii) Chloroethene monomers can be converted into a polymer called poly(chloroethene). State the type of polymerisation that produces poly(chloroethene) from chloroethene. ....................................................................................................................................... [1] (iii) Draw a section of the poly(chloroethene) molecule made from two monomer molecules. [2] 2021 0620/43/O/N/21 over [Turn",
+          "marks": 4
+        }
+      ],
+      "questionImage": "",
+      "markschemeImage": "",
+      "totalMarks": 4
+    },
+    {
+      "paperType": "paper4",
+      "subject": "chemistry",
+      "topic": "organic",
+      "year": 2021,
+      "number": 14,
+      "paper": "assets/papers4/chemistry/Chemistry - Paper 4/November 2021 (v3) QP - Paper 4 CAIE Chemistry IGCSE.pdf",
+      "questionText": "(e) The structure of part of a polymer is shown. O O O N C N C N C H H H This polymer is made from one type of monomer only. Complete the diagram to show the structure of the monomer used to produce this polymer. Show all of the atoms and all of the bonds in the functional groups. [2] [Total: 16] 2021 0620/43/O/N/21",
+      "markschemeText": "",
+      "parts": [
+        {
+          "label": "e",
+          "text": "The structure of part of a polymer is shown. O O O N C N C N C H H H This polymer is made from one type of monomer only. Complete the diagram to show the structure of the monomer used to produce this polymer. Show all of the atoms and all of the bonds in the functional groups. [2] [Total: 16] 2021 0620/43/O/N/21",
+          "marks": 2
+        }
+      ],
+      "questionImage": "",
+      "markschemeImage": "",
+      "totalMarks": 2
+    },
+    {
+      "paperType": "paper4",
+      "subject": "chemistry",
+      "topic": "electrolysis",
+      "year": 2021,
+      "number": 15,
+      "paper": "assets/papers4/chemistry/Chemistry - Paper 4/November 2021 (v3) QP - Paper 4 CAIE Chemistry IGCSE.pdf",
+      "questionText": "BLANK PAGE Permission to reproduce items where third-party owned material protected by copyright is included has been sought and cleared where possible. Every reasonable effort has been made by the publisher (UCLES) to trace copyright holders, but if any items requiring clearance have unwittingly been included, the publisher will be pleased to make amends at the earliest possible opportunity. To avoid the issue of disclosure of answer-related information to candidates, all copyright acknowledgements are reproduced online in the Cambridge Assessment International Education Copyright Acknowledgements Booklet. This is produced for each series of examinations and is freely available to download at www.cambridgeinternational.org after the live examination series. Cambridge Assessment International Education is part of the Cambridge Assessment Group. Cambridge Assessment is the brand name of the University of Cambridge Local Examinations Syndicate (UCLES), which itself is a department of the University of Cambridge. 2021 0620/43/O/N/21 The Periodic Table of Elements Group 2021 I II III IV V VI VII VIII",
+      "markschemeText": "",
+      "parts": [
+        {
+          "label": "main",
+          "text": "BLANK PAGE Permission to reproduce items where third-party owned material protected by copyright is included has been sought and cleared where possible. Every reasonable effort has been made by the publisher (UCLES) to trace copyright holders, but if any items requiring clearance have unwittingly been included, the publisher will be pleased to make amends at the earliest possible opportunity. To avoid the issue of disclosure of answer-related information to candidates, all copyright acknowledgements are reproduced online in the Cambridge Assessment International Education Copyright Acknowledgements Booklet. This is produced for each series of examinations and is freely available to download at www.cambridgeinternational.org after the live examination series. Cambridge Assessment International Education is part of the Cambridge Assessment Group. Cambridge Assessment is the brand name of the University of Cambridge Local Examinations Syndicate (UCLES), which itself is a department of the University of Cambridge. 2021 0620/43/O/N/21 The Periodic Table of Elements Group 2021 I II III IV V VI VII VIII",
+          "marks": 1
+        }
+      ],
+      "questionImage": "",
+      "markschemeImage": "",
+      "totalMarks": 1
+    },
+    {
+      "paperType": "paper4",
+      "subject": "chemistry",
+      "topic": "stoichiometry",
+      "year": 2021,
+      "number": 16,
+      "paper": "assets/papers4/chemistry/Chemistry - Paper 4/November 2021 (v3) QP - Paper 4 CAIE Chemistry IGCSE.pdf",
+      "questionText": "85 88 89 91 93 96 \u2013 101 103 106 108 112 115 119 122 128 127 131",
+      "markschemeText": "",
+      "parts": [
+        {
+          "label": "main",
+          "text": "85 88 89 91 93 96 \u2013 101 103 106 108 112 115 119 122 128 127 131",
+          "marks": 1
+        }
+      ],
+      "questionImage": "",
+      "markschemeImage": "",
+      "totalMarks": 1
+    },
+    {
+      "paperType": "paper4",
+      "subject": "chemistry",
+      "topic": "organic",
+      "year": 2021,
+      "number": 19,
+      "paper": "assets/papers4/chemistry/Chemistry - Paper 4/November 2021 (v3) QP - Paper 4 CAIE Chemistry IGCSE.pdf",
+      "questionText": "20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 K Ca Sc Ti V Cr Mn Fe Co Ni Cu Zn Ga Ge As Se Br Kr potassium calcium scandium titanium vanadium chromium manganese iron cobalt nickel copper zinc gallium germanium arsenic selenium bromine krypton",
+      "markschemeText": "",
+      "parts": [
+        {
+          "label": "main",
+          "text": "20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 K Ca Sc Ti V Cr Mn Fe Co Ni Cu Zn Ga Ge As Se Br Kr potassium calcium scandium titanium vanadium chromium manganese iron cobalt nickel copper zinc gallium germanium arsenic selenium bromine krypton",
+          "marks": 1
+        }
+      ],
+      "questionImage": "",
+      "markschemeImage": "",
+      "totalMarks": 1
+    },
+    {
+      "paperType": "paper4",
+      "subject": "chemistry",
+      "topic": "acids-bases",
+      "year": 2021,
+      "number": 23,
+      "paper": "assets/papers4/chemistry/Chemistry - Paper 4/November 2021 (v3) QP - Paper 4 CAIE Chemistry IGCSE.pdf",
+      "questionText": "24 27 28 31 32 35.5 40",
+      "markschemeText": "",
+      "parts": [
+        {
+          "label": "main",
+          "text": "24 27 28 31 32 35.5 40",
+          "marks": 1
+        }
+      ],
+      "questionImage": "",
+      "markschemeImage": "",
+      "totalMarks": 1
+    },
+    {
+      "paperType": "paper4",
+      "subject": "chemistry",
+      "topic": "bonding",
+      "year": 2021,
+      "number": 37,
+      "paper": "assets/papers4/chemistry/Chemistry - Paper 4/November 2021 (v3) QP - Paper 4 CAIE Chemistry IGCSE.pdf",
+      "questionText": "38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 Rb Sr Y Zr Nb Mo Tc Ru Rh Pd Ag Cd In Sn Sb Te I Xe rubidium strontium yttrium zirconium niobium molybdenum technetium ruthenium rhodium palladium silver cadmium indium tin antimony tellurium iodine xenon",
+      "markschemeText": "",
+      "parts": [
+        {
+          "label": "main",
+          "text": "38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 Rb Sr Y Zr Nb Mo Tc Ru Rh Pd Ag Cd In Sn Sb Te I Xe rubidium strontium yttrium zirconium niobium molybdenum technetium ruthenium rhodium palladium silver cadmium indium tin antimony tellurium iodine xenon",
+          "marks": 1
+        }
+      ],
+      "questionImage": "",
+      "markschemeImage": "",
+      "totalMarks": 1
+    },
+    {
+      "paperType": "paper4",
+      "subject": "chemistry",
+      "topic": "organic",
+      "year": 2021,
+      "number": 39,
+      "paper": "assets/papers4/chemistry/Chemistry - Paper 4/November 2021 (v3) QP - Paper 4 CAIE Chemistry IGCSE.pdf",
+      "questionText": "40 45 48 51 52 55 56 59 59 64 65 70 73 75 79 80 84",
+      "markschemeText": "",
+      "parts": [
+        {
+          "label": "main",
+          "text": "40 45 48 51 52 55 56 59 59 64 65 70 73 75 79 80 84",
+          "marks": 1
+        }
+      ],
+      "questionImage": "",
+      "markschemeImage": "",
+      "totalMarks": 1
+    },
+    {
+      "paperType": "paper4",
+      "subject": "physics",
+      "topic": "motion",
+      "year": 2021,
+      "number": 1,
+      "paper": "assets/papers4/physics/Physics - Paper 4/November 2021 (v3) QP - Paper 4 CAIE Physics IGCSE.pdf",
+      "questionText": "A ship sails in a straight line between two ports. Fig. 1.1 shows the speed\u2013time graph of the ship for the first 100 minutes of its journey between the two ports.",
+      "markschemeText": "C1 (18 \u00d7 7.5 \u00d7 60 ) + ( 7.5 \u00d7 18 \u00d7 60 ) + (15 \u00d7 40 \u00d7 60 )",
+      "parts": [
+        {
+          "label": "main",
+          "text": "A ship sails in a straight line between two ports. Fig. 1.1 shows the speed\u2013time graph of the ship for the first 100 minutes of its journey between the two ports.",
+          "marks": 1
+        }
+      ],
+      "questionImage": "assets/question_snippets/paper4/November_2021_v3_QP_-_Paper_4_CAIE_Physics_IGCSE/qp/q01.png",
+      "markschemeImage": "assets/question_snippets/paper4/November_2021_v3_QP_-_Paper_4_CAIE_Physics_IGCSE/ms/q01.png",
+      "totalMarks": 1
+    },
+    {
+      "paperType": "paper4",
+      "subject": "physics",
+      "topic": "forces",
+      "year": 2021,
+      "number": 2,
+      "paper": "assets/papers4/physics/Physics - Paper 4/November 2021 (v3) QP - Paper 4 CAIE Physics IGCSE.pdf",
+      "questionText": "Fig. 2.1 shows a simplified version of a \u2018gravity lamp\u2019. This apparatus is used to light a light-emitting diode (LED) without mains electricity. attachment to ceiling LED generator strap",
+      "markschemeText": "1(c)(i) (force =) 2.0 \u00d7 105 N A2 (F =) ma OR 2.3 \u00d7 107 \u00d7 0.0087 in any form C1 1(c)(ii) there is a backward / drag force OR water resistance B1 Question Answer Marks 2(a) (rate of transfer of gravitational potential energy =) 0.17 W A4 (gravitational PE lost =) mgh in any form OR 12 \u00d7 10 \u00d7 1.7 C1 (gravitational PE lost =) 204 (J) C1 (gravitational PE lost / s =) 204 / 1200 C1 2(b) 59% OR 0.59 A2 efficiency = useful power output / power input (\u00d7 100%) in any form OR 0.10 / 0.17 \u00d7 100% C1 2(c) any sensible advantage, e.g. no use of (fossil) fuel, no cost to run, can be used in remote areas, no CO2 / air pollution, no B1 greenhouse gases, does not contribute to global warming 2021 0625/43 Cambridge IGCSE \u2013 Mark Scheme October/November 2021 PUBLISHED Question Answer Marks 3(a)(i) B2 pressure in a liquid increases with depth OR pressure decreases (as bubble rises) B1 pressure (of gas) is inversely proportional to volume OR internal pressure greater than external pressure (momentarily) B1 OR (air) molecules do not have to hit surface of bubble as frequently (to stop the bubble collapsing) OR the bubble is not as strongly compressed 3(a)(ii) 0.50 cm3 A4 PV = constant, in any form C1 P (due to water) = \u03c1gh, in any form C1 [1.0 \u00d7 105 + (1000 \u00d7 10 \u00d7 3.0)] \u00d7 0.40 = [1.0 \u00d7 105 + (1000 \u00d7 10 \u00d7 0.5)] \u00d7 V2 C1 3(b) B2 paper is not compressed as much / less force on piston B B1 air can be compressed OR some of the energy is used to compress the air (instead of the paper) B1 Question Answer Marks",
+      "parts": [
+        {
+          "label": "main",
+          "text": "Fig. 2.1 shows a simplified version of a \u2018gravity lamp\u2019. This apparatus is used to light a light-emitting diode (LED) without mains electricity. attachment to ceiling LED generator strap",
+          "marks": 1
+        }
+      ],
+      "questionImage": "assets/question_snippets/paper4/November_2021_v3_QP_-_Paper_4_CAIE_Physics_IGCSE/qp/q02.png",
+      "markschemeImage": "assets/question_snippets/paper4/November_2021_v3_QP_-_Paper_4_CAIE_Physics_IGCSE/ms/q02.png",
+      "totalMarks": 1
+    },
+    {
+      "paperType": "paper4",
+      "subject": "physics",
+      "topic": "electricity",
+      "year": 2021,
+      "number": 3,
+      "paper": "assets/papers4/physics/Physics - Paper 4/November 2021 (v3) QP - Paper 4 CAIE Physics IGCSE.pdf",
+      "questionText": "(a) A gas bubble is released at the bottom of a lake. Atmospheric pressure is 1.0 \u00d7 105 Pa. The density of water is 1000 kg / m3. The temperature of the water in the lake is constant. (i) The gas bubble rises to the surface. The volume of the gas bubble increases as it rises higher in the water. Explain why the volume of the bubble increases. ........................................................................................................................................... ........................................................................................................................................... ..................................................................................................................................... [2] (ii) The volume of the gas bubble is 0.40 cm3 when it is 3.0 m below the surface of the lake. Calculate the volume of the gas bubble when it is 0.50 m below the surface of the lake. volume = ......................................................... [4] 2021 0625/43/O/N/21",
+      "markschemeText": "Although spellings do not have to be correct, spellings of syllabus terms must allow for clear and unambiguous separation from other syllabus terms with which they may be confused (e.g. ethane / ethene, glucagon / glycogen, refraction / reflection).",
+      "parts": [
+        {
+          "label": "a",
+          "text": "A gas bubble is released at the bottom of a lake. Atmospheric pressure is 1.0 \u00d7 105 Pa. The density of water is 1000 kg / m3. The temperature of the water in the lake is constant.",
+          "marks": 1
+        },
+        {
+          "label": "i",
+          "text": "The gas bubble rises to the surface. The volume of the gas bubble increases as it rises higher in the water. Explain why the volume of the bubble increases. ........................................................................................................................................... ........................................................................................................................................... ..................................................................................................................................... [2] (ii) The volume of the gas bubble is 0.40 cm3 when it is 3.0 m below the surface of the lake. Calculate the volume of the gas bubble when it is 0.50 m below the surface of the lake. volume = ......................................................... [4] 2021 0625/43/O/N/21",
+          "marks": 6
+        }
+      ],
+      "questionImage": "assets/question_snippets/paper4/November_2021_v3_QP_-_Paper_4_CAIE_Physics_IGCSE/qp/q03.png",
+      "markschemeImage": "assets/question_snippets/paper4/November_2021_v3_QP_-_Paper_4_CAIE_Physics_IGCSE/ms/q03.png",
+      "totalMarks": 7
+    },
+    {
+      "paperType": "paper4",
+      "subject": "physics",
+      "topic": "waves",
+      "year": 2021,
+      "number": 4,
+      "paper": "assets/papers4/physics/Physics - Paper 4/November 2021 (v3) QP - Paper 4 CAIE Physics IGCSE.pdf",
+      "questionText": "Explain what happens to the pressure of a constant volume of air when the temperature of the air increases. Use ideas of momentum of molecules in your explanation. .......................................................................................................................................................... .......................................................................................................................................................... .......................................................................................................................................................... .......................................................................................................................................................... .......................................................................................................................................................... .......................................................................................................................................................... .................................................................................................................................................... [4] 2021 0625/43/O/N/21",
+      "markschemeText": "B4 (temperature of air increases) so molecules move faster / their KE increases B1 molecules collide with walls of container and change momentum B1 greater change of momentum when temperature is higher OR collisions more frequent OR harder collisions OR force = B1 rate of change of momentum (higher force and hence) higher pressure B1 2021 0625/43 Cambridge IGCSE \u2013 Mark Scheme October/November 2021 PUBLISHED Question Answer Marks 5(a)(i) 1.2 kg A2 7600 \u00d7 0.41 C1 (m =) volume constant so mass directly proportional to density 2600 5(a)(ii) 0.37 J / \u00b0C A2 (thermal capacity =) mass \u00d7 specific heat capacity C1 5(a)(iii) 48 J A2 (E =) mc\u0394T OR 1.2 \u00d7 0.50 \u00d7 (100 \u2013 20) in any form C1 5(b) electrons mentioned B1 (metals have) electrons free to move / delocalised (which transfer thermal energy) B1 2021 0625/43 Cambridge IGCSE \u2013 Mark Scheme October/November 2021 PUBLISHED Question Answer Marks 6(a) B5 method of producing sound, e.g. clap for echo method or gun for direct measurement, sig gen or loudspeaker, hammer B1 on block apparatus used, e.g. stopwatch, long tape, trundle wheel, wall if using echo method, metre rule, microphones and timer or B1 microphones and oscilloscope detail of measurement of (long) distance, e.g. measure distance between person and the wall, measure distance between B1 loudspeaker and microphone or measure distance between two microphones detail of measurement of time OR appropriate time measured, e.g. at one end start stopwatch when smoke seen from B1 gun and stop it when sound heard, start stopwatch when gun heard / clap heard and stop when echo heard, measure time taken between clap and hearing echo, timer starts when first microphone receives signal and stops when second receives signal OR measurement of wavelength, e.g. move one microphone away until two waves on oscilloscope have moved one wavelength apart speed = measured distance / time for direct method B1 OR speed = 2 \u00d7 distance from student clapping to wall / time for echo method OR distance between microphones = wavelength AND v = f \u00d7 \u03bb 6(b) B2 wavelength of light is (much) smaller than width of doorway or wavelength of sound B1 wavelength of sound is similar to width of doorway OR \u03bb \u2243 width of gap for diffraction to occur OR larger wavelength B1 results in greater diffraction ORA 2021 0625/43 Cambridge IGCSE \u2013 Mark Scheme October/November 2021 PUBLISHED Question Answer Marks 7(a)(i) B2 ray approaching left hand face of prism closer to normal than emerging ray B1 ray entering right hand face of prism showing refraction towards normal for ray already drawn B1 7(a)(ii) light of single frequency B1 7(b)(i) 3(.0) \u00d7 108 m / s B1 7(b)(ii) 5.8 \u00d7 1014 Hz A2 (f =) v / \u03bb in any form OR 3.0 \u00d7 108 / 5.2 \u00d7 10\u20137 C1 7(b)(iii) 2.0 \u00d7 108 m / s A2 refractive index = speed of light in air / speed of light in glass in any form C1 Question Answer Marks 8(a) B2 five straight, parallel vertical lines, equally spaced by eye, between plates B1 arrow head pointing upwards on at least one line and none wrong B1 8(b)(i) 11 A A2 (I =) P / V in any form OR 2400 = I220 C1 8(b)(ii) 9900 C OR 9800 C A2 (Q =) It in any form OR (Q =) 11 \u00d7 15 \u00d7 60 C1 8(b)(iii) 13 A B1 2021 0625/43 Cambridge IGCSE \u2013 Mark Scheme October/November 2021 PUBLISHED Question Answer Marks 9(a)(i) B2 four components joined in series B1 all circuit symbols correct for resistor, thermistor, a filament lamp and a power supply B1 9(a)(ii) voltmeter connected in parallel to the resistor B1 9(a)(iii) (p.d. across terminals of power supply) = 18 V A4 (current through resistor when p.d. across it is 6.0 V =) 0.4 A C1 current same through all components in series circuit C1 OR horizontal line through 0.4 A on graph through all three curves OR p.d. across filament lamp = 3.0 V OR p.d. across thermistor = 9.0 V p.d. across filament lamp = 3.0 V AND p.d, across thermistor = 9.0 V C1 9(b) any sensible use requiring temperature control or depending on temperature, e.g. fire alarms, to keep computers cool (by B1 operating fan), in incubators, electronic thermometer, electronic thermostat in kettle / car engine 2021 0625/43 Cambridge IGCSE \u2013 Mark Scheme October/November 2021 PUBLISHED Question Answer Marks 10(a)(i) 6.0 V A2 (VS =) NSVP / NP in any form or (VS =) (25 \u00d7 120) / 500 C1 10(a)(ii) 2.5 A OR 2500 mA A2 (IS =) IP VP / VS in any form OR (0.125 \u00d7 120) / 6.0 C1 10(b)(i) arrow right to left along loose part of wire or any other correct position B1 10(b)(ii) B2 wire moves up B1 (reversing direction of the current) reverses the direction of force B1 10(c) coil does not continue to rotate in the same direction B1 Question Answer Marks 11(a)(i) background radiation OR any reasonable specific source of background radiation e.g. cosmic rays, the sun, space, building materials, B1 earth, rocks, radon gas, student etc. 11(a)(ii) (radioactive decay is a) random (process) B1 11(b) B3 U: proton no 92 and nucleon number 238 B1 Th: proton number 90 and nucleon number 234 B1 \u03b1: proton number 2 and nucleon number 4 B1 11(c) 11 A2 three half lives or evidence of multiplying half-life by 3 C1 2021",
+      "parts": [
+        {
+          "label": "main",
+          "text": "Explain what happens to the pressure of a constant volume of air when the temperature of the air increases. Use ideas of momentum of molecules in your explanation. .......................................................................................................................................................... .......................................................................................................................................................... .......................................................................................................................................................... .......................................................................................................................................................... .......................................................................................................................................................... .......................................................................................................................................................... .................................................................................................................................................... [4] 2021 0625/43/O/N/21",
+          "marks": 4
+        }
+      ],
+      "questionImage": "assets/question_snippets/paper4/November_2021_v3_QP_-_Paper_4_CAIE_Physics_IGCSE/qp/q04.png",
+      "markschemeImage": "assets/question_snippets/paper4/November_2021_v3_QP_-_Paper_4_CAIE_Physics_IGCSE/ms/q04.png",
+      "totalMarks": 4
+    },
+    {
+      "paperType": "paper4",
+      "subject": "physics",
+      "topic": "energy",
+      "year": 2021,
+      "number": 5,
+      "paper": "assets/papers4/physics/Physics - Paper 4/November 2021 (v3) QP - Paper 4 CAIE Physics IGCSE.pdf",
+      "questionText": "(a) An aluminium saucepan and a steel saucepan have the same dimensions. Table 5.1 shows the values of the specific heat capacity and the density of aluminium and of steel. Table 5.1 specific heat capacity density metal J / (kg \u00b0C) kg / m3 aluminium 0.91 2600 steel 0.50 7600 The mass of the aluminium saucepan is 0.41 kg. (i) Calculate the mass of the steel saucepan. mass = ......................................................... [2] (ii) Calculate the thermal capacity of the aluminium saucepan. thermal capacity = ......................................................... [2] (iii) Water is heated in the steel saucepan. The initial temperature of the water and the saucepan is 20 \u00b0C. Calculate the energy transfer needed to raise the temperature of the steel saucepan to 100 \u00b0C. energy = ......................................................... [2] (b) Explain why metals are better thermal conductors than non-metals. ............................................................................................................................................. [2] [Total: 8] 2021 0625/43/O/N/21 over [Turn",
+      "markschemeText": "\u2018List rule\u2019 guidance For questions that require n responses (e.g. State two reasons \u2026): \u2022 The response should be read as continuous prose, even when numbered answer spaces are provided. \u2022 Any response marked ignore in the mark scheme should not count towards n. \u2022 Incorrect responses should not be awarded credit but will still count towards n. \u2022 Read the entire response to check for any responses that contradict those that would otherwise be credited. Credit should not be awarded for any responses that are contradicted within the rest of the response. Where two responses contradict one another, this should be treated as a single incorrect response. \u2022 Non-contradictory responses after the first n responses may be ignored even if they include incorrect science. 2021 0625/43 Cambridge IGCSE \u2013 Mark Scheme October/November 2021 PUBLISHED",
+      "parts": [
+        {
+          "label": "a",
+          "text": "An aluminium saucepan and a steel saucepan have the same dimensions. Table 5.1 shows the values of the specific heat capacity and the density of aluminium and of steel. Table 5.1 specific heat capacity density metal J / (kg \u00b0C) kg / m3 aluminium 0.91 2600 steel 0.50 7600 The mass of the aluminium saucepan is 0.41 kg.",
+          "marks": 1
+        },
+        {
+          "label": "i",
+          "text": "Calculate the mass of the steel saucepan. mass = ......................................................... [2] (ii) Calculate the thermal capacity of the aluminium saucepan. thermal capacity = ......................................................... [2] (iii) Water is heated in the steel saucepan. The initial temperature of the water and the saucepan is 20 \u00b0C. Calculate the energy transfer needed to raise the temperature of the steel saucepan to 100 \u00b0C. energy = ......................................................... [2]",
+          "marks": 6
+        },
+        {
+          "label": "b",
+          "text": "Explain why metals are better thermal conductors than non-metals. ............................................................................................................................................. [2] [Total: 8] 2021 0625/43/O/N/21 over [Turn",
+          "marks": 2
+        }
+      ],
+      "questionImage": "assets/question_snippets/paper4/November_2021_v3_QP_-_Paper_4_CAIE_Physics_IGCSE/qp/q05.png",
+      "markschemeImage": "assets/question_snippets/paper4/November_2021_v3_QP_-_Paper_4_CAIE_Physics_IGCSE/ms/q05.png",
+      "totalMarks": 9
+    },
+    {
+      "paperType": "paper4",
+      "subject": "physics",
+      "topic": "motion",
+      "year": 2021,
+      "number": 6,
+      "paper": "assets/papers4/physics/Physics - Paper 4/November 2021 (v3) QP - Paper 4 CAIE Physics IGCSE.pdf",
+      "questionText": "(a) Describe an experiment to determine the speed of sound in air. State the apparatus you need, details of how to take measurements and how to calculate the speed of sound in air. You may use the space below to draw a labelled diagram as part of your answer. ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ............................................................................................................................................. [5] (b) Sound waves from a television are diffracted through doorways. Light waves from a television are not diffracted through doorways. Suggest why light waves and sound waves behave differently in this situation. ................................................................................................................................................... ................................................................................................................................................... ............................................................................................................................................. [2] [Total: 7] 2021 0625/43/O/N/21",
+      "markschemeText": "Calculation specific guidance Correct answers to calculations should be given full credit even if there is no working or incorrect working, unless the question states \u2018show your working\u2019. For questions in which the number of significant figures required is not stated, credit should be awarded for correct answers when rounded by the examiner to the number of significant figures given in the mark scheme. This may not apply to measured values. For answers given in standard form (e.g. a \u00d7 10n) in which the convention of restricting the value of the coefficient (a) to a value between 1 and 10 is not followed, credit may still be awarded if the answer can be converted to the answer given in the mark scheme. Unless a separate mark is given for a unit, a missing or incorrect unit will normally mean that the final calculation mark is not awarded. Exceptions to this general principle will be noted in the mark scheme.",
+      "parts": [
+        {
+          "label": "a",
+          "text": "Describe an experiment to determine the speed of sound in air. State the apparatus you need, details of how to take measurements and how to calculate the speed of sound in air. You may use the space below to draw a labelled diagram as part of your answer. ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ................................................................................................................................................... ............................................................................................................................................. [5]",
+          "marks": 5
+        },
+        {
+          "label": "b",
+          "text": "Sound waves from a television are diffracted through doorways. Light waves from a television are not diffracted through doorways. Suggest why light waves and sound waves behave differently in this situation. ................................................................................................................................................... ................................................................................................................................................... ............................................................................................................................................. [2] [Total: 7] 2021 0625/43/O/N/21",
+          "marks": 2
+        }
+      ],
+      "questionImage": "assets/question_snippets/paper4/November_2021_v3_QP_-_Paper_4_CAIE_Physics_IGCSE/qp/q06.png",
+      "markschemeImage": "assets/question_snippets/paper4/November_2021_v3_QP_-_Paper_4_CAIE_Physics_IGCSE/ms/q06.png",
+      "totalMarks": 7
+    },
+    {
+      "paperType": "paper4",
+      "subject": "physics",
+      "topic": "forces",
+      "year": 2021,
+      "number": 7,
+      "paper": "assets/papers4/physics/Physics - Paper 4/November 2021 (v3) QP - Paper 4 CAIE Physics IGCSE.pdf",
+      "questionText": "(a) Fig. 7.1 shows a ray of green light emerging from one face of a glass prism. prism ray of green light Fig. 7.1 (i) On Fig. 7.1, draw the path of the green light entering and passing through the prism. [2] (ii) The green light is monochromatic. State, in terms of a wave property, what is meant by monochromatic light. ..................................................................................................................................... [1] (b) (i) State the speed of light in air. ..................................................................................................................................... [1] (ii) The wavelength of green light in air is 5.2 \u00d7 10\u20137 m. Calculate the frequency of green light. frequency = ......................................................... [2] (iii) The refractive index of glass for green light is 1.52. Calculate the speed of green light in glass. speed = ......................................................... [2] [Total: 8] 2021 0625/43/O/N/21 over [Turn",
+      "markschemeText": "Guidance for chemical equations Multiples / fractions of coefficients used in chemical equations are acceptable unless stated otherwise in the mark scheme. State symbols given in an equation should be ignored unless asked for in the question or stated otherwise in the mark scheme. 2021 0625/43 Cambridge IGCSE \u2013 Mark Scheme October/November 2021 PUBLISHED Examples of how to apply the list rule State three reasons\u2026. [3] A 1. Correct \uf0fc F 1. Correct \uf0fc 2. Correct \uf0fc 2 (4 responses) 2. Correct \uf0fc",
+      "parts": [
+        {
+          "label": "a",
+          "text": "Fig. 7.1 shows a ray of green light emerging from one face of a glass prism. prism ray of green light Fig. 7.1",
+          "marks": 1
+        },
+        {
+          "label": "i",
+          "text": "On Fig. 7.1, draw the path of the green light entering and passing through the prism. [2] (ii) The green light is monochromatic. State, in terms of a wave property, what is meant by monochromatic light. ..................................................................................................................................... [1]",
+          "marks": 3
+        },
+        {
+          "label": "i",
+          "text": "State the speed of light in air. ..................................................................................................................................... [1] (ii) The wavelength of green light in air is 5.2 \u00d7 10\u20137 m. Calculate the frequency of green light. frequency = ......................................................... [2] (iii) The refractive index of glass for green light is 1.52. Calculate the speed of green light in glass. speed = ......................................................... [2] [Total: 8] 2021 0625/43/O/N/21 over [Turn",
+          "marks": 5
+        }
+      ],
+      "questionImage": "assets/question_snippets/paper4/November_2021_v3_QP_-_Paper_4_CAIE_Physics_IGCSE/qp/q07.png",
+      "markschemeImage": "assets/question_snippets/paper4/November_2021_v3_QP_-_Paper_4_CAIE_Physics_IGCSE/ms/q07.png",
+      "totalMarks": 9
+    },
+    {
+      "paperType": "paper4",
+      "subject": "physics",
+      "topic": "electricity",
+      "year": 2021,
+      "number": 8,
+      "paper": "assets/papers4/physics/Physics - Paper 4/November 2021 (v3) QP - Paper 4 CAIE Physics IGCSE.pdf",
+      "questionText": "(a) Fig. 8.1 shows two charged metal plates with a gap between them. The plates are parallel to each other. The top plate is negatively charged and the bottom plate is positively charged. \u2013 \u2013 \u2013 \u2013 \u2013 + + + + + Fig. 8.1 On Fig. 8.1, draw five electric field lines between the two plates. [2] (b) An electric iron has a power of 2400 W. The potential difference (p.d.) of the mains supply is 220 V. (i) Calculate the electric current in the iron. current = ......................................................... [2] (ii) Calculate the electric charge which flows through the iron in 15 minutes. charge = ......................................................... [2] (iii) Fuse ratings of 3 A, 5 A, 10 A, 13 A and 30 A are available. State which of these fuse ratings is suitable for use in the iron. fuse rating ......................................................... [1] [Total: 7] 2021 0625/43/O/N/21",
+      "markschemeText": "",
+      "parts": [
+        {
+          "label": "a",
+          "text": "Fig. 8.1 shows two charged metal plates with a gap between them. The plates are parallel to each other. The top plate is negatively charged and the bottom plate is positively charged. \u2013 \u2013 \u2013 \u2013 \u2013 + + + + + Fig. 8.1 On Fig. 8.1, draw five electric field lines between the two plates. [2]",
+          "marks": 2
+        },
+        {
+          "label": "b",
+          "text": "An electric iron has a power of 2400 W. The potential difference (p.d.) of the mains supply is 220 V.",
+          "marks": 1
+        },
+        {
+          "label": "i",
+          "text": "Calculate the electric current in the iron. current = ......................................................... [2] (ii) Calculate the electric charge which flows through the iron in 15 minutes. charge = ......................................................... [2] (iii) Fuse ratings of 3 A, 5 A, 10 A, 13 A and 30 A are available. State which of these fuse ratings is suitable for use in the iron. fuse rating ......................................................... [1] [Total: 7] 2021 0625/43/O/N/21",
+          "marks": 5
+        }
+      ],
+      "questionImage": "assets/question_snippets/paper4/November_2021_v3_QP_-_Paper_4_CAIE_Physics_IGCSE/qp/q08.png",
+      "markschemeImage": "",
+      "totalMarks": 8
+    },
+    {
+      "paperType": "paper4",
+      "subject": "physics",
+      "topic": "waves",
+      "year": 2021,
+      "number": 9,
+      "paper": "assets/papers4/physics/Physics - Paper 4/November 2021 (v3) QP - Paper 4 CAIE Physics IGCSE.pdf",
+      "questionText": "Fig. 9.1 shows current\u2013potential difference (p.d.) graphs for a resistor, a thermistor and a filament lamp. 1.0 filament lamp current / A 0.8 resistor 0.6 0.4 thermistor 0.2",
+      "markschemeText": "",
+      "parts": [
+        {
+          "label": "main",
+          "text": "Fig. 9.1 shows current\u2013potential difference (p.d.) graphs for a resistor, a thermistor and a filament lamp. 1.0 filament lamp current / A 0.8 resistor 0.6 0.4 thermistor 0.2",
+          "marks": 1
+        }
+      ],
+      "questionImage": "assets/question_snippets/paper4/November_2021_v3_QP_-_Paper_4_CAIE_Physics_IGCSE/qp/q09.png",
+      "markschemeImage": "",
+      "totalMarks": 1
+    },
+    {
+      "paperType": "paper4",
+      "subject": "physics",
+      "topic": "energy",
+      "year": 2021,
+      "number": 10,
+      "paper": "assets/papers4/physics/Physics - Paper 4/November 2021 (v3) QP - Paper 4 CAIE Physics IGCSE.pdf",
+      "questionText": "(a) A transformer has 500 turns on the primary coil and 25 turns on the secondary coil. The input voltage is 120 V. (i) Calculate the output voltage. output voltage = ......................................................... [2] (ii) The current in the primary coil is 125 mA. The transformer is 100% efficient. Calculate the output current. output current = ......................................................... [2] (b) Fig. 10.1 shows a loose wire connected in a circuit with a d.c. (direct current) power supply and a switch. The length of the wire between the two supports is in the magnetic field of a horseshoe magnet. S support support N d.c. power supply magnet switch Fig. 10.1 The power supply is switched on and the wire moves down. (i) On Fig. 10.1, draw an arrow on the wire to show the direction of the current. [1] (ii) The power supply is switched off and the wire returns to its original position. The power supply is then switched on so that the current is in the opposite direction. State and explain what happens to the wire. ........................................................................................................................................... ..................................................................................................................................... [2] 2021 0625/43/O/N/21",
+      "markschemeText": "",
+      "parts": [
+        {
+          "label": "a",
+          "text": "A transformer has 500 turns on the primary coil and 25 turns on the secondary coil. The input voltage is 120 V.",
+          "marks": 1
+        },
+        {
+          "label": "i",
+          "text": "Calculate the output voltage. output voltage = ......................................................... [2] (ii) The current in the primary coil is 125 mA. The transformer is 100% efficient. Calculate the output current. output current = ......................................................... [2]",
+          "marks": 4
+        },
+        {
+          "label": "b",
+          "text": "Fig. 10.1 shows a loose wire connected in a circuit with a d.c. (direct current) power supply and a switch. The length of the wire between the two supports is in the magnetic field of a horseshoe magnet. S support support N d.c. power supply magnet switch Fig. 10.1 The power supply is switched on and the wire moves down.",
+          "marks": 1
+        },
+        {
+          "label": "i",
+          "text": "On Fig. 10.1, draw an arrow on the wire to show the direction of the current. [1] (ii) The power supply is switched off and the wire returns to its original position. The power supply is then switched on so that the current is in the opposite direction. State and explain what happens to the wire. ........................................................................................................................................... ..................................................................................................................................... [2] 2021 0625/43/O/N/21",
+          "marks": 3
+        }
+      ],
+      "questionImage": "assets/question_snippets/paper4/November_2021_v3_QP_-_Paper_4_CAIE_Physics_IGCSE/qp/q10.png",
+      "markschemeImage": "",
+      "totalMarks": 9
+    },
+    {
+      "paperType": "paper4",
+      "subject": "physics",
+      "topic": "motion",
+      "year": 2021,
+      "number": 11,
+      "paper": "assets/papers4/physics/Physics - Paper 4/November 2021 (v3) QP - Paper 4 CAIE Physics IGCSE.pdf",
+      "questionText": "(a) A detector of radioactivity is placed in a laboratory where there are no radioactive samples. A student notices that the detector shows a count rate that varies between 20 counts / min and",
+      "markschemeText": "",
+      "parts": [
+        {
+          "label": "a",
+          "text": "A detector of radioactivity is placed in a laboratory where there are no radioactive samples. A student notices that the detector shows a count rate that varies between 20 counts / min and",
+          "marks": 1
+        }
+      ],
+      "questionImage": "assets/question_snippets/paper4/November_2021_v3_QP_-_Paper_4_CAIE_Physics_IGCSE/qp/q11.png",
+      "markschemeImage": "",
+      "totalMarks": 1
+    },
+    {
+      "paperType": "paper4",
+      "subject": "physics",
+      "topic": "electricity",
+      "year": 2021,
+      "number": 13,
+      "paper": "assets/papers4/physics/Physics - Paper 4/November 2021 (v3) QP - Paper 4 CAIE Physics IGCSE.pdf",
+      "questionText": "BLANK PAGE 2021 0625/43/O/N/21 over [Turn",
+      "markschemeText": "",
+      "parts": [
+        {
+          "label": "main",
+          "text": "BLANK PAGE 2021 0625/43/O/N/21 over [Turn",
+          "marks": 1
+        }
+      ],
+      "questionImage": "",
+      "markschemeImage": "",
+      "totalMarks": 1
+    },
+    {
+      "paperType": "paper4",
+      "subject": "physics",
+      "topic": "energy",
+      "year": 2021,
+      "number": 15,
+      "paper": "assets/papers4/physics/Physics - Paper 4/November 2021 (v3) QP - Paper 4 CAIE Physics IGCSE.pdf",
+      "questionText": "(ii) Add a voltmeter to your circuit diagram in (a)(i) in a correct position to measure the p.d. across the resistor. [1] (iii) Using the graph in Fig. 9.1, determine the p.d. across the terminals of the power supply when the p.d. across the resistor is 6.0 V. p.d. across terminals of power supply = ......................................................... [4] (b) Describe a practical use for a thermistor. ................................................................................................................................................... ............................................................................................................................................. [1] [Total: 8] 2021 0625/43/O/N/21 over [Turn",
+      "markschemeText": "\u2212 7.5 C1 (acceleration =) gradient of graph or \u0394v / \u0394t in any form OR ( 60 \u2212 42 ) 60 1(b) 48 000 m or 48 km A3 area under graph C1",
+      "parts": [
+        {
+          "label": "i",
+          "text": "in a correct position to measure the p.d. across the resistor. [1] (iii) Using the graph in Fig. 9.1, determine the p.d. across the terminals of the power supply when the p.d. across the resistor is 6.0 V. p.d. across terminals of power supply = ......................................................... [4]",
+          "marks": 5
+        },
+        {
+          "label": "b",
+          "text": "Describe a practical use for a thermistor. ................................................................................................................................................... ............................................................................................................................................. [1] [Total: 8] 2021 0625/43/O/N/21 over [Turn",
+          "marks": 1
+        }
+      ],
+      "questionImage": "",
+      "markschemeImage": "",
+      "totalMarks": 6
+    },
+    {
+      "paperType": "paper4",
+      "subject": "physics",
+      "topic": "forces",
+      "year": 2021,
+      "number": 17,
+      "paper": "assets/papers4/physics/Physics - Paper 4/November 2021 (v3) QP - Paper 4 CAIE Physics IGCSE.pdf",
+      "questionText": "(c) A split-ring commutator is an important feature of a d.c. motor. Suggest one reason why the d.c. motor cannot operate without a split-ring commutator. ............................................................................................................................................. [1] [Total: 8] 2021 0625/43/O/N/21 over [Turn",
+      "markschemeText": "",
+      "parts": [
+        {
+          "label": "c",
+          "text": "A split-ring commutator is an important feature of a d.c. motor. Suggest one reason why the d.c. motor cannot operate without a split-ring commutator. ............................................................................................................................................. [1] [Total: 8] 2021 0625/43/O/N/21 over [Turn",
+          "marks": 1
+        }
+      ],
+      "questionImage": "",
+      "markschemeImage": "",
+      "totalMarks": 1
+    },
+    {
+      "paperType": "paper4",
+      "subject": "physics",
+      "topic": "waves",
+      "year": 2021,
+      "number": 19,
+      "paper": "assets/papers4/physics/Physics - Paper 4/November 2021 (v3) QP - Paper 4 CAIE Physics IGCSE.pdf",
+      "questionText": "BLANK PAGE 2021 0625/43/O/N/21",
+      "markschemeText": "",
+      "parts": [
+        {
+          "label": "main",
+          "text": "BLANK PAGE 2021 0625/43/O/N/21",
+          "marks": 1
+        }
+      ],
+      "questionImage": "",
+      "markschemeImage": "",
+      "totalMarks": 1
+    },
+    {
+      "paperType": "paper4",
+      "subject": "physics",
+      "topic": "energy",
+      "year": 2021,
+      "number": 20,
+      "paper": "assets/papers4/physics/Physics - Paper 4/November 2021 (v3) QP - Paper 4 CAIE Physics IGCSE.pdf",
+      "questionText": "BLANK PAGE Permission to reproduce items where third-party owned material protected by copyright is included has been sought and cleared where possible. Every reasonable effort has been made by the publisher (UCLES) to trace copyright holders, but if any items requiring clearance have unwittingly been included, the publisher will be pleased to make amends at the earliest possible opportunity. To avoid the issue of disclosure of answer-related information to candidates, all copyright acknowledgements are reproduced online in the Cambridge Assessment International Education Copyright Acknowledgements Booklet. This is produced for each series of examinations and is freely available to download at www.cambridgeinternational.org after the live examination series. Cambridge Assessment International Education is part of the Cambridge Assessment Group. Cambridge Assessment is the brand name of the University of Cambridge Local Examinations Syndicate (UCLES), which itself is a department of the University of Cambridge. 2021 0625/43/O/N/21",
+      "markschemeText": "",
+      "parts": [
+        {
+          "label": "main",
+          "text": "BLANK PAGE Permission to reproduce items where third-party owned material protected by copyright is included has been sought and cleared where possible. Every reasonable effort has been made by the publisher (UCLES) to trace copyright holders, but if any items requiring clearance have unwittingly been included, the publisher will be pleased to make amends at the earliest possible opportunity. To avoid the issue of disclosure of answer-related information to candidates, all copyright acknowledgements are reproduced online in the Cambridge Assessment International Education Copyright Acknowledgements Booklet. This is produced for each series of examinations and is freely available to download at www.cambridgeinternational.org after the live examination series. Cambridge Assessment International Education is part of the Cambridge Assessment Group. Cambridge Assessment is the brand name of the University of Cambridge Local Examinations Syndicate (UCLES), which itself is a department of the University of Cambridge. 2021 0625/43/O/N/21",
+          "marks": 1
+        }
+      ],
+      "questionImage": "",
+      "markschemeImage": "",
+      "totalMarks": 1
+    },
+    {
+      "paperType": "paper4",
+      "subject": "physics",
+      "topic": "waves",
+      "year": 2021,
+      "number": 24,
+      "paper": "assets/papers4/physics/Physics - Paper 4/November 2021 (v3) QP - Paper 4 CAIE Physics IGCSE.pdf",
+      "questionText": "counts / min. (i) Suggest a source of these readings. ..................................................................................................................................... [1] (ii) Explain why these readings are not constant. ..................................................................................................................................... [1] (b) A nucleus of uranium (U) contains 92 protons and 146 neutrons. It decays by emitting an \u03b1-particle to become a nucleus of thorium (Th). Complete the nuclide equation for this radioactive decay. ..... ..... ..... ..... U ..... Th + .....\u03b1 [3] (c) An isotope of radon has a half-life of 3.8 days. It decays by emitting \u03b1-radiation. Calculate the time taken for 16 mg of this isotope to decay to 2 mg of this isotope. time = ................................................ days [2] [Total: 7] 2021 0625/43/O/N/21",
+      "markschemeText": "",
+      "parts": [
+        {
+          "label": "i",
+          "text": "Suggest a source of these readings. ..................................................................................................................................... [1] (ii) Explain why these readings are not constant. ..................................................................................................................................... [1]",
+          "marks": 2
+        },
+        {
+          "label": "b",
+          "text": "A nucleus of uranium",
+          "marks": 1
+        },
+        {
+          "label": "u",
+          "text": "contains 92 protons and 146 neutrons. It decays by emitting an \u03b1-particle to become a nucleus of thorium (Th). Complete the nuclide equation for this radioactive decay. ..... ..... ..... ..... U ..... Th + .....\u03b1 [3]",
+          "marks": 3
+        },
+        {
+          "label": "c",
+          "text": "An isotope of radon has a half-life of 3.8 days. It decays by emitting \u03b1-radiation. Calculate the time taken for 16 mg of this isotope to decay to 2 mg of this isotope. time = ................................................ days [2] [Total: 7] 2021 0625/43/O/N/21",
+          "marks": 2
+        }
+      ],
+      "questionImage": "assets/question_snippets/paper4/November_2021_v3_QP_-_Paper_4_CAIE_Physics_IGCSE/qp/q24.png",
+      "markschemeImage": "",
+      "totalMarks": 8
+    }
+  ]
+};
