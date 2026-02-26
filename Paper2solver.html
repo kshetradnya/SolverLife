@@ -568,12 +568,12 @@
           <div class="question-mode-row">
             <label for="questionRenderMode"><b>Question View</b></label>
             <select id="questionRenderMode">
-              <option value="image-beta">Image (testing/beta)</option>
+              <option value="image-beta" selected>Image (testing/beta)</option>
               <option value="ocr-beta">OCR text (new/beta)</option>
-              <option value="text-reliable" selected>Text (reliable, diagrams may be incomplete)</option>
+              <option value="text-reliable">Text (reliable, diagrams may be incomplete)</option>
             </select>
           </div>
-          <p id="questionModeNote" class="question-mode-note">Text mode (reliable): best for text extraction; diagram-only details may be incomplete.</p>
+          <p id="questionModeNote" class="question-mode-note">Image mode (testing/beta): cropped snippet extraction may be imperfect.</p>
           <div class="question-text" id="questionText"><b>Question text appears here.</b></div>
           <div id="questionImageWrap" class="question-image-wrap" hidden>
             <img id="questionSnippet" class="question-image" alt="Question snippet beta preview" />
@@ -1041,7 +1041,7 @@
         return;
       }
 
-      modeNote.textContent = "Text mode (reliable): best for text extraction; diagram-only details may be incomplete.";
+      modeNote.textContent = "Image mode (testing/beta): cropped snippet extraction may be imperfect.";
       textEl.hidden = false;
       textEl.innerHTML = `<b>${reliableText}</b>`;
       drawDiagram(reliableText || "");
