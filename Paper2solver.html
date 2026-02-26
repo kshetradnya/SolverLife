@@ -251,6 +251,39 @@
       padding: 12px;
       margin-bottom: 10px;
     }
+    .question-mode-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin: 6px 0 10px;
+    }
+    .question-mode-row select {
+      width: auto;
+      min-width: 260px;
+      margin: 0;
+    }
+    .question-mode-note {
+      margin: 0;
+      font-size: .86rem;
+      color: var(--muted);
+      font-weight: 700;
+    }
+    .question-image-wrap {
+      border: 1px solid rgba(255,255,255,.2);
+      border-radius: 12px;
+      padding: 8px;
+      margin-bottom: 12px;
+      background: rgba(0,0,0,.18);
+    }
+    .question-image {
+      width: 100%;
+      max-height: 560px;
+      object-fit: contain;
+      border-radius: 8px;
+      display: block;
+      background: #0a0f1c;
+    }
 
     .diagram-box {
       border: 1px solid rgba(255,255,255,.2);
@@ -532,6 +565,17 @@
           <hr style="border-color: rgba(255,255,255,.15)">
 
           <h3 id="qTitle">Pick subjects and click Start Session</h3>
+          <div class="question-mode-row">
+            <label for="questionRenderMode"><b>Question View</b></label>
+            <select id="questionRenderMode">
+              <option value="image-beta">Image (testing/beta)</option>
+              <option value="text-reliable" selected>Text (reliable, diagrams may be incomplete)</option>
+            </select>
+          </div>
+          <p id="questionModeNote" class="question-mode-note">Text mode (reliable): best for text extraction; diagram-only details may be incomplete.</p>
+          <div id="questionImageWrap" class="question-image-wrap" hidden>
+            <img id="questionSnippet" class="question-image" alt="Question snippet beta preview" />
+          </div>
           <div class="question-text" id="questionText"><b>Question text appears here.</b></div>
           <div class="diagram-box" id="diagramBox" hidden>
             <canvas id="diagramCanvas" width="960" height="180"></canvas>
@@ -655,6 +699,7 @@
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-storage-compat.js"></script>
   <script src="assets/data/question-bank.js"></script>
+  <script src="assets/data/question-image-bank.js"></script>
   <script>
     // Fill Firebase config for real online users on GitHub Pages.
     const FIREBASE_CONFIG = {
@@ -696,9 +741,16 @@
       { subject:"physics", topic:"forces", q:"Resultant force is zero when object is:", opts:["Accelerating","At constant velocity or rest","Moving in circle","Heating up"], a:1, why:"Zero resultant force means no acceleration, so velocity remains constant.", number: 3, paper: "fallback" }
     ];
 
-    const BANK = (window.SOLVERLIFE_BANK && Array.isArray(window.SOLVERLIFE_BANK.questions) && window.SOLVERLIFE_BANK.questions.length)
+    const BASE_BANK = (window.SOLVERLIFE_BANK && Array.isArray(window.SOLVERLIFE_BANK.questions) && window.SOLVERLIFE_BANK.questions.length)
       ? window.SOLVERLIFE_BANK.questions
       : FALLBACK_BANK;
+    const IMAGE_LOOKUP = (window.SOLVERLIFE_IMAGE_BANK && window.SOLVERLIFE_IMAGE_BANK.lookup)
+      ? window.SOLVERLIFE_IMAGE_BANK.lookup
+      : {};
+    const BANK = BASE_BANK.map((q) => {
+      const key = `${q.paper || ""}::${q.number || ""}`;
+      return { ...q, imageSnippet: IMAGE_LOOKUP[key] || "" };
+    });
 
     function saveState() {
       localStorage.setItem("solverlife-profile", JSON.stringify(state.profile));
@@ -929,12 +981,49 @@
       box.hidden = true;
     }
 
+    function getQuestionRenderMode() {
+      const modeEl = document.getElementById("questionRenderMode");
+      return modeEl ? modeEl.value : "text-reliable";
+    }
+
+    function renderCurrentQuestionView() {
+      if (!state.current) return;
+      const q = state.current;
+      const mode = getQuestionRenderMode();
+      const textEl = document.getElementById("questionText");
+      const imageWrap = document.getElementById("questionImageWrap");
+      const imageEl = document.getElementById("questionSnippet");
+      const modeNote = document.getElementById("questionModeNote");
+      const hasSnippet = Boolean(q.imageSnippet);
+
+      if (mode === "image-beta") {
+        modeNote.textContent = "Image mode (testing/beta): cropped snippet extraction may be imperfect.";
+        if (hasSnippet) {
+          imageEl.src = q.imageSnippet;
+          imageWrap.hidden = false;
+          textEl.hidden = true;
+        } else {
+          imageWrap.hidden = true;
+          textEl.hidden = false;
+          textEl.innerHTML = `<b>${q.q}</b>`;
+          modeNote.textContent = "Image beta not available for this question, auto-fallback to text.";
+        }
+        document.getElementById("diagramBox").hidden = true;
+        return;
+      }
+
+      modeNote.textContent = "Text mode (reliable): best for text extraction; diagram-only details may be incomplete.";
+      imageWrap.hidden = true;
+      textEl.hidden = false;
+      textEl.innerHTML = `<b>${q.q}</b>`;
+      drawDiagram(q.q || "");
+    }
+
     function nextQuestion() {
       const q = rand(state.sessionPool);
       state.current = q;
       document.getElementById("qTitle").textContent = `[${q.subject.toUpperCase()} | ${q.topic}] Q${q.number || "?"}`;
-      document.getElementById("questionText").innerHTML = `<b>${q.q}</b>`;
-      drawDiagram(q.q || "");
+      renderCurrentQuestionView();
 
       const options = document.getElementById("options");
       options.innerHTML = q.opts.map((opt, i) => `<button class="opt" data-i="${i}"><b>${String.fromCharCode(65 + i)}) ${opt}</b></button>`).join("");
@@ -1372,6 +1461,7 @@
       document.getElementById("saveBtn").onclick = saveCurrent;
       document.getElementById("savedCount").textContent = `${state.saved.length} saved`;
       document.getElementById("subjectCodes").addEventListener("change", syncSubjectChipsFromSelect);
+      document.getElementById("questionRenderMode").addEventListener("change", renderCurrentQuestionView);
       document.querySelectorAll("#subjectQuick .subject-chip").forEach((chip) => {
         chip.addEventListener("click", () => toggleSubject(chip.dataset.subject));
       });
