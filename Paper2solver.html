@@ -714,6 +714,7 @@
             </select>
           </div>
           <p id="questionModeNote" class="question-mode-note">Image mode (testing/beta): cropped snippet extraction may be imperfect.</p>
+          <p class="question-mode-note"><b>Quick keys:</b> A/B/C/D to answer, N for next.</p>
           <div class="question-text" id="questionText"><b>Question text appears here.</b></div>
           <div id="questionImageWrap" class="question-image-wrap" hidden>
             <img id="questionSnippet" class="question-image" alt="Question snippet beta preview" />
@@ -1166,32 +1167,32 @@
       const reliableText = cleanDisplayText(q.q);
       const ocrText = cleanDisplayText(q.ocrSnippetText || "");
 
-      if (hasSnippet) {
-        imageEl.src = q.imageSnippet;
-        imageWrap.hidden = false;
-      } else {
-        imageWrap.hidden = true;
-      }
-
       if (mode === "image-beta") {
-        modeNote.textContent = "Image mode (testing/beta): cropped snippet extraction may be imperfect.";
-        textEl.hidden = false;
-        textEl.innerHTML = `<b>${reliableText}</b>`;
-        if (!hasSnippet) modeNote.textContent = "Image beta not available for this question, auto-fallback to text.";
+        modeNote.textContent = "Image mode (testing/beta): image-only view + A/B/C/D options.";
+        textEl.hidden = true;
         document.getElementById("diagramBox").hidden = true;
+        if (hasSnippet) {
+          imageEl.src = q.imageSnippet;
+          imageWrap.hidden = false;
+        } else {
+          imageWrap.hidden = true;
+          modeNote.textContent = "Image beta snippet unavailable for this question.";
+        }
         return;
       }
 
       if (mode === "ocr-beta") {
-        modeNote.textContent = "OCR mode (new/beta): text is read from question image snippets and may contain OCR errors.";
+        modeNote.textContent = "OCR mode (new/beta): OCR text + full option text.";
+        imageWrap.hidden = true;
         textEl.hidden = false;
         textEl.innerHTML = `<b>${ocrText || reliableText}</b>`;
-        if (!ocrText) modeNote.textContent = "OCR text unavailable for this question, auto-fallback to reliable text.";
+        if (!ocrText) modeNote.textContent = "OCR text unavailable for this question, fallback to reliable text.";
         document.getElementById("diagramBox").hidden = true;
         return;
       }
 
-      modeNote.textContent = "Text mode (reliable): best for text extraction; diagram-only details may be incomplete.";
+      modeNote.textContent = "Text mode (reliable): text + full option text; no snippet image.";
+      imageWrap.hidden = true;
       textEl.hidden = false;
       textEl.innerHTML = `<b>${reliableText}</b>`;
       drawDiagram(reliableText || "");
@@ -1205,9 +1206,9 @@
 
       const options = document.getElementById("options");
       const mode = getQuestionRenderMode();
-      const ocrMode = mode === "ocr-beta";
-      options.classList.toggle("ocr-mode", ocrMode);
-      if (ocrMode) {
+      const imageMode = mode === "image-beta";
+      options.classList.toggle("ocr-mode", imageMode);
+      if (imageMode) {
         options.innerHTML = q.opts.map((_, i) => `<button class="opt" data-i="${i}" title="Option ${String.fromCharCode(65 + i)}"><b>${String.fromCharCode(65 + i)}</b></button>`).join("");
       } else {
         options.innerHTML = q.opts.map((opt, i) => `<button class="opt" data-i="${i}"><b>${String.fromCharCode(65 + i)}) ${cleanDisplayText(opt)}</b></button>`).join("");
@@ -1650,9 +1651,9 @@
         renderCurrentQuestionView();
         if (state.current) {
           const options = document.getElementById("options");
-          const ocrMode = getQuestionRenderMode() === "ocr-beta";
-          options.classList.toggle("ocr-mode", ocrMode);
-          if (ocrMode) {
+          const imageMode = getQuestionRenderMode() === "image-beta";
+          options.classList.toggle("ocr-mode", imageMode);
+          if (imageMode) {
             options.innerHTML = state.current.opts.map((_, i) => `<button class="opt" data-i="${i}" title="Option ${String.fromCharCode(65 + i)}"><b>${String.fromCharCode(65 + i)}</b></button>`).join("");
           } else {
             options.innerHTML = state.current.opts.map((opt, i) => `<button class="opt" data-i="${i}"><b>${String.fromCharCode(65 + i)}) ${cleanDisplayText(opt)}</b></button>`).join("");
@@ -1674,6 +1675,21 @@
         const hint = document.getElementById("batHoverHint");
         hint.style.left = `${e.clientX + 14}px`;
         hint.style.top = `${e.clientY - 16}px`;
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if (!state.current) return;
+        if (["INPUT", "TEXTAREA", "SELECT"].includes((e.target && e.target.tagName) || "")) return;
+        const key = e.key.toUpperCase();
+        const map = { A: 0, B: 1, C: 2, D: 3 };
+        if (key in map) {
+          const btn = document.querySelector(`#options .opt[data-i="${map[key]}"]`);
+          if (btn && !btn.disabled) btn.click();
+        }
+        if (key === "N") {
+          const nbtn = document.getElementById("nextBtn");
+          if (nbtn) nbtn.click();
+        }
       });
 
       document.getElementById("sendReport").onclick = submitReport;
