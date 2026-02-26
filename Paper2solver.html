@@ -569,14 +569,15 @@
             <label for="questionRenderMode"><b>Question View</b></label>
             <select id="questionRenderMode">
               <option value="image-beta">Image (testing/beta)</option>
+              <option value="ocr-beta">OCR text (new/beta)</option>
               <option value="text-reliable" selected>Text (reliable, diagrams may be incomplete)</option>
             </select>
           </div>
           <p id="questionModeNote" class="question-mode-note">Text mode (reliable): best for text extraction; diagram-only details may be incomplete.</p>
+          <div class="question-text" id="questionText"><b>Question text appears here.</b></div>
           <div id="questionImageWrap" class="question-image-wrap" hidden>
             <img id="questionSnippet" class="question-image" alt="Question snippet beta preview" />
           </div>
-          <div class="question-text" id="questionText"><b>Question text appears here.</b></div>
           <div class="diagram-box" id="diagramBox" hidden>
             <canvas id="diagramCanvas" width="960" height="180"></canvas>
           </div>
@@ -700,6 +701,7 @@
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-storage-compat.js"></script>
   <script src="assets/data/question-bank.js"></script>
   <script src="assets/data/question-image-bank.js"></script>
+  <script src="assets/data/question-ocr-bank.js"></script>
   <script>
     // Fill Firebase config for real online users on GitHub Pages.
     const FIREBASE_CONFIG = {
@@ -747,9 +749,13 @@
     const IMAGE_LOOKUP = (window.SOLVERLIFE_IMAGE_BANK && window.SOLVERLIFE_IMAGE_BANK.lookup)
       ? window.SOLVERLIFE_IMAGE_BANK.lookup
       : {};
+    const OCR_LOOKUP = (window.SOLVERLIFE_OCR_BANK && window.SOLVERLIFE_OCR_BANK.lookup)
+      ? window.SOLVERLIFE_OCR_BANK.lookup
+      : {};
     const BANK = BASE_BANK.map((q) => {
       const key = `${q.paper || ""}::${q.number || ""}`;
-      return { ...q, imageSnippet: IMAGE_LOOKUP[key] || "" };
+      const ocr = OCR_LOOKUP[key] || {};
+      return { ...q, imageSnippet: IMAGE_LOOKUP[key] || "", ocrSnippetText: ocr.ocrText || "" };
     });
 
     function saveState() {
@@ -986,6 +992,18 @@
       return modeEl ? modeEl.value : "text-reliable";
     }
 
+    function cleanDisplayText(value) {
+      let t = String(value || "");
+      t = t.replace(/\b0\d{3}\/\d{2}(?:\/[A-Z]{1,3}\/\d{2})?\b/g, " ");
+      t = t.replace(/\[Turn[^\]]*\]?/gi, " ");
+      t = t.replace(/\bPMT\b/gi, " ");
+      t = t.replace(/www\.root19\.com/gi, " ");
+      t = t.replace(/\+91\s*-\s*9969\s*353\s*391/g, " ");
+      t = t.replace(/©\s*UCLES/gi, " ");
+      t = t.replace(/\s+/g, " ").trim();
+      return t;
+    }
+
     function renderCurrentQuestionView() {
       if (!state.current) return;
       const q = state.current;
@@ -995,28 +1013,38 @@
       const imageEl = document.getElementById("questionSnippet");
       const modeNote = document.getElementById("questionModeNote");
       const hasSnippet = Boolean(q.imageSnippet);
+      const reliableText = cleanDisplayText(q.q);
+      const ocrText = cleanDisplayText(q.ocrSnippetText || "");
+
+      if (hasSnippet) {
+        imageEl.src = q.imageSnippet;
+        imageWrap.hidden = false;
+      } else {
+        imageWrap.hidden = true;
+      }
 
       if (mode === "image-beta") {
         modeNote.textContent = "Image mode (testing/beta): cropped snippet extraction may be imperfect.";
-        if (hasSnippet) {
-          imageEl.src = q.imageSnippet;
-          imageWrap.hidden = false;
-          textEl.hidden = true;
-        } else {
-          imageWrap.hidden = true;
-          textEl.hidden = false;
-          textEl.innerHTML = `<b>${q.q}</b>`;
-          modeNote.textContent = "Image beta not available for this question, auto-fallback to text.";
-        }
+        textEl.hidden = false;
+        textEl.innerHTML = `<b>${reliableText}</b>`;
+        if (!hasSnippet) modeNote.textContent = "Image beta not available for this question, auto-fallback to text.";
+        document.getElementById("diagramBox").hidden = true;
+        return;
+      }
+
+      if (mode === "ocr-beta") {
+        modeNote.textContent = "OCR mode (new/beta): text is read from question image snippets and may contain OCR errors.";
+        textEl.hidden = false;
+        textEl.innerHTML = `<b>${ocrText || reliableText}</b>`;
+        if (!ocrText) modeNote.textContent = "OCR text unavailable for this question, auto-fallback to reliable text.";
         document.getElementById("diagramBox").hidden = true;
         return;
       }
 
       modeNote.textContent = "Text mode (reliable): best for text extraction; diagram-only details may be incomplete.";
-      imageWrap.hidden = true;
       textEl.hidden = false;
-      textEl.innerHTML = `<b>${q.q}</b>`;
-      drawDiagram(q.q || "");
+      textEl.innerHTML = `<b>${reliableText}</b>`;
+      drawDiagram(reliableText || "");
     }
 
     function nextQuestion() {
@@ -1026,7 +1054,7 @@
       renderCurrentQuestionView();
 
       const options = document.getElementById("options");
-      options.innerHTML = q.opts.map((opt, i) => `<button class="opt" data-i="${i}"><b>${String.fromCharCode(65 + i)}) ${opt}</b></button>`).join("");
+      options.innerHTML = q.opts.map((opt, i) => `<button class="opt" data-i="${i}"><b>${String.fromCharCode(65 + i)}) ${cleanDisplayText(opt)}</b></button>`).join("");
       document.getElementById("feedback").hidden = true;
       options.querySelectorAll(".opt").forEach(btn => btn.onclick = () => answerQuestion(Number(btn.dataset.i), btn));
     }
@@ -1052,7 +1080,7 @@
     }
 
     function inferScientificPrinciple(q) {
-      const text = (q.q || "").toLowerCase();
+      const text = cleanDisplayText(q.q || "").toLowerCase();
       if (text.includes("freezing point") && text.includes("boiling point")) {
         return "State changes depend on temperature relative to melting/freezing and boiling points at the stated pressure.";
       }
@@ -1075,8 +1103,8 @@
     }
 
     function explainOption(q, optionIdx) {
-      const text = (q.q || "").toLowerCase();
-      const opt = (q.opts[optionIdx] || "").toLowerCase();
+      const text = cleanDisplayText(q.q || "").toLowerCase();
+      const opt = cleanDisplayText(q.opts[optionIdx] || "").toLowerCase();
       const isCorrect = optionIdx === q.a;
 
       if (text.includes("freezing point") && text.includes("boiling point")) {
@@ -1121,7 +1149,7 @@
 
       const optionChecks = q.opts.map((opt, i) => {
         const mark = i === q.a ? "Correct" : "Not correct";
-        return `<li><b>${String.fromCharCode(65 + i)}) ${esc(opt)}:</b> ${esc(explainOption(q, i))} <b>(${mark})</b></li>`;
+        return `<li><b>${String.fromCharCode(65 + i)}) ${esc(cleanDisplayText(opt))}:</b> ${esc(explainOption(q, i))} <b>(${mark})</b></li>`;
       }).join("");
 
       if (isCorrect) {
