@@ -36,12 +36,20 @@ PAPERS = [
 ]
 
 NOISE_PATTERNS = [
-    r"\[Turn over\]",
+    r"\[Turn[^\]]*\]?",
+    r"\bover\s*\[Turn\b",
     r"Page \d+ of \d+",
     r"©\s*UCLES",
+    r"\bBLANK\s+PAGE\b",
+    r"\bPermission to reproduce items\b.*",
+    r"\breasonable effort has been made by the publisher\b.*",
     r"PMT",
     r"www\.root19\.com",
     r"\+91\s*-\s*9969\s*353\s*391",
+    r"\b0\d{3}/\d{2}(?:/[A-Z]{1,3}/\d{2,4})?\b",
+    r"\b20\d{2}\s+0\d{3}/\d{2}/[A-Z]{1,3}/\d{2,4}\b",
+    r"\b(?:19|20)\d{2}\s*/[A-Z]/[A-Z]/\d{2,4}\b",
+    r"\b/[A-Z]/[A-Z]/\d{2,4}\b",
     r"\s{2,}",
 ]
 
@@ -61,6 +69,23 @@ def clean_text(text: str) -> str:
         out = re.sub(pat, " ", out, flags=re.I)
     out = re.sub(r"\s+", " ", out).strip()
     return out
+
+
+def looks_invalid_question(text: str) -> bool:
+    t = clean_text(text or "").lower()
+    if len(t) < 12:
+        return True
+    if "blank page" in t:
+        return True
+    if "permission to reproduce items" in t:
+        return True
+    if re.search(r"\b0\d{3}/\d{2}(?:/[a-z]{1,3}/\d{2,4})?\b", t):
+        return True
+    if re.search(r"\b(?:19|20)\d{2}\s*/[a-z]/[a-z]/\d{2,4}\b", t):
+        return True
+    if len(re.sub(r"[^a-z]+", "", t)) < 8:
+        return True
+    return False
 
 
 def pdftotext_layout(path: Path) -> str:
@@ -244,10 +269,13 @@ def build():
 
         for qn in sorted(q_blocks.keys()):
             block = q_blocks.get(qn, "")
-            if len(clean_text(block)) < 10:
+            if looks_invalid_question(block):
                 continue
             ms_block = clean_text(m_blocks.get(qn, ""))
             parts = parse_subparts(block)
+            parts = [p for p in parts if not looks_invalid_question(p.get("text", ""))]
+            if not parts:
+                continue
             out_questions.append(
                 {
                     "paperType": "paper4",

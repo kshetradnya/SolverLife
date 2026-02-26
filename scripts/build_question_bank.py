@@ -35,12 +35,17 @@ NOISE_PATTERNS = [
     r"www\.root19\.com",
     r"\+91\s*-\s*9969\s*353\s*391",
     r"©\s*UCLES",
-    r"\[Turn over\]",
+    r"\[Turn[^\]]*\]?",
+    r"\bover\s*\[Turn\b",
     r"Page \d+ of \d+",
+    r"\bBLANK\s+PAGE\b",
+    r"\bPermission to reproduce items\b.*",
+    r"\breasonable effort has been made by the publisher\b.*",
     r"PMT",
-    r"0620/\d+",
-    r"0610/\d+",
-    r"0625/\d+",
+    r"\b0\d{3}/\d{2}(?:/[A-Z]{1,3}/\d{2,4})?\b",
+    r"\b20\d{2}\s+0\d{3}/\d{2}/[A-Z]{1,3}/\d{2,4}\b",
+    r"\b(?:19|20)\d{2}\s*/[A-Z]/[A-Z]/\d{2,4}\b",
+    r"\b/[A-Z]/[A-Z]/\d{2,4}\b",
 ]
 
 
@@ -63,6 +68,23 @@ def strip_noise(text: str) -> str:
     for pat in NOISE_PATTERNS:
         out = re.sub(pat, " ", out, flags=re.I)
     return out
+
+
+def looks_invalid_stem(text: str) -> bool:
+    t = squash_whitespace(strip_noise(text or "")).lower()
+    if len(t) < 12:
+        return True
+    if "blank page" in t:
+        return True
+    if "permission to reproduce items" in t:
+        return True
+    if re.search(r"\b0\d{3}/\d{2}(?:/[a-z]{1,3}/\d{2,4})?\b", t):
+        return True
+    if re.search(r"\b(?:19|20)\d{2}\s*/[a-z]/[a-z]/\d{2,4}\b", t):
+        return True
+    if re.search(r"\bturn\b", t) and len(t) < 40:
+        return True
+    return False
 
 
 def parse_answers(ms_text: str):
@@ -112,7 +134,7 @@ def parse_questions(qp_text: str):
             continue
         stem = squash_whitespace(strip_noise(body[:first_opt.start()]))
 
-        if len(stem) < 12:
+        if looks_invalid_stem(stem):
             continue
 
         questions[qnum] = {

@@ -420,6 +420,19 @@
       color: var(--muted);
       font-weight: 700;
     }
+    .snippet-toggle-row {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin: 8px 0 10px;
+      font-size: .9rem;
+      color: var(--muted);
+      font-weight: 700;
+    }
+    .snippet-toggle-row input {
+      width: auto;
+      margin: 0 6px 0 0;
+    }
     .question-image-wrap {
       border: 1px solid rgba(255,255,255,.2);
       border-radius: 12px;
@@ -924,10 +937,18 @@
             </select>
           </div>
           <p id="questionModeNote" class="question-mode-note">Image mode (testing/beta): cropped snippet extraction may be imperfect.</p>
+          <div class="snippet-toggle-row">
+            <label><input type="checkbox" id="showQuestionSnippet" checked>Show question snippet</label>
+            <label><input type="checkbox" id="showMarkschemeSnippet">Show markscheme snippet (individual)</label>
+          </div>
           <p class="question-mode-note"><b>Quick keys:</b> A/B/C/D to answer, N for next.</p>
           <div class="question-text" id="questionText"><b>Question text appears here.</b></div>
           <div id="questionImageWrap" class="question-image-wrap" hidden>
             <img id="questionSnippet" class="question-image" alt="Question snippet beta preview" />
+          </div>
+          <div id="markschemeImageWrap" class="question-image-wrap" hidden>
+            <img id="markschemeSnippet" class="question-image" alt="Markscheme snippet preview" />
+            <small id="markschemeHint">Markscheme snippet for this question.</small>
           </div>
           <div class="diagram-box" id="diagramBox" hidden>
             <canvas id="diagramCanvas" width="960" height="180"></canvas>
@@ -1091,6 +1112,7 @@
   <script src="assets/data/question-bank.js"></script>
   <script src="assets/data/question-image-bank.js"></script>
   <script src="assets/data/question-ocr-bank.js"></script>
+  <script src="assets/data/question-ms-image-bank.js"></script>
   <script src="assets/data/paper4-bank.js"></script>
   <script>
     // Fill Firebase config for real online users on GitHub Pages.
@@ -1151,13 +1173,36 @@
     const OCR_LOOKUP = (window.SOLVERLIFE_OCR_BANK && window.SOLVERLIFE_OCR_BANK.lookup)
       ? window.SOLVERLIFE_OCR_BANK.lookup
       : {};
+    const MS_IMAGE_LOOKUP = (window.SOLVERLIFE_MS_IMAGE_BANK && window.SOLVERLIFE_MS_IMAGE_BANK.lookup)
+      ? window.SOLVERLIFE_MS_IMAGE_BANK.lookup
+      : {};
+
+    function looksLikeNoiseQuestion(text) {
+      const t = String(text || "").toLowerCase();
+      if (!t.trim()) return true;
+      if (/\bblank\s+page\b/i.test(t)) return true;
+      if (/permission to reproduce items/i.test(t)) return true;
+      if (/reasonable effort has been made by the publisher/i.test(t)) return true;
+      if (/\b0\d{3}\/\d{2}(?:\/[a-z]{1,3}\/\d{2,4})?\b/i.test(t)) return true;
+      if (/\b(?:19|20)\d{2}\s*\/[a-z]\/[a-z]\/\d{2,4}\b/i.test(t)) return true;
+      if (/\[turn[^\]]*\]?/i.test(t)) return true;
+      return false;
+    }
+
     const BANK = BASE_BANK.map((q) => {
       const key = `${q.paper || ""}::${q.number || ""}`;
       const ocr = OCR_LOOKUP[key] || {};
-      return { ...q, imageSnippet: IMAGE_LOOKUP[key] || "", ocrSnippetText: ocr.ocrText || "" };
-    });
+      return {
+        ...q,
+        imageSnippet: IMAGE_LOOKUP[key] || "",
+        ocrSnippetText: ocr.ocrText || "",
+        markschemeSnippet: MS_IMAGE_LOOKUP[key] || ""
+      };
+    }).filter((q) => !looksLikeNoiseQuestion(q.q));
     const PAPER4_BANK = (window.SOLVERLIFE_PAPER4_BANK && Array.isArray(window.SOLVERLIFE_PAPER4_BANK.questions))
-      ? window.SOLVERLIFE_PAPER4_BANK.questions.filter((q) => Number(q.year || 0) >= 2016)
+      ? window.SOLVERLIFE_PAPER4_BANK.questions
+          .filter((q) => Number(q.year || 0) >= 2016)
+          .filter((q) => !looksLikeNoiseQuestion(q.questionText))
       : [];
     const SCIENCE_FACTS = [
       "Biology: ATP is the universal immediate energy currency in cells.",
@@ -1446,8 +1491,15 @@
 
     function cleanDisplayText(value) {
       let t = String(value || "");
-      t = t.replace(/\b0\d{3}\/\d{2}(?:\/[A-Z]{1,3}\/\d{2})?\b/g, " ");
+      t = t.replace(/\b0\d{3}\/\d{2}(?:\/[A-Z]{1,3}\/\d{2,4})?\b/gi, " ");
+      t = t.replace(/\b20\d{2}\s+0\d{3}\/\d{2}\/[A-Z]{1,3}\/\d{2,4}\b/gi, " ");
+      t = t.replace(/\b(?:19|20)\d{2}\s*\/[A-Z]\/[A-Z]\/\d{2,4}\b/gi, " ");
+      t = t.replace(/\b\/[A-Z]\/[A-Z]\/\d{2,4}\b/gi, " ");
       t = t.replace(/\[Turn[^\]]*\]?/gi, " ");
+      t = t.replace(/\bover\s*\[Turn\b/gi, " ");
+      t = t.replace(/\bBLANK\s+PAGE\b/gi, " ");
+      t = t.replace(/\bPermission to reproduce items\b[\s\S]*/gi, " ");
+      t = t.replace(/\breasonable effort has been made by the publisher\b[\s\S]*/gi, " ");
       t = t.replace(/\bPMT\b/gi, " ");
       t = t.replace(/www\.root19\.com/gi, " ");
       t = t.replace(/\+91\s*-\s*9969\s*353\s*391/g, " ");
@@ -1463,28 +1515,47 @@
       const textEl = document.getElementById("questionText");
       const imageWrap = document.getElementById("questionImageWrap");
       const imageEl = document.getElementById("questionSnippet");
+      const showQSnippet = document.getElementById("showQuestionSnippet").checked;
+      const showMSSnippet = document.getElementById("showMarkschemeSnippet").checked;
+      const msWrap = document.getElementById("markschemeImageWrap");
+      const msEl = document.getElementById("markschemeSnippet");
+      const msHint = document.getElementById("markschemeHint");
       const modeNote = document.getElementById("questionModeNote");
       const hasSnippet = Boolean(q.imageSnippet);
+      const hasMSSnippet = Boolean(q.markschemeSnippet);
       const reliableText = cleanDisplayText(q.q);
       const ocrText = cleanDisplayText(q.ocrSnippetText || "");
+
+      if (showQSnippet && hasSnippet) {
+        imageEl.src = q.imageSnippet;
+        imageWrap.hidden = false;
+      } else {
+        imageWrap.hidden = true;
+      }
+      if (showMSSnippet && hasMSSnippet) {
+        msEl.src = q.markschemeSnippet;
+        msHint.textContent = "Individual markscheme snippet for this question.";
+        msWrap.hidden = false;
+      } else if (showMSSnippet) {
+        msEl.removeAttribute("src");
+        msHint.textContent = "No individual markscheme snippet found for this question.";
+        msWrap.hidden = false;
+      } else {
+        msWrap.hidden = true;
+      }
 
       if (mode === "image-beta") {
         modeNote.textContent = "Image mode (testing/beta): image-only view + A/B/C/D options.";
         textEl.hidden = true;
         document.getElementById("diagramBox").hidden = true;
-        if (hasSnippet) {
-          imageEl.src = q.imageSnippet;
-          imageWrap.hidden = false;
-        } else {
-          imageWrap.hidden = true;
-          modeNote.textContent = "Image beta snippet unavailable for this question.";
-        }
+        if (!showQSnippet) imageWrap.hidden = true;
+        if (showQSnippet && !hasSnippet) modeNote.textContent = "Image beta snippet unavailable for this question.";
         return;
       }
 
       if (mode === "ocr-beta") {
         modeNote.textContent = "OCR mode (new/beta): OCR text + full option text.";
-        imageWrap.hidden = true;
+        if (!showQSnippet) imageWrap.hidden = true;
         textEl.hidden = false;
         textEl.innerHTML = `<b>${ocrText || reliableText}</b>`;
         if (!ocrText) modeNote.textContent = "OCR text unavailable for this question, fallback to reliable text.";
@@ -1493,7 +1564,7 @@
       }
 
       modeNote.textContent = "Text mode (reliable): text + full option text; no snippet image.";
-      imageWrap.hidden = true;
+      if (!showQSnippet) imageWrap.hidden = true;
       textEl.hidden = false;
       textEl.innerHTML = `<b>${reliableText}</b>`;
       drawDiagram(reliableText || "");
@@ -2312,6 +2383,8 @@
           options.querySelectorAll(".opt").forEach(btn => btn.onclick = () => answerQuestion(Number(btn.dataset.i), btn));
         }
       });
+      document.getElementById("showQuestionSnippet").addEventListener("change", renderCurrentQuestionView);
+      document.getElementById("showMarkschemeSnippet").addEventListener("change", renderCurrentQuestionView);
       document.querySelectorAll("#subjectQuick .subject-chip").forEach((chip) => {
         chip.addEventListener("click", () => toggleSubject(chip.dataset.subject));
       });
