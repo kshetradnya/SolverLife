@@ -49,7 +49,24 @@ def parse_bbox_pages(xml_text: str):
     return pages
 
 
-def question_locations(pages):
+def detect_start_page_after_abbreviations(pages):
+    abbreviations_page = None
+    for idx, p in enumerate(pages, start=1):
+        words = sorted(p["words"], key=lambda w: (w["yMin"], w["xMin"]))
+        text = " ".join(w["text"] for w in words).lower()
+        if (
+            "mark scheme abbreviations" in text
+            or "abbreviations used in the mark scheme" in text
+            or "mark scheme abbreviation" in text
+        ):
+            abbreviations_page = idx
+            break
+    if abbreviations_page is None:
+        return 1
+    return min(len(pages), abbreviations_page + 1)
+
+
+def question_locations(pages, min_page=1):
     def has_answer_pattern(page_words, y_ref, qn):
         line_words = []
         for w in page_words:
@@ -67,6 +84,8 @@ def question_locations(pages):
 
     cand = {i: [] for i in range(1, 41)}
     for p_idx, p in enumerate(pages, start=1):
+        if p_idx < min_page:
+            continue
         for w in p["words"]:
             if not re.fullmatch(r"\d{1,2}", w["text"]):
                 continue
@@ -175,7 +194,8 @@ def build():
         pages = parse_bbox_pages(xml_text)
         if not pages:
             continue
-        qloc = question_locations(pages)
+        min_page = detect_start_page_after_abbreviations(pages)
+        qloc = question_locations(pages, min_page=min_page)
         ordered = sorted(qnums)
         detected = sorted(qloc.keys())
         for n in ordered:

@@ -191,6 +191,22 @@
       padding: 10px 16px;
       gap: 10px;
     }
+    .top-controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .top-controls select {
+      width: auto;
+      min-width: 170px;
+      margin: 0;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-weight: 800;
+      background: rgba(255,255,255,.12);
+      color: var(--text);
+    }
 
     .brand {
       font-family: "Space Grotesk", sans-serif;
@@ -236,8 +252,15 @@
     }
 
     .home-grid { display: grid; gap: 16px; grid-template-columns: 1.2fr 1fr; }
+    .home-grid + .home-grid { margin-top: 16px; }
     .hero-title { font-family: "Space Grotesk", sans-serif; font-size: clamp(2rem, 5vw, 3rem); margin: 0 0 10px; }
     .big-auth { margin-top: 14px; font-size: 1.2rem; padding: 14px 24px; border-radius: 14px; background: linear-gradient(90deg, #4bd8ff, #6c9fff); color: #041527; border: 0; font-weight: 800; }
+    .hero-sub {
+      font-size: 1.05rem;
+      line-height: 1.6;
+      margin-bottom: 12px;
+      color: #d5e3ff;
+    }
     .dashboard-grid { display: grid; gap: 12px; grid-template-columns: repeat(4, minmax(120px, 1fr)); margin-top: 12px; }
     .dash-tile {
       border-radius: 14px;
@@ -251,13 +274,21 @@
       transform: perspective(700px) rotateX(4deg) rotateY(-4deg) translateY(-2px);
       box-shadow: 0 10px 20px rgba(0,0,0,.3);
     }
-    .fact-line { margin-top: 10px; font-weight: 700; color: var(--muted); }
+    .fact-line {
+      margin-top: 12px;
+      font-weight: 700;
+      color: #d7e6ff;
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 12px;
+      padding: 10px 12px;
+    }
     .streak-wrap { margin-top: 10px; }
     .streak-bar {
-      height: 14px;
+      height: 16px;
       border-radius: 999px;
-      background: rgba(255,255,255,.1);
-      border: 1px solid rgba(255,255,255,.15);
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.18);
       overflow: hidden;
     }
     .streak-fill {
@@ -267,6 +298,19 @@
       background: linear-gradient(90deg, #ff6a2a, #ff3d1f, #ff9f1c);
       transition: width .35s ease;
     }
+    .metrics-row {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(120px, 1fr));
+      gap: 10px;
+      margin-top: 12px;
+    }
+    .metric-card {
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 14px;
+      padding: 10px;
+      font-weight: 700;
+    }
 
     .demo {
       position: relative;
@@ -275,6 +319,24 @@
       border-radius: 16px;
       background: linear-gradient(145deg, #111a2f 0%, #111522 100%);
       border: 1px solid rgba(255,255,255,0.12);
+    }
+    .demo-head {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      right: 12px;
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      z-index: 2;
+    }
+    .demo-pill {
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: .78rem;
+      font-weight: 800;
+      border: 1px solid rgba(255,255,255,.2);
+      background: rgba(0,0,0,.26);
     }
 
     .demo .option {
@@ -291,10 +353,10 @@
       font-weight: 800;
     }
 
-    .o1 { top: 20px; }
-    .o2 { top: 85px; }
-    .o3 { top: 150px; }
-    .o4 { top: 215px; }
+    .o1 { top: 64px; }
+    .o2 { top: 130px; }
+    .o3 { top: 196px; }
+    .o4 { top: 262px; }
 
     .cursor {
       width: 20px;
@@ -320,13 +382,13 @@
     }
 
     @keyframes cursorMove {
-      0%, 8% { transform: translate(42px, 32px); }
-      20% { transform: translate(42px, 96px); }
-      22% { transform: scale(0.8) translate(52px, 110px); }
-      35% { transform: translate(42px, 161px); }
-      50% { transform: translate(42px, 227px); }
-      52% { transform: scale(0.8) translate(50px, 240px); }
-      100% { transform: translate(42px, 32px); }
+      0%, 8% { transform: translate(42px, 76px); }
+      20% { transform: translate(42px, 143px); }
+      22% { transform: scale(0.8) translate(52px, 154px); }
+      35% { transform: translate(42px, 208px); }
+      50% { transform: translate(42px, 274px); }
+      52% { transform: scale(0.8) translate(50px, 286px); }
+      100% { transform: translate(42px, 76px); }
     }
 
     @keyframes bubble {
@@ -502,6 +564,21 @@
     }
     .opt.wrong { border-color: var(--bad); background: rgba(255,95,124,0.2); }
     .feedback { margin-top: 10px; padding: 10px; border-radius: 10px; background: rgba(0,0,0,.25); font-weight: 700; }
+    .feedback-controls {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+    .reveal {
+      opacity: 0;
+      transform: translateY(14px);
+      transition: opacity .55s ease, transform .55s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
 
     .leaderboard .entry {
       display: flex;
@@ -726,6 +803,34 @@
       background: rgba(255,255,255,.05);
       font-weight: 700;
     }
+    .pomodoro-box {
+      margin-top: 12px;
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: 14px;
+      padding: 12px;
+      background: rgba(255,255,255,.05);
+    }
+    .pomodoro-clock {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: .03em;
+      margin: 8px 0;
+    }
+    .community-post {
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: 12px;
+      padding: 10px;
+      background: rgba(255,255,255,.05);
+      margin-bottom: 10px;
+    }
+    .comment-item {
+      margin-top: 6px;
+      padding: 8px;
+      border-radius: 10px;
+      background: rgba(0,0,0,.2);
+      border: 1px solid rgba(255,255,255,.1);
+    }
     .author-grid {
       display: grid;
       grid-template-columns: 280px 1fr;
@@ -796,6 +901,7 @@
     @media (max-width: 980px) {
       .home-grid, .solver-grid, .split { grid-template-columns: 1fr; }
       .dashboard-grid { grid-template-columns: repeat(2, minmax(120px, 1fr)); }
+      .metrics-row { grid-template-columns: 1fr; }
       .paper4-layout { grid-template-columns: 1fr; }
       .author-grid { grid-template-columns: 1fr; }
       .podium { grid-template-columns: 1fr; }
@@ -806,27 +912,57 @@
   <div id="batHoverHint" class="bat-hover-hint">🦇 Gotham pulse detected</div>
   <header class="topbar">
     <div class="brand">SolverLife</div>
-    <nav class="nav" id="nav"></nav>
+    <div class="top-controls">
+      <select id="solverPicker" title="Quick switch solver paper">
+        <option value="solver">Solver: Paper 2 MCQ</option>
+        <option value="paper4">Solver: Paper 4 Structured</option>
+      </select>
+      <nav class="nav" id="nav"></nav>
+    </div>
   </header>
 
   <main>
     <section id="home" class="section active">
       <div class="home-grid">
-        <article class="card">
+        <article class="card reveal">
           <h1 class="hero-title">MCQ practice with real-time feedback.</h1>
-          <p><b>Online Mode:</b> configure Firebase once, host on GitHub Pages, and real users can register/login with email+password and appear on a real leaderboard.</p>
+          <p class="hero-sub"><b>SolverLife</b> gives you two complete prep tracks: rapid MCQ solving for Paper 2 and structured marking for Paper 4. Train, review, save, and improve with one flow.</p>
+          <p><b>Online Mode:</b> configure Firebase once, host on GitHub Pages, and real users can register/login with email+password and appear on a real leaderboard and community feed.</p>
           <div class="dashboard-grid" id="dashboardGrid"></div>
+          <div class="metrics-row">
+            <div class="metric-card"><small>Paper 2 Flow</small><div><b>Fast MCQ + Optional Feedback</b></div></div>
+            <div class="metric-card"><small>Paper 4 Flow</small><div><b>Write/Draw + AI/Self Mark</b></div></div>
+            <div class="metric-card"><small>Community</small><div><b>Post doubts, comment, solve together</b></div></div>
+          </div>
           <div class="fact-line" id="factLine">Fact loading...</div>
           <div class="streak-wrap">
             <div><b>🔥 Streak Meter</b> <span id="streakLabel">0</span></div>
             <div class="streak-bar"><div class="streak-fill" id="streakFill"></div></div>
           </div>
+          <div class="pomodoro-box">
+            <h3 style="margin:0;">Pomodoro Focus</h3>
+            <small>Set your own cycle and keep consistency while solving.</small>
+            <div class="pomodoro-clock" id="pomodoroClock">25:00</div>
+            <div class="split">
+              <input id="pomodoroMinutes" type="number" min="1" max="120" value="25" placeholder="Minutes">
+              <input id="pomodoroBreak" type="number" min="1" max="60" value="5" placeholder="Break min">
+            </div>
+            <div style="display:flex;gap:8px;flex-wrap:wrap;">
+              <button class="btn" id="pomodoroStart">Start</button>
+              <button class="btn" id="pomodoroPause">Pause</button>
+              <button class="btn" id="pomodoroReset">Reset</button>
+            </div>
+          </div>
           <div id="homeAuthArea"></div>
         </article>
 
-        <article class="card">
-          <h3>How it works (animated demo)</h3>
+        <article class="card reveal">
+          <h3>How it works (interactive demo)</h3>
           <div class="demo">
+            <div class="demo-head">
+              <span class="demo-pill">Attempt 1: wrong</span>
+              <span class="demo-pill">Attempt 2: corrected</span>
+            </div>
             <div class="option o1">A) Random choice</div>
             <div class="option o2">B) Another option</div>
             <div class="option o3">C) Correct logic route</div>
@@ -834,6 +970,19 @@
             <div class="cursor"></div>
             <div class="feedback-bubble">Wrong first, then correct with feedback.</div>
           </div>
+          <p style="margin-top:12px;"><b>Demo flow:</b> choose subject → start session → solve → optionally reveal feedback → save or post confusion to community.</p>
+        </article>
+      </div>
+      <div class="home-grid">
+        <article class="card reveal">
+          <h3>What You Can Do Here</h3>
+          <p>Use Paper 2 mode for high-volume accuracy practice and Paper 4 mode for mark-based writing practice. Build streaks, unlock achievements, and maintain a structured revision rhythm.</p>
+          <p>Every page is designed to keep revision active, not static: fast switching, saved retries, and visible progress breakdowns.</p>
+        </article>
+        <article class="card reveal">
+          <h3>Practice Strategy</h3>
+          <p>Start with 20 minutes of focused Paper 2 questions, then switch to 1-2 Paper 4 parts and self-mark with snippets. Repeat in pomodoro cycles.</p>
+          <p>This mixed-mode method improves both speed and long-answer quality.</p>
         </article>
       </div>
     </section>
@@ -942,6 +1091,11 @@
             <label><input type="checkbox" id="showMarkschemeSnippet">Show markscheme snippet (individual)</label>
           </div>
           <p class="question-mode-note"><b>Quick keys:</b> A/B/C/D to answer, N for next.</p>
+          <div class="feedback-controls">
+            <label><input type="checkbox" id="autoFeedbackToggle" checked>Show feedback automatically</label>
+            <button class="btn" id="showFeedbackBtn" type="button" hidden>Show Feedback</button>
+            <button class="btn" id="postQuestionBtn" type="button">Post This Question To Community</button>
+          </div>
           <div class="question-text" id="questionText"><b>Question text appears here.</b></div>
           <div id="questionImageWrap" class="question-image-wrap" hidden>
             <img id="questionSnippet" class="question-image" alt="Question snippet beta preview" />
@@ -1001,6 +1155,28 @@
       </article>
     </section>
 
+    <section id="community" class="section">
+      <article class="card">
+        <h2>Community</h2>
+        <p>Post doubts directly from Solver, and let others answer publicly or privately.</p>
+        <div class="split">
+          <div>
+            <input id="communityTitle" placeholder="Question title (e.g., Why is option C correct?)">
+            <textarea id="communityBody" rows="5" placeholder="Describe your doubt, context, or your attempted reasoning..."></textarea>
+            <select id="communityVisibility">
+              <option value="public">Public post</option>
+              <option value="private">Private reply requested</option>
+            </select>
+            <button class="btn" id="communityPostBtn">Post Question</button>
+          </div>
+          <div>
+            <h3 style="margin-top:0;">Recent Posts</h3>
+            <div id="communityList"></div>
+          </div>
+        </div>
+      </article>
+    </section>
+
     <section id="history" class="section">
       <div class="split">
         <article class="card">
@@ -1039,6 +1215,17 @@
         <input id="profileName" placeholder="Display name">
         <input id="profileEmail" placeholder="Email" type="email" disabled>
         <input id="profilePic" placeholder="Public profile picture URL">
+        <textarea id="profileBio" rows="3" placeholder="Public bio"></textarea>
+        <label><b>Accent Color</b></label>
+        <input id="profileAccent" type="color" value="#4bd8ff">
+        <label><b>Font Scale</b></label>
+        <input id="fontScale" type="range" min="90" max="120" value="100">
+        <label><b>Answer Sounds</b></label>
+        <select id="soundPack">
+          <option value="clean">Clean Chime</option>
+          <option value="soft">Soft Pop</option>
+          <option value="bright">Bright Ping</option>
+        </select>
         <label><input type="checkbox" id="batmanMode"> Batman mode (hide name/pic/info + silence sounds)</label>
         <label><b>Theme</b></label>
         <select id="themeSelect">
@@ -1125,12 +1312,13 @@
       appId: ""
     };
 
-    const sections = ["home", "solver", "paper4", "saved", "bugrec", "leaderboard", "history", "contact", "account", "author"];
+    const sections = ["home", "solver", "paper4", "saved", "community", "bugrec", "leaderboard", "history", "contact", "account", "author"];
     const sectionLabels = {
       home: "Home",
       solver: "Solver",
       paper4: "Paper 4",
       saved: "Saved",
+      community: "Community",
       bugrec: "Bug & Rec",
       leaderboard: "Leaderboard",
       history: "History",
@@ -1152,6 +1340,8 @@
       paper4PartIndex: 0,
       paper4AnswerMode: "text",
       paper4DraftMarks: 0,
+      pendingFeedbackHtml: "",
+      pomodoro: { running: false, remaining: 25 * 60, break: 5 * 60, timer: null },
       streak: 0,
       captcha: "",
       online: { enabled: false, auth: null, db: null, storage: null, uid: null },
@@ -1212,6 +1402,7 @@
       "Chemistry: Equilibrium is dynamic; forward and reverse rates balance.",
       "Physics: Power is the rate of energy transfer per unit time."
     ];
+    const LOCAL_COMMUNITY_KEY = "solverlife-community-posts";
 
     function saveState() {
       localStorage.setItem("solverlife-profile", JSON.stringify(state.profile));
@@ -1267,6 +1458,10 @@
         const data = snap.data();
         state.profile.name = data.name || state.profile.name;
         state.profile.pic = data.pic || state.profile.pic || "";
+        state.profile.bio = data.bio || state.profile.bio || "";
+        state.profile.accent = data.accent || state.profile.accent || "#4bd8ff";
+        state.profile.fontScale = Number(data.fontScale || state.profile.fontScale || 100);
+        state.profile.soundPack = data.soundPack || state.profile.soundPack || "clean";
         state.profile.batmanMode = Boolean(data.batmanMode);
         state.profile.theme = data.theme || state.profile.theme || "default";
         saveState();
@@ -1275,6 +1470,10 @@
           name: state.profile.name || state.profile.email.split("@")[0],
           email: state.profile.email,
           pic: state.profile.pic || "",
+          bio: state.profile.bio || "",
+          accent: state.profile.accent || "#4bd8ff",
+          fontScale: Number(state.profile.fontScale || 100),
+          soundPack: state.profile.soundPack || "clean",
           batmanMode: Boolean(state.profile.batmanMode),
           theme: state.profile.theme || "default",
           createdAt: firebase.firestore.FieldValue.serverTimestamp()
@@ -1313,7 +1512,10 @@
       if (id === "leaderboard") renderLeaderboard();
       if (id === "home") renderHomeAuth();
       if (id === "saved") renderSavedList();
+      if (id === "community") renderCommunity();
       if (id === "paper4" && state.paper4Current) renderPaper4Question();
+      const picker = document.getElementById("solverPicker");
+      if (picker && (id === "solver" || id === "paper4")) picker.value = id;
     }
 
     function generateCaptcha() {
@@ -1370,6 +1572,31 @@
         fill.style.width = `${pct}%`;
         label.textContent = `${streak} 🔥`;
       }
+    }
+
+    function initRevealAnimations() {
+      const items = Array.from(document.querySelectorAll(".reveal"));
+      if (!("IntersectionObserver" in window)) {
+        items.forEach((el) => el.classList.add("visible"));
+        return;
+      }
+      const io = new IntersectionObserver((entries) => {
+        for (const e of entries) {
+          if (e.isIntersecting) e.target.classList.add("visible");
+        }
+      }, { threshold: 0.14 });
+      items.forEach((el) => io.observe(el));
+    }
+
+    function applyProfileVisuals() {
+      const accent = state.profile.accent || "#4bd8ff";
+      document.documentElement.style.setProperty("--accent", accent);
+      const fs = Number(state.profile.fontScale || 100);
+      document.documentElement.style.fontSize = `${Math.max(90, Math.min(120, fs))}%`;
+    }
+
+    function getSoundPack() {
+      return state.profile.soundPack || "clean";
     }
 
     function selectedSubjects() {
@@ -1585,7 +1812,10 @@
       } else {
         options.innerHTML = q.opts.map((opt, i) => `<button class="opt" data-i="${i}"><b>${String.fromCharCode(65 + i)}) ${cleanDisplayText(opt)}</b></button>`).join("");
       }
+      state.pendingFeedbackHtml = "";
       document.getElementById("feedback").hidden = true;
+      const showBtn = document.getElementById("showFeedbackBtn");
+      if (showBtn) showBtn.hidden = true;
       options.querySelectorAll(".opt").forEach(btn => btn.onclick = () => answerQuestion(Number(btn.dataset.i), btn));
     }
 
@@ -1775,17 +2005,44 @@
       renderSavedList();
     }
 
-    function tone(freq, dur = 0.12) {
+    function tone(freq, dur = 0.12, type = "correct") {
       if (state.profile.batmanMode) return;
       const ctx = new (window.AudioContext || window.webkitAudioContext)();
-      const osc = ctx.createOscillator();
+      const pack = getSoundPack();
       const gain = ctx.createGain();
-      osc.type = "triangle";
-      osc.frequency.value = freq;
-      gain.gain.value = 0.05;
-      osc.connect(gain); gain.connect(ctx.destination);
-      osc.start();
-      osc.stop(ctx.currentTime + dur);
+      gain.gain.value = 0.0001;
+      gain.connect(ctx.destination);
+
+      const osc1 = ctx.createOscillator();
+      const osc2 = ctx.createOscillator();
+      osc1.connect(gain);
+      osc2.connect(gain);
+
+      if (pack === "soft") {
+        osc1.type = "sine";
+        osc2.type = "triangle";
+      } else if (pack === "bright") {
+        osc1.type = "triangle";
+        osc2.type = "square";
+      } else {
+        osc1.type = "sine";
+        osc2.type = "sine";
+      }
+
+      const base = freq;
+      const alt = type === "correct" ? Math.round(freq * 1.35) : Math.round(freq * 0.73);
+      osc1.frequency.value = base;
+      osc2.frequency.value = alt;
+
+      const now = ctx.currentTime;
+      gain.gain.exponentialRampToValueAtTime(0.08, now + 0.01);
+      gain.gain.exponentialRampToValueAtTime(0.02, now + dur * 0.7);
+      gain.gain.exponentialRampToValueAtTime(0.0001, now + dur);
+
+      osc1.start(now);
+      osc2.start(now);
+      osc1.stop(now + dur);
+      osc2.stop(now + dur);
     }
 
     function esc(text) {
@@ -1912,11 +2169,22 @@
 
       const isCorrect = idx === q.a;
       if (!isCorrect) clickedBtn.classList.add("wrong");
-      if (isCorrect) { tone(680); tone(920, .1); state.streak += 1; } else { tone(210, .22); state.streak = 0; }
+      if (isCorrect) { tone(640, .16, "correct"); state.streak += 1; } else { tone(280, .2, "wrong"); state.streak = 0; }
 
       const fb = document.getElementById("feedback");
-      fb.hidden = false;
-      fb.innerHTML = buildScientificFeedback(q, idx);
+      const html = buildScientificFeedback(q, idx);
+      state.pendingFeedbackHtml = html;
+      const autoFeedback = document.getElementById("autoFeedbackToggle").checked;
+      const showBtn = document.getElementById("showFeedbackBtn");
+      if (autoFeedback) {
+        fb.hidden = false;
+        fb.innerHTML = html;
+        showBtn.hidden = true;
+      } else {
+        fb.hidden = true;
+        fb.innerHTML = "";
+        showBtn.hidden = false;
+      }
 
       const entry = {
         at: new Date().toISOString(),
@@ -1938,11 +2206,13 @@
       renderHistory();
       await renderLeaderboard();
       renderHomeAuth();
+      renderDashboard();
     }
 
     function saveCurrent() {
       if (!state.current) return;
-      const fb = document.getElementById("feedback").textContent.trim();
+      const visibleFeedback = document.getElementById("feedback").textContent.trim();
+      const fb = visibleFeedback || String(state.pendingFeedbackHtml || "").replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
       if (!fb) return alert("Answer first, then save.");
       state.saved.push({
         kind: "paper2",
@@ -2296,6 +2566,147 @@
       document.getElementById("attachment").value = "";
     }
 
+    function loadLocalCommunity() {
+      return JSON.parse(localStorage.getItem(LOCAL_COMMUNITY_KEY) || "[]");
+    }
+
+    function saveLocalCommunity(items) {
+      localStorage.setItem(LOCAL_COMMUNITY_KEY, JSON.stringify(items.slice(-120)));
+    }
+
+    async function postCommunityQuestion(payload) {
+      if (state.online.enabled && state.online.uid) {
+        await state.online.db.collection("community_posts").add(payload);
+        return;
+      }
+      const rows = loadLocalCommunity();
+      rows.push({ ...payload, id: `local-${Date.now()}`, comments: [] });
+      saveLocalCommunity(rows);
+    }
+
+    async function loadCommunityPosts() {
+      if (state.online.enabled) {
+        const snap = await state.online.db.collection("community_posts").orderBy("at", "desc").limit(40).get();
+        return snap.docs.map((d) => ({ id: d.id, ...d.data() }));
+      }
+      return loadLocalCommunity().slice().reverse();
+    }
+
+    async function addCommunityComment(postId, body, visibility) {
+      const comment = {
+        body: body.trim(),
+        visibility,
+        author: state.profile.name || "User",
+        at: new Date().toISOString()
+      };
+      if (state.online.enabled && state.online.uid) {
+        await state.online.db.collection("community_posts").doc(postId).collection("comments").add(comment);
+        return;
+      }
+      const rows = loadLocalCommunity();
+      const idx = rows.findIndex((x) => x.id === postId);
+      if (idx >= 0) {
+        rows[idx].comments = rows[idx].comments || [];
+        rows[idx].comments.push(comment);
+        saveLocalCommunity(rows);
+      }
+    }
+
+    async function loadCommunityComments(postId) {
+      if (state.online.enabled) {
+        const snap = await state.online.db.collection("community_posts").doc(postId).collection("comments").orderBy("at", "asc").limit(60).get();
+        return snap.docs.map((d) => d.data());
+      }
+      const rows = loadLocalCommunity();
+      const row = rows.find((x) => x.id === postId);
+      return row && row.comments ? row.comments : [];
+    }
+
+    async function renderCommunity() {
+      const list = document.getElementById("communityList");
+      if (!list) return;
+      const posts = await loadCommunityPosts();
+      if (!posts.length) {
+        list.innerHTML = "<div class='community-post'><b>No posts yet.</b> Ask your first question from Solver.</div>";
+        return;
+      }
+      list.innerHTML = posts.map((p) => `
+        <div class="community-post" data-post-id="${p.id}">
+          <div><b>${esc(p.title || "Untitled Question")}</b> <small>• ${esc(p.visibility || "public")}</small></div>
+          <div style="margin-top:6px;">${esc(p.body || "")}</div>
+          <small>By ${esc(p.author || "User")} • ${new Date(p.at).toLocaleString()}</small>
+          <div class="comment-slot" id="comments-${p.id}"></div>
+          <div style="margin-top:8px;">
+            <textarea id="comment-input-${p.id}" rows="2" placeholder="Add an answer/comment..."></textarea>
+            <select id="comment-vis-${p.id}">
+              <option value="public">Public</option>
+              <option value="private">Private to author</option>
+            </select>
+            <button class="btn" data-comment-btn="${p.id}" type="button">Reply</button>
+          </div>
+        </div>
+      `).join("");
+      for (const p of posts) {
+        const comments = await loadCommunityComments(p.id);
+        const slot = document.getElementById(`comments-${p.id}`);
+        if (slot) {
+          slot.innerHTML = comments.map((c) => `<div class="comment-item"><b>${esc(c.author || "User")}</b> (${esc(c.visibility || "public")}): ${esc(c.body || "")}</div>`).join("");
+        }
+      }
+      list.querySelectorAll("button[data-comment-btn]").forEach((btn) => {
+        btn.onclick = async () => {
+          const id = btn.dataset.commentBtn;
+          const input = document.getElementById(`comment-input-${id}`);
+          const vis = document.getElementById(`comment-vis-${id}`).value;
+          if (!input.value.trim()) return;
+          await addCommunityComment(id, input.value, vis);
+          input.value = "";
+          renderCommunity();
+        };
+      });
+    }
+
+    function startPomodoro() {
+      if (state.pomodoro.running) return;
+      const min = Number(document.getElementById("pomodoroMinutes").value || 25);
+      const br = Number(document.getElementById("pomodoroBreak").value || 5);
+      if (!state.pomodoro.remaining || state.pomodoro.remaining <= 0) state.pomodoro.remaining = min * 60;
+      state.pomodoro.break = br * 60;
+      state.pomodoro.running = true;
+      state.pomodoro.timer = setInterval(() => {
+        state.pomodoro.remaining -= 1;
+        if (state.pomodoro.remaining <= 0) {
+          tone(860, .18, "correct");
+          state.pomodoro.running = false;
+          clearInterval(state.pomodoro.timer);
+          state.pomodoro.remaining = state.pomodoro.break;
+        }
+        renderPomodoro();
+      }, 1000);
+      renderPomodoro();
+    }
+
+    function pausePomodoro() {
+      state.pomodoro.running = false;
+      clearInterval(state.pomodoro.timer);
+      renderPomodoro();
+    }
+
+    function resetPomodoro() {
+      pausePomodoro();
+      state.pomodoro.remaining = Number(document.getElementById("pomodoroMinutes").value || 25) * 60;
+      renderPomodoro();
+    }
+
+    function renderPomodoro() {
+      const el = document.getElementById("pomodoroClock");
+      if (!el) return;
+      const rem = Math.max(0, state.pomodoro.remaining);
+      const mm = String(Math.floor(rem / 60)).padStart(2, "0");
+      const ss = String(rem % 60).padStart(2, "0");
+      el.textContent = `${mm}:${ss}`;
+    }
+
     async function authAction(mode) {
       const email = document.getElementById("authEmail").value.trim();
       const password = document.getElementById("authPassword").value;
@@ -2385,6 +2796,20 @@
       });
       document.getElementById("showQuestionSnippet").addEventListener("change", renderCurrentQuestionView);
       document.getElementById("showMarkschemeSnippet").addEventListener("change", renderCurrentQuestionView);
+      document.getElementById("showFeedbackBtn").onclick = () => {
+        if (!state.pendingFeedbackHtml) return;
+        const fb = document.getElementById("feedback");
+        fb.hidden = false;
+        fb.innerHTML = state.pendingFeedbackHtml;
+        document.getElementById("showFeedbackBtn").hidden = true;
+      };
+      document.getElementById("solverPicker").onchange = (e) => showSection(e.target.value);
+      document.getElementById("postQuestionBtn").onclick = () => {
+        if (!state.current) return alert("Start a question first.");
+        document.getElementById("communityTitle").value = `Doubt: ${state.current.subject.toUpperCase()} Q${state.current.number || "?"}`;
+        document.getElementById("communityBody").value = cleanDisplayText(state.current.q || "");
+        showSection("community");
+      };
       document.querySelectorAll("#subjectQuick .subject-chip").forEach((chip) => {
         chip.addEventListener("click", () => toggleSubject(chip.dataset.subject));
       });
@@ -2426,12 +2851,37 @@
       document.getElementById("refreshCaptcha").onclick = generateCaptcha;
       document.getElementById("loginBtn").onclick = () => authAction("login");
       document.getElementById("registerBtn").onclick = () => authAction("register");
+      document.getElementById("pomodoroStart").onclick = startPomodoro;
+      document.getElementById("pomodoroPause").onclick = pausePomodoro;
+      document.getElementById("pomodoroReset").onclick = resetPomodoro;
+      document.getElementById("communityPostBtn").onclick = async () => {
+        const title = document.getElementById("communityTitle").value.trim();
+        const body = document.getElementById("communityBody").value.trim();
+        const visibility = document.getElementById("communityVisibility").value;
+        if (!title || !body) return alert("Add title and body.");
+        await postCommunityQuestion({
+          title,
+          body,
+          visibility,
+          author: state.profile.name || "User",
+          uid: state.online.uid || "",
+          at: new Date().toISOString()
+        });
+        document.getElementById("communityTitle").value = "";
+        document.getElementById("communityBody").value = "";
+        await renderCommunity();
+      };
 
       document.getElementById("saveProfile").onclick = async () => {
         state.profile.name = document.getElementById("profileName").value.trim();
         state.profile.pic = document.getElementById("profilePic").value.trim();
+        state.profile.bio = document.getElementById("profileBio").value.trim();
+        state.profile.accent = document.getElementById("profileAccent").value;
+        state.profile.fontScale = Number(document.getElementById("fontScale").value || 100);
+        state.profile.soundPack = document.getElementById("soundPack").value;
         state.profile.batmanMode = document.getElementById("batmanMode").checked;
         setTheme(document.getElementById("themeSelect").value);
+        applyProfileVisuals();
         saveState();
 
         if (state.online.enabled && state.online.uid) {
@@ -2439,6 +2889,10 @@
             name: state.profile.name || "",
             email: state.profile.email || "",
             pic: state.profile.pic || "",
+            bio: state.profile.bio || "",
+            accent: state.profile.accent || "#4bd8ff",
+            fontScale: Number(state.profile.fontScale || 100),
+            soundPack: state.profile.soundPack || "clean",
             batmanMode: Boolean(state.profile.batmanMode),
             theme: state.profile.theme || "default",
             updatedAt: firebase.firestore.FieldValue.serverTimestamp()
@@ -2457,11 +2911,16 @@
       document.getElementById("profileName").value = state.profile.name || "";
       document.getElementById("profileEmail").value = state.profile.email || "";
       document.getElementById("profilePic").value = state.profile.pic || "";
+      document.getElementById("profileBio").value = state.profile.bio || "";
+      document.getElementById("profileAccent").value = state.profile.accent || "#4bd8ff";
+      document.getElementById("fontScale").value = Number(state.profile.fontScale || 100);
+      document.getElementById("soundPack").value = state.profile.soundPack || "clean";
       document.getElementById("batmanMode").checked = Boolean(state.profile.batmanMode);
       const themeSelect = document.getElementById("themeSelect");
       themeSelect.value = state.profile.theme || "default";
       if (themeSelect.value !== (state.profile.theme || "default")) themeSelect.value = "default";
       setTheme(themeSelect.value);
+      applyProfileVisuals();
       document.body.classList.toggle("batman-mode", Boolean(state.profile.batmanMode));
     }
 
@@ -2470,11 +2929,14 @@
     setTopicOptions();
     bind();
     setupPaper4Drawing();
+    initRevealAnimations();
+    renderPomodoro();
     syncSubjectChipsFromSelect();
     hydrateProfile();
     renderHomeAuth();
     renderDashboard();
     renderSavedList();
+    renderCommunity();
     renderHistory();
     renderLeaderboard();
   </script>

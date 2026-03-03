@@ -127,6 +127,17 @@ def parse_subparts(block: str):
     return chunks
 
 
+def compute_total_marks(block: str, parts):
+    total_hits = re.findall(r"\[\s*total\s*:\s*(\d{1,2})\s*\]", block, flags=re.I)
+    if total_hits:
+        return int(total_hits[-1])
+    bracket_hits = [int(x) for x in re.findall(r"\[(\d{1,2})\]", block)]
+    if bracket_hits:
+        return sum(bracket_hits)
+    part_sum = sum(max(1, int(p.get("marks", 1))) for p in (parts or []))
+    return part_sum if part_sum > 0 else 1
+
+
 def parse_bbox_pages(xml_text: str):
     pages = []
     for pm in re.finditer(r'<page\s+width="([\d.]+)"\s+height="([\d.]+)">(.*?)</page>', xml_text, flags=re.S):
@@ -276,6 +287,7 @@ def build():
             parts = [p for p in parts if not looks_invalid_question(p.get("text", ""))]
             if not parts:
                 continue
+            total_marks = compute_total_marks(block, parts)
             out_questions.append(
                 {
                     "paperType": "paper4",
@@ -289,7 +301,7 @@ def build():
                     "parts": parts,
                     "questionImage": q_snippets.get(qn, ""),
                     "markschemeImage": m_snippets.get(qn, ""),
-                    "totalMarks": sum([max(1, int(p.get("marks", 1))) for p in parts]) if parts else 1,
+                    "totalMarks": total_marks,
                 }
             )
 
